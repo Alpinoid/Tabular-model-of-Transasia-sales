@@ -1,0 +1,6 @@
+C:\Users\avramko.vv\Documents\Visual Studio 2013\projects\Табличная модель продаж Трансазии\Табличная модель продаж Трансазии\bin\Model.asdatabase
+C:\Users\avramko.vv\Documents\Visual Studio 2013\projects\Табличная модель продаж Трансазии\Табличная модель продаж Трансазии\bin\Model.deploymenttargets
+C:\Users\avramko.vv\Documents\Visual Studio 2013\projects\Табличная модель продаж Трансазии\Табличная модель продаж Трансазии\bin\Model.deploymentoptions
+C:\Users\avramko.vv\Documents\Visual Studio 2013\projects\Табличная модель продаж Трансазии\Табличная модель продаж Трансазии\obj\Development\Model.asdatabase
+C:\Users\avramko.vv\Documents\Visual Studio 2013\projects\Табличная модель продаж Трансазии\Табличная модель продаж Трансазии\obj\Development\Model.deploymentoptions
+C:\Users\avramko.vv\Documents\Visual Studio 2013\projects\Табличная модель продаж Трансазии\Табличная модель продаж Трансазии\obj\Development\Model.deploymenttargets
