@@ -2312,7 +2312,7 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
                 <AttributeRelationship>
                   <AttributeID>Description</AttributeID>
                   <OverrideBehavior>None</OverrideBehavior>
-                  <Name>Description</Name>
+                  <Name>Номенклатура</Name>
                 </AttributeRelationship>
                 <AttributeRelationship>
                   <AttributeID>Article</AttributeID>
@@ -2444,7 +2444,7 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
                 </Annotation>
               </Annotations>
               <ID>Description</ID>
-              <Name>Description</Name>
+              <Name>Номенклатура</Name>
               <KeyColumns>
                 <KeyColumn>
                   <DataType>WChar</DataType>
@@ -3858,20 +3858,14 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
           <Name>01 Продажи</Name>
           <Annotations>
             <Annotation>
-              <Name>IsQueryEditorUsed</Name>
-              <Value>True</Value>
+              <Name>TableWidgetSerialization</Name>
             </Annotation>
             <Annotation>
               <Name>QueryEditorSerialization</Name>
             </Annotation>
             <Annotation>
-              <Name>TableWidgetSerialization</Name>
-            </Annotation>
-            <Annotation>
-              <Name>DataMarketWebBaseUrl</Name>
-            </Annotation>
-            <Annotation>
-              <Name>DataMarketWebQueryUrl</Name>
+              <Name>IsQueryEditorUsed</Name>
+              <Value>True</Value>
             </Annotation>
           </Annotations>
           <Source xsi:type="DataSourceViewBinding">
@@ -3978,11 +3972,6 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
                   <Name>AgentID</Name>
                 </AttributeRelationship>
                 <AttributeRelationship>
-                  <AttributeID>GoodsID</AttributeID>
-                  <OverrideBehavior>None</OverrideBehavior>
-                  <Name>GoodsID</Name>
-                </AttributeRelationship>
-                <AttributeRelationship>
                   <AttributeID>Quantity</AttributeID>
                   <OverrideBehavior>None</OverrideBehavior>
                   <Name>Quantity</Name>
@@ -4011,6 +4000,26 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
                   <AttributeID>AmountDiscount</AttributeID>
                   <OverrideBehavior>None</OverrideBehavior>
                   <Name>AmountDiscount</Name>
+                </AttributeRelationship>
+                <AttributeRelationship>
+                  <AttributeID>GoodID</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>GoodID</Name>
+                </AttributeRelationship>
+                <AttributeRelationship>
+                  <AttributeID>CostPrice</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>CostPrice</Name>
+                </AttributeRelationship>
+                <AttributeRelationship>
+                  <AttributeID>Вычисляемый столбец1 1</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>Cost</Name>
+                </AttributeRelationship>
+                <AttributeRelationship>
+                  <AttributeID>Вычисляемый столбец1 2</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>MarginByCost</Name>
                 </AttributeRelationship>
               </AttributeRelationships>
               <OrderBy>Key</OrderBy>
@@ -4526,42 +4535,6 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
                 <Annotation>
                   <Name>Format</Name>
                   <Value>
-                    <Format Format="Text" xmlns="" />
-                  </Value>
-                </Annotation>
-              </Annotations>
-              <ID>GoodsID</ID>
-              <Name>GoodsID</Name>
-              <KeyColumns>
-                <KeyColumn>
-                  <DataType>WChar</DataType>
-                  <DataSize>32768</DataSize>
-                  <NullProcessing>Preserve</NullProcessing>
-                  <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
-                  <Source xsi:type="ColumnBinding">
-                    <TableID>Sales_66bec93a-15a0-4ede-bb32-d916264ea6f3</TableID>
-                    <ColumnID>GoodsID</ColumnID>
-                  </Source>
-                </KeyColumn>
-              </KeyColumns>
-              <NameColumn>
-                <DataType>WChar</DataType>
-                <DataSize>32768</DataSize>
-                <NullProcessing>ZeroOrBlank</NullProcessing>
-                <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
-                <Source xsi:type="ColumnBinding">
-                  <TableID>Sales_66bec93a-15a0-4ede-bb32-d916264ea6f3</TableID>
-                  <ColumnID>GoodsID</ColumnID>
-                </Source>
-              </NameColumn>
-              <OrderBy>Key</OrderBy>
-              <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
-            </Attribute>
-            <Attribute>
-              <Annotations>
-                <Annotation>
-                  <Name>Format</Name>
-                  <Value>
                     <Format Format="General" xmlns="" />
                   </Value>
                 </Annotation>
@@ -4753,6 +4726,113 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
                 <DataType>WChar</DataType>
                 <Source xsi:type="ddl200_200:ExpressionBinding">
                   <Expression>[AmountWithoutDiscount]-[Amount]</Expression>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+              <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+            </Attribute>
+            <Attribute>
+              <ID>GoodID</ID>
+              <Name>GoodID</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>32768</DataSize>
+                  <NullProcessing>Preserve</NullProcessing>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>Sales_66bec93a-15a0-4ede-bb32-d916264ea6f3</TableID>
+                    <ColumnID>GoodID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>32768</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>Sales_66bec93a-15a0-4ede-bb32-d916264ea6f3</TableID>
+                  <ColumnID>GoodID</ColumnID>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+              <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+            </Attribute>
+            <Attribute>
+              <ID>CostPrice</ID>
+              <Name>CostPrice</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Double</DataType>
+                  <DataSize>-1</DataSize>
+                  <NullProcessing>Preserve</NullProcessing>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>Sales_66bec93a-15a0-4ede-bb32-d916264ea6f3</TableID>
+                    <ColumnID>CostPrice</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>-1</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>Sales_66bec93a-15a0-4ede-bb32-d916264ea6f3</TableID>
+                  <ColumnID>CostPrice</ColumnID>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+              <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+            </Attribute>
+            <Attribute>
+              <Annotations>
+                <Annotation>
+                  <Name>Format</Name>
+                  <Value>
+                    <Format Format="General" xmlns="" />
+                  </Value>
+                </Annotation>
+              </Annotations>
+              <ID>Вычисляемый столбец1 1</ID>
+              <Name>Cost</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Empty</DataType>
+                  <Source xsi:type="ddl200_200:ExpressionBinding">
+                    <Expression>[Quantity]*[CostPrice]</Expression>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <Source xsi:type="ddl200_200:ExpressionBinding">
+                  <Expression>[Quantity]*[CostPrice]</Expression>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+            </Attribute>
+            <Attribute>
+              <Annotations>
+                <Annotation>
+                  <Name>Format</Name>
+                  <Value>
+                    <Format Format="General" xmlns="" />
+                  </Value>
+                </Annotation>
+              </Annotations>
+              <ID>Вычисляемый столбец1 2</ID>
+              <Name>MarginByCost</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Empty</DataType>
+                  <Source xsi:type="ddl200_200:ExpressionBinding">
+                    <Expression>[Amount]-[Cost]</Expression>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <Source xsi:type="ddl200_200:ExpressionBinding">
+                  <Expression>[Amount]-[Cost]</Expression>
                 </Source>
               </NameColumn>
               <OrderBy>Key</OrderBy>
@@ -5044,14 +5124,14 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
               </ddl300_300:ToRelationshipEnd>
             </ddl300_300:Relationship>
             <ddl300_300:Relationship>
-              <ID>9026bf5d-baf9-4dd7-a8af-a98ee25bbd9a</ID>
+              <ID>2a728f56-5240-4062-bf59-2db7d49311b1</ID>
               <ddl300_300:FromRelationshipEnd>
                 <ddl300_300:Multiplicity>Many</ddl300_300:Multiplicity>
                 <ddl300:VisualizationProperties />
                 <DimensionID>Sales_66bec93a-15a0-4ede-bb32-d916264ea6f3</DimensionID>
                 <Attributes>
                   <Attribute>
-                    <AttributeID>GoodsID</AttributeID>
+                    <AttributeID>GoodID</AttributeID>
                   </Attribute>
                 </Attributes>
               </ddl300_300:FromRelationshipEnd>
@@ -5062,6 +5142,272 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
                 <Attributes>
                   <Attribute>
                     <AttributeID>ID</AttributeID>
+                  </Attribute>
+                </Attributes>
+              </ddl300_300:ToRelationshipEnd>
+            </ddl300_300:Relationship>
+          </ddl300_300:Relationships>
+        </Dimension>
+        <Dimension>
+          <ID>Cost_ba5b515e-2ff0-47ec-bcd9-9b2936191797</ID>
+          <Name>04 Себестоимость</Name>
+          <Annotations>
+            <Annotation>
+              <Name>TableWidgetSerialization</Name>
+            </Annotation>
+            <Annotation>
+              <Name>QueryEditorSerialization</Name>
+            </Annotation>
+            <Annotation>
+              <Name>IsQueryEditorUsed</Name>
+              <Value>True</Value>
+            </Annotation>
+          </Annotations>
+          <Source xsi:type="DataSourceViewBinding">
+            <DataSourceViewID>Sandbox</DataSourceViewID>
+          </Source>
+          <UnknownMember valuens="ddl200_200">AutomaticNull</UnknownMember>
+          <ErrorConfiguration>
+            <KeyNotFound>IgnoreError</KeyNotFound>
+            <KeyDuplicate>ReportAndStop</KeyDuplicate>
+            <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+          </ErrorConfiguration>
+          <StorageMode valuens="ddl200_200">InMemory</StorageMode>
+          <Language>1049</Language>
+          <UnknownMemberName>Unknown</UnknownMemberName>
+          <Attributes>
+            <Attribute>
+              <ID>RowNumber</ID>
+              <Name>RowNumber</Name>
+              <Type valuens="ddl200_200">RowNumber</Type>
+              <Usage>Key</Usage>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <DataSize>4</DataSize>
+                  <NullProcessing>Error</NullProcessing>
+                  <Source xsi:type="ddl200_200:RowNumberBinding" />
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>4</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <Source xsi:type="ddl200_200:RowNumberBinding" />
+              </NameColumn>
+              <AttributeRelationships>
+                <AttributeRelationship>
+                  <AttributeID>Date</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>Date</Name>
+                </AttributeRelationship>
+                <AttributeRelationship>
+                  <AttributeID>GoodID</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>GoodID</Name>
+                </AttributeRelationship>
+                <AttributeRelationship>
+                  <AttributeID>Ammount</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>Себестоимость на дату</Name>
+                </AttributeRelationship>
+                <AttributeRelationship>
+                  <AttributeID>Вычисляемый столбец1 1</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>Вычисляемый столбец1</Name>
+                </AttributeRelationship>
+              </AttributeRelationships>
+              <OrderBy>Key</OrderBy>
+              <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+            </Attribute>
+            <Attribute>
+              <Annotations>
+                <Annotation>
+                  <Name>Format</Name>
+                  <Value>
+                    <Format Format="DateTimeGeneral" xmlns="" />
+                  </Value>
+                </Annotation>
+              </Annotations>
+              <ID>Date</ID>
+              <Name>Date</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Date</DataType>
+                  <DataSize>-1</DataSize>
+                  <NullProcessing>Preserve</NullProcessing>
+                  <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>Cost_ba5b515e-2ff0-47ec-bcd9-9b2936191797</TableID>
+                    <ColumnID>Date</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>-1</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>Cost_ba5b515e-2ff0-47ec-bcd9-9b2936191797</TableID>
+                  <ColumnID>Date</ColumnID>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+              <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+              <ddl300_300:FormatString>General Date</ddl300_300:FormatString>
+            </Attribute>
+            <Attribute>
+              <Annotations>
+                <Annotation>
+                  <Name>Format</Name>
+                  <Value>
+                    <Format Format="Text" xmlns="" />
+                  </Value>
+                </Annotation>
+              </Annotations>
+              <ID>GoodID</ID>
+              <Name>GoodID</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>32768</DataSize>
+                  <NullProcessing>Preserve</NullProcessing>
+                  <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>Cost_ba5b515e-2ff0-47ec-bcd9-9b2936191797</TableID>
+                    <ColumnID>GoodID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>32768</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>Cost_ba5b515e-2ff0-47ec-bcd9-9b2936191797</TableID>
+                  <ColumnID>GoodID</ColumnID>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+              <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+            </Attribute>
+            <Attribute>
+              <Annotations>
+                <Annotation>
+                  <Name>Format</Name>
+                  <Value>
+                    <Format Format="General" xmlns="" />
+                  </Value>
+                </Annotation>
+              </Annotations>
+              <ID>Ammount</ID>
+              <Name>Себестоимость на дату</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Double</DataType>
+                  <DataSize>-1</DataSize>
+                  <NullProcessing>Preserve</NullProcessing>
+                  <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>Cost_ba5b515e-2ff0-47ec-bcd9-9b2936191797</TableID>
+                    <ColumnID>Ammount</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>-1</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>Cost_ba5b515e-2ff0-47ec-bcd9-9b2936191797</TableID>
+                  <ColumnID>Ammount</ColumnID>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+            </Attribute>
+            <Attribute>
+              <Annotations>
+                <Annotation>
+                  <Name>Format</Name>
+                  <Value>
+                    <Format Format="DateTimeGeneral" xmlns="" />
+                  </Value>
+                </Annotation>
+              </Annotations>
+              <ID>Вычисляемый столбец1 1</ID>
+              <Name>Вычисляемый столбец1</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Empty</DataType>
+                  <Source xsi:type="ddl200_200:ExpressionBinding">
+                    <Expression>CALCULATE(MAX([Date]),FILTER(ALL('04 Себестоимость'),'04 Себестоимость'[GoodID]=EARLIEST([GoodID])))</Expression>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <Source xsi:type="ddl200_200:ExpressionBinding">
+                  <Expression>CALCULATE(MAX([Date]),FILTER(ALL('04 Себестоимость'),'04 Себестоимость'[GoodID]=EARLIEST([GoodID])))</Expression>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+              <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+              <ddl300_300:FormatString>General Date</ddl300_300:FormatString>
+            </Attribute>
+          </Attributes>
+          <ProactiveCaching>
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" />
+          </ProactiveCaching>
+          <ddl300_300:Relationships>
+            <ddl300_300:Relationship>
+              <ID>174101f6-1ffb-4d26-bd98-436cf72ae0af</ID>
+              <ddl300_300:FromRelationshipEnd>
+                <ddl300_300:Multiplicity>Many</ddl300_300:Multiplicity>
+                <ddl300:VisualizationProperties />
+                <DimensionID>Cost_ba5b515e-2ff0-47ec-bcd9-9b2936191797</DimensionID>
+                <Attributes>
+                  <Attribute>
+                    <AttributeID>GoodID</AttributeID>
+                  </Attribute>
+                </Attributes>
+              </ddl300_300:FromRelationshipEnd>
+              <ddl300_300:ToRelationshipEnd>
+                <ddl300_300:Multiplicity>One</ddl300_300:Multiplicity>
+                <ddl300:VisualizationProperties />
+                <DimensionID>Goods_1f62a172-7212-49c3-a93d-c32e3d7c1be0</DimensionID>
+                <Attributes>
+                  <Attribute>
+                    <AttributeID>ID</AttributeID>
+                  </Attribute>
+                </Attributes>
+              </ddl300_300:ToRelationshipEnd>
+            </ddl300_300:Relationship>
+            <ddl300_300:Relationship>
+              <ID>0932b29d-442d-4966-8415-d6d36009f39b</ID>
+              <ddl300_300:FromRelationshipEnd>
+                <ddl300_300:Multiplicity>Many</ddl300_300:Multiplicity>
+                <ddl300:VisualizationProperties />
+                <DimensionID>Cost_ba5b515e-2ff0-47ec-bcd9-9b2936191797</DimensionID>
+                <Attributes>
+                  <Attribute>
+                    <AttributeID>Date</AttributeID>
+                  </Attribute>
+                </Attributes>
+              </ddl300_300:FromRelationshipEnd>
+              <ddl300_300:ToRelationshipEnd>
+                <ddl300_300:Multiplicity>One</ddl300_300:Multiplicity>
+                <ddl300:VisualizationProperties />
+                <DimensionID>Calendar_a2616ec2-6d56-4d2c-b015-f1e300f370ff</DimensionID>
+                <Attributes>
+                  <Attribute>
+                    <AttributeID>Date</AttributeID>
                   </Attribute>
                 </Attributes>
               </ddl300_300:ToRelationshipEnd>
@@ -5636,10 +5982,6 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
                   <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
                 </Attribute>
                 <Attribute>
-                  <AttributeID>GoodsID</AttributeID>
-                  <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
-                </Attribute>
-                <Attribute>
                   <AttributeID>Quantity</AttributeID>
                   <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
                 </Attribute>
@@ -5663,113 +6005,50 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
                   <AttributeID>AmountDiscount</AttributeID>
                   <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
                 </Attribute>
+                <Attribute>
+                  <AttributeID>GoodID</AttributeID>
+                  <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>CostPrice</AttributeID>
+                  <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Вычисляемый столбец1 1</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Вычисляемый столбец1 2</AttributeID>
+                  <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <ID>Cost_ba5b515e-2ff0-47ec-bcd9-9b2936191797</ID>
+              <Name>04 Себестоимость</Name>
+              <DimensionID>Cost_ba5b515e-2ff0-47ec-bcd9-9b2936191797</DimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>RowNumber</AttributeID>
+                  <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Date</AttributeID>
+                  <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>GoodID</AttributeID>
+                  <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Ammount</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Вычисляемый столбец1 1</AttributeID>
+                  <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+                </Attribute>
               </Attributes>
             </Dimension>
           </Dimensions>
-          <Perspectives>
-            <Perspective>
-              <ID>Sales by Branches</ID>
-              <Name>Sales by Branches</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>TradeShops_555d8116-f1bc-4e93-ad7c-da77dab28139</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Description</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ID</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>Code</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Customers_5947d12c-0402-45e6-942e-86a816ac4eab</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Description</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ID</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>INN</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>Code</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Branches_98e7fbab-178e-4214-9c67-1410974bb381</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>ID</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-              </Dimensions>
-              <Calculations>
-                <Calculation>
-                  <Name>[Measures].[__Не определено ни одной меры]</Name>
-                  <Type>Member</Type>
-                </Calculation>
-              </Calculations>
-            </Perspective>
-            <Perspective>
-              <ID>SalesWork_GeneralPrice_Sales</ID>
-              <Name>SalesWork_GeneralPrice_Sales</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>TradeShops_555d8116-f1bc-4e93-ad7c-da77dab28139</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Description</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ID</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>Code</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Customers_5947d12c-0402-45e6-942e-86a816ac4eab</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Description</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ID</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>INN</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>Code</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Branches_98e7fbab-178e-4214-9c67-1410974bb381</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>ID</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-              </Dimensions>
-              <Calculations>
-                <Calculation>
-                  <Name>[Measures].[__Не определено ни одной меры]</Name>
-                  <Type>Member</Type>
-                </Calculation>
-              </Calculations>
-            </Perspective>
-          </Perspectives>
           <MeasureGroups>
             <MeasureGroup>
               <ID>Customers_5947d12c-0402-45e6-942e-86a816ac4eab</ID>
@@ -7958,33 +8237,33 @@ FROM dbo._Reference55</QueryDefinition>
                     <QueryDefinition>DECLARE @StartDay Date
 DECLARE @EndDay Date
 
-SET @StartDay = (SELECT TOP 1 DATEADD(year, -1*(SELECT TOP 1 Offset FROM dbo._YearOffset), MIN(CAST(_Period as date))) AS [Date] FROM dbo._AccumRg2026)
+SET @StartDay = '2013-12-31'--(SELECT TOP 1 DATEADD(year, -1*(SELECT TOP 1 Offset FROM dbo._YearOffset), MIN(CAST(_Period as date))) AS [Date] FROM dbo._AccumRg2026)
 SET @EndDay = (SELECT TOP 1 DATEADD(year, -1*(SELECT TOP 1 Offset FROM dbo._YearOffset), MAX(CAST(_Period as date))) AS [Date] FROM dbo._AccumRg2026)
 ;
 WITH Calendar AS 
 (
 SELECT
-  @StartDay AS [Date]
+	@StartDay AS [Date]
 UNION ALL
 SELECT
- DATEADD(DAY, 1, [Date])
+	DATEADD(DAY, 1, [Date])
 FROM Calendar
 WHERE [Date] &lt;= @EndDay
 )
- SELECT
- [Date]
- ,DATENAME(year, [Date]) AS [Year]
- ,DATENAME(quarter, [Date]) AS [Quarter]
- ,DATENAME(quarter, [Date])+' квартал' AS [NameQuarter]
- ,DATEPART(month, [Date]) AS [Month]
- ,DATENAME(month, [Date]) AS [NameOfMonth]
- ,DATENAME(week, [Date]) AS [Week]
- ,DATENAME(dayofyear, [Date]) AS [DayOfYear]
- ,DATENAME(day, [Date]) AS [DayOfMonth]
- ,DATEPART(weekday, [Date]) AS [Weekday]
- ,DATENAME(weekday, [Date]) AS [WeekdayName]
- FROM Calendar
- OPTION (MAXRECURSION 7300)</QueryDefinition>
+SELECT
+	[Date]
+	,DATENAME(year, [Date]) AS [Year]
+	,DATENAME(quarter, [Date]) AS [Quarter]
+	,DATENAME(quarter, [Date])+' квартал' AS [NameQuarter]
+	,DATEPART(month, [Date]) AS [Month]
+	,DATENAME(month, [Date]) AS [NameOfMonth]
+	,DATENAME(week, [Date]) AS [Week]
+	,DATENAME(dayofyear, [Date]) AS [DayOfYear]
+	,DATENAME(day, [Date]) AS [DayOfMonth]
+	,DATEPART(weekday, [Date]) AS [Weekday]
+	,DATENAME(weekday, [Date]) AS [WeekdayName]
+FROM Calendar
+OPTION (MAXRECURSION 7300)</QueryDefinition>
                   </Source>
                   <StorageMode valuens="ddl200_200">InMemory</StorageMode>
                   <ProcessingMode>Regular</ProcessingMode>
@@ -9011,21 +9290,6 @@ SELECT
                       </KeyColumns>
                     </Attribute>
                     <Attribute>
-                      <AttributeID>GoodsID</AttributeID>
-                      <KeyColumns>
-                        <KeyColumn>
-                          <DataType>WChar</DataType>
-                          <DataSize>32768</DataSize>
-                          <NullProcessing>Preserve</NullProcessing>
-                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
-                          <Source xsi:type="ColumnBinding">
-                            <TableID>Sales_66bec93a-15a0-4ede-bb32-d916264ea6f3</TableID>
-                            <ColumnID>GoodsID</ColumnID>
-                          </Source>
-                        </KeyColumn>
-                      </KeyColumns>
-                    </Attribute>
-                    <Attribute>
                       <AttributeID>Quantity</AttributeID>
                       <KeyColumns>
                         <KeyColumn>
@@ -9103,6 +9367,56 @@ SELECT
                           <DataType>Empty</DataType>
                           <Source xsi:type="ddl200_200:ExpressionBinding">
                             <Expression>[AmountWithoutDiscount]-[Amount]</Expression>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>GoodID</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Sales_66bec93a-15a0-4ede-bb32-d916264ea6f3</TableID>
+                            <ColumnID>GoodID</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>CostPrice</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Double</DataType>
+                          <DataSize>-1</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Sales_66bec93a-15a0-4ede-bb32-d916264ea6f3</TableID>
+                            <ColumnID>CostPrice</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Вычисляемый столбец1 1</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Empty</DataType>
+                          <Source xsi:type="ddl200_200:ExpressionBinding">
+                            <Expression>[Quantity]*[CostPrice]</Expression>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Вычисляемый столбец1 2</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Empty</DataType>
+                          <Source xsi:type="ddl200_200:ExpressionBinding">
+                            <Expression>[Amount]-[Cost]</Expression>
                           </Source>
                         </KeyColumn>
                       </KeyColumns>
@@ -10310,25 +10624,28 @@ SELECT
                     </Attribute>
                   </Attributes>
                   <IntermediateCubeDimensionID>Sales_66bec93a-15a0-4ede-bb32-d916264ea6f3</IntermediateCubeDimensionID>
-                  <IntermediateGranularityAttributeID>GoodsID</IntermediateGranularityAttributeID>
+                  <IntermediateGranularityAttributeID>GoodID</IntermediateGranularityAttributeID>
                   <Materialization>Regular</Materialization>
-                  <ddl300:RelationshipID>9026bf5d-baf9-4dd7-a8af-a98ee25bbd9a</ddl300:RelationshipID>
+                  <ddl300:RelationshipID>2a728f56-5240-4062-bf59-2db7d49311b1</ddl300:RelationshipID>
                 </Dimension>
               </Dimensions>
               <Partitions>
                 <Partition>
                   <ID>Sales_66bec93a-15a0-4ede-bb32-d916264ea6f3</ID>
-                  <Name>Sales</Name>
+                  <Name>Sales 2014</Name>
                   <Annotations>
                     <Annotation>
-                      <Name>IsQueryEditorUsed</Name>
-                      <Value>True</Value>
+                      <Name>TableWidgetSerialization</Name>
+                    </Annotation>
+                    <Annotation>
+                      <Name>TableWidgetSourceTable</Name>
                     </Annotation>
                     <Annotation>
                       <Name>QueryEditorSerialization</Name>
                     </Annotation>
                     <Annotation>
-                      <Name>TableWidgetSerialization</Name>
+                      <Name>IsQueryEditorUsed</Name>
+                      <Value>True</Value>
                     </Annotation>
                   </Annotations>
                   <Source xsi:type="QueryBinding">
@@ -10363,19 +10680,473 @@ SELECT
 	,CONVERT(varchar(32), RegSales._Fld2106RRef, 2) AS StorehouseID					-- ID склада
 	,CONVERT(varchar(32), RegSales._Fld2028RRef, 2) AS CustomerID					-- ID контрагента
 	,CONVERT(varchar(32), RegSales._Fld2029RRef, 2) AS TardeShopID					-- ID точки доставки (продажи)
-	,CONVERT(varchar(32), RegSales._Fld2033RRef, 2) AS CreditLineID					-- ID крединого направления
+	,CONVERT(varchar(32), RegSales._Fld2033RRef, 2) AS CreditLineID					-- ID кредитного направления
 	,CONVERT(varchar(32), RegSales._Fld2035RRef, 2) AS RouteID						-- ID марушрта (торгового представителя)
 	,CONVERT(varchar(32), RegSales._Fld2036RRef, 2) AS AgentID						-- ID торгового агента (сотрудника)
-	,CONVERT(varchar(32), RegSales._Fld2027RRef, 2) AS GoodsID						-- ID номенклатуры
+	,CONVERT(varchar(32), RegSales._Fld2027RRef, 2) AS GoodID						-- ID номенклатуры
+	--,CONVERT(varchar(32), RegSales._Fld2027RRef, 2)+'-'+CAST(DATEADD(year, -1*@Offset, CAST(RegSales._Period AS date)) AS varchar) AS GoodDateID	-- ID пары номенклатуры и даты
 	,RegSales._Fld2038 AS Quantity													-- Количество в базовых единицах измерения
-	,RegSales._Fld2039 AS AmountVAT												    -- Сумма НДС
+	,RegSales._Fld2039 AS AmountVAT													-- Сумма НДС
 	,RegSales._Fld2040 AS AmountWithoutDiscount										-- Сумма без скидки
 	,RegSales._Fld2041 AS Amount													-- Сумма
+	,(SELECT TOP 1
+		Cost._Fld1587 AS Ammount
+		FROM dbo._InfoRg1585 AS Cost
+		WHERE Cost._Active = 0x01
+		AND Cost._Fld1586RRef = RegSales._Fld2027RRef
+		AND Cost._Period &lt;= RegSales._Period
+	ORDER BY Cost._Period DESC) CostPrice											-- Себестоимость
 FROM dbo._AccumRg2026 AS RegSales
 LEFT JOIN dbo._Document81 AS DocSales ON DocSales._IDRRef = RegSales._RecorderRRef AND RegSales._RecorderTRef = 0x00000051			-- Документы продаж
 LEFT JOIN dbo._Document1292 AS DocRefunds ON DocRefunds._IDRRef = RegSales._RecorderRRef AND RegSales._RecorderTRef = 0x0000050C	-- Документы возврата
 WHERE RegSales._Active = 0x01
 	AND RegSales._Period BETWEEN @StartDate AND @EndDate</QueryDefinition>
+                  </Source>
+                  <StorageMode valuens="ddl200_200">InMemory</StorageMode>
+                  <ProcessingMode>Regular</ProcessingMode>
+                  <ErrorConfiguration>
+                    <KeyNotFound>IgnoreError</KeyNotFound>
+                    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+                    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+                  </ErrorConfiguration>
+                  <ProactiveCaching>
+                    <SilenceInterval>-PT1S</SilenceInterval>
+                    <Latency>-PT1S</Latency>
+                    <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+                    <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+                    <Source xsi:type="ProactiveCachingInheritedBinding" />
+                  </ProactiveCaching>
+                </Partition>
+              </Partitions>
+              <ProactiveCaching>
+                <SilenceInterval>-PT1S</SilenceInterval>
+                <Latency>-PT1S</Latency>
+                <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+                <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+                <Source xsi:type="ProactiveCachingInheritedBinding" />
+              </ProactiveCaching>
+            </MeasureGroup>
+            <MeasureGroup>
+              <ID>Cost_ba5b515e-2ff0-47ec-bcd9-9b2936191797</ID>
+              <Name>04 Себестоимость</Name>
+              <Measures>
+                <Measure>
+                  <ID>Cost_ba5b515e-2ff0-47ec-bcd9-9b2936191797</ID>
+                  <Name>_Количество 04 Себестоимость</Name>
+                  <AggregateFunction>Count</AggregateFunction>
+                  <DataType>BigInt</DataType>
+                  <Source>
+                    <DataType>BigInt</DataType>
+                    <DataSize>8</DataSize>
+                    <Source xsi:type="RowBinding">
+                      <TableID>Cost_ba5b515e-2ff0-47ec-bcd9-9b2936191797</TableID>
+                    </Source>
+                  </Source>
+                  <Visible>false</Visible>
+                </Measure>
+              </Measures>
+              <StorageMode valuens="ddl200_200">InMemory</StorageMode>
+              <ErrorConfiguration>
+                <KeyNotFound>IgnoreError</KeyNotFound>
+                <KeyDuplicate>ReportAndStop</KeyDuplicate>
+                <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+              </ErrorConfiguration>
+              <ProcessingMode>Regular</ProcessingMode>
+              <Dimensions>
+                <Dimension xsi:type="DegenerateMeasureGroupDimension">
+                  <CubeDimensionID>Cost_ba5b515e-2ff0-47ec-bcd9-9b2936191797</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>RowNumber</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Integer</DataType>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Cost</TableID>
+                            <ColumnID>RowNumber</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                      <Type>Granularity</Type>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Date</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Date</DataType>
+                          <DataSize>-1</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Cost_ba5b515e-2ff0-47ec-bcd9-9b2936191797</TableID>
+                            <ColumnID>Date</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>GoodID</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Cost_ba5b515e-2ff0-47ec-bcd9-9b2936191797</TableID>
+                            <ColumnID>GoodID</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Ammount</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Double</DataType>
+                          <DataSize>-1</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Cost_ba5b515e-2ff0-47ec-bcd9-9b2936191797</TableID>
+                            <ColumnID>Ammount</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Вычисляемый столбец1 1</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Empty</DataType>
+                          <Source xsi:type="ddl200_200:ExpressionBinding">
+                            <Expression>CALCULATE(MAX([Date]),FILTER('04 Себестоимость','04 Себестоимость'[GoodID]="82CE08606E8882E611E44A5289535491"),'04 Себестоимость'[Date]&lt;=[Date])</Expression>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                  </Attributes>
+                  <ddl200_200:ShareDimensionStorage>Shared</ddl200_200:ShareDimensionStorage>
+                </Dimension>
+                <Dimension xsi:type="ReferenceMeasureGroupDimension">
+                  <CubeDimensionID>Goods_1f62a172-7212-49c3-a93d-c32e3d7c1be0</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>RowNumber</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Integer</DataType>
+                          <DataSize>4</DataSize>
+                          <NullProcessing>Error</NullProcessing>
+                          <Source xsi:type="ddl200_200:RowNumberBinding" />
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>ID</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Error</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Goods_1f62a172-7212-49c3-a93d-c32e3d7c1be0</TableID>
+                            <ColumnID>ID</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                      <Type>Granularity</Type>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>ParentID</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Goods_1f62a172-7212-49c3-a93d-c32e3d7c1be0</TableID>
+                            <ColumnID>ParentID</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Code</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Goods_1f62a172-7212-49c3-a93d-c32e3d7c1be0</TableID>
+                            <ColumnID>Code</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Description</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Goods_1f62a172-7212-49c3-a93d-c32e3d7c1be0</TableID>
+                            <ColumnID>Description</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Article</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Goods_1f62a172-7212-49c3-a93d-c32e3d7c1be0</TableID>
+                            <ColumnID>Article</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>BusinessID</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Goods_1f62a172-7212-49c3-a93d-c32e3d7c1be0</TableID>
+                            <ColumnID>BusinessID</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                  </Attributes>
+                  <IntermediateCubeDimensionID>Cost_ba5b515e-2ff0-47ec-bcd9-9b2936191797</IntermediateCubeDimensionID>
+                  <IntermediateGranularityAttributeID>GoodID</IntermediateGranularityAttributeID>
+                  <Materialization>Regular</Materialization>
+                  <ddl300:RelationshipID>174101f6-1ffb-4d26-bd98-436cf72ae0af</ddl300:RelationshipID>
+                </Dimension>
+                <Dimension xsi:type="ReferenceMeasureGroupDimension">
+                  <CubeDimensionID>Calendar_a2616ec2-6d56-4d2c-b015-f1e300f370ff</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>RowNumber</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Integer</DataType>
+                          <DataSize>4</DataSize>
+                          <NullProcessing>Error</NullProcessing>
+                          <Source xsi:type="ddl200_200:RowNumberBinding" />
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Date</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Date</DataType>
+                          <DataSize>-1</DataSize>
+                          <NullProcessing>Error</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Calendar_a2616ec2-6d56-4d2c-b015-f1e300f370ff</TableID>
+                            <ColumnID>Date</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                      <Type>Granularity</Type>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Year</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>BigInt</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Calendar_a2616ec2-6d56-4d2c-b015-f1e300f370ff</TableID>
+                            <ColumnID>Year</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Quarter</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>BigInt</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Calendar_a2616ec2-6d56-4d2c-b015-f1e300f370ff</TableID>
+                            <ColumnID>Quarter</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>NameQuarter</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Calendar_a2616ec2-6d56-4d2c-b015-f1e300f370ff</TableID>
+                            <ColumnID>NameQuarter</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Month 1</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Integer</DataType>
+                          <DataSize>-1</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Calendar_a2616ec2-6d56-4d2c-b015-f1e300f370ff</TableID>
+                            <ColumnID>Month</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Week</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>BigInt</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Calendar_a2616ec2-6d56-4d2c-b015-f1e300f370ff</TableID>
+                            <ColumnID>Week</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>DayOfYear</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>BigInt</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Calendar_a2616ec2-6d56-4d2c-b015-f1e300f370ff</TableID>
+                            <ColumnID>DayOfYear</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>DayOfMonth</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>BigInt</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Calendar_a2616ec2-6d56-4d2c-b015-f1e300f370ff</TableID>
+                            <ColumnID>DayOfMonth</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>NameOfMonth</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Calendar_a2616ec2-6d56-4d2c-b015-f1e300f370ff</TableID>
+                            <ColumnID>NameOfMonth</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Weekday</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Integer</DataType>
+                          <DataSize>-1</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Calendar_a2616ec2-6d56-4d2c-b015-f1e300f370ff</TableID>
+                            <ColumnID>Weekday</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>WeekdayName</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Calendar_a2616ec2-6d56-4d2c-b015-f1e300f370ff</TableID>
+                            <ColumnID>WeekdayName</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                  </Attributes>
+                  <IntermediateCubeDimensionID>Cost_ba5b515e-2ff0-47ec-bcd9-9b2936191797</IntermediateCubeDimensionID>
+                  <IntermediateGranularityAttributeID>Date</IntermediateGranularityAttributeID>
+                  <Materialization>Regular</Materialization>
+                  <ddl300:RelationshipID>0932b29d-442d-4966-8415-d6d36009f39b</ddl300:RelationshipID>
+                </Dimension>
+              </Dimensions>
+              <Partitions>
+                <Partition>
+                  <ID>Cost_ba5b515e-2ff0-47ec-bcd9-9b2936191797</ID>
+                  <Name>Cost</Name>
+                  <Annotations>
+                    <Annotation>
+                      <Name>TableWidgetSerialization</Name>
+                    </Annotation>
+                    <Annotation>
+                      <Name>TableWidgetSourceTable</Name>
+                    </Annotation>
+                    <Annotation>
+                      <Name>QueryEditorSerialization</Name>
+                    </Annotation>
+                    <Annotation>
+                      <Name>IsQueryEditorUsed</Name>
+                      <Value>True</Value>
+                    </Annotation>
+                  </Annotations>
+                  <Source xsi:type="QueryBinding">
+                    <DataSourceID>55e78742-7a14-415d-ade9-8f42bea1a5bb</DataSourceID>
+                    <QueryDefinition>DECLARE @Offset int
+
+SET @Offset = (SELECT TOP 1 Offset FROM dbo._YearOffset)
+
+SELECT
+ DATEADD(year, -1*@Offset, CAST(Cost._Period AS date)) AS Date
+ ,CONVERT(varchar(32), Cost._Fld1586RRef, 2) AS GoodID
+ ,Cost._Fld1587 AS Ammount
+FROM dbo._InfoRg1585 AS Cost
+WHERE Cost._Active = 0x01</QueryDefinition>
                   </Source>
                   <StorageMode valuens="ddl200_200">InMemory</StorageMode>
                   <ProcessingMode>Regular</ProcessingMode>
@@ -10624,6 +11395,120 @@ CREATE MEASURE '01 Продажи'[Количество маршрутов]=DIST
                     </Annotation>
                   </Annotations>
                 </Command>
+                <Command>
+                  <Text>----------------------------------------------------------
+-- PowerPivot measures command (do not modify manually) --
+----------------------------------------------------------
+
+
+CREATE MEASURE '04 Себестоимость'[Средняя себестоимость]=AVERAGE([Себестоимость на дату]);
+</Text>
+                  <Annotations>
+                    <Annotation>
+                      <Name>FullName</Name>
+                      <Value>Средняя себестоимость</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>Table</Name>
+                      <Value>04 Себестоимость</Value>
+                    </Annotation>
+                  </Annotations>
+                </Command>
+                <Command>
+                  <Text>----------------------------------------------------------
+-- PowerPivot measures command (do not modify manually) --
+----------------------------------------------------------
+
+
+CREATE MEASURE '04 Себестоимость'[Максимальная себестоимость]=MAX([Себестоимость на дату]);
+</Text>
+                  <Annotations>
+                    <Annotation>
+                      <Name>FullName</Name>
+                      <Value>Максимальная себестоимость</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>Table</Name>
+                      <Value>04 Себестоимость</Value>
+                    </Annotation>
+                  </Annotations>
+                </Command>
+                <Command>
+                  <Text>----------------------------------------------------------
+-- PowerPivot measures command (do not modify manually) --
+----------------------------------------------------------
+
+
+CREATE MEASURE '04 Себестоимость'[Минимальная себестоимость]=MIN([Себестоимость на дату]);
+</Text>
+                  <Annotations>
+                    <Annotation>
+                      <Name>FullName</Name>
+                      <Value>Минимальная себестоимость</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>Table</Name>
+                      <Value>04 Себестоимость</Value>
+                    </Annotation>
+                  </Annotations>
+                </Command>
+                <Command>
+                  <Text>----------------------------------------------------------
+-- PowerPivot measures command (do not modify manually) --
+----------------------------------------------------------
+
+
+CREATE MEASURE '01 Продажи'[Себестоимость]=SUM([Cost]);
+</Text>
+                  <Annotations>
+                    <Annotation>
+                      <Name>FullName</Name>
+                      <Value>Себестоимость</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>Table</Name>
+                      <Value>01 Продажи</Value>
+                    </Annotation>
+                  </Annotations>
+                </Command>
+                <Command>
+                  <Text>----------------------------------------------------------
+-- PowerPivot measures command (do not modify manually) --
+----------------------------------------------------------
+
+
+CREATE MEASURE '01 Продажи'[Наценка от себестоимости (руб)]=SUM([MarginByCost]);
+</Text>
+                  <Annotations>
+                    <Annotation>
+                      <Name>FullName</Name>
+                      <Value>Наценка от себестоимости (руб)</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>Table</Name>
+                      <Value>01 Продажи</Value>
+                    </Annotation>
+                  </Annotations>
+                </Command>
+                <Command>
+                  <Text>----------------------------------------------------------
+-- PowerPivot measures command (do not modify manually) --
+----------------------------------------------------------
+
+
+CREATE MEASURE '01 Продажи'[Наценка от себестоимости (%)]=SUM([MarginByCost])/SUM([Cost]);
+</Text>
+                  <Annotations>
+                    <Annotation>
+                      <Name>FullName</Name>
+                      <Value>Наценка от себестоимости (%)</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>Table</Name>
+                      <Value>01 Продажи</Value>
+                    </Annotation>
+                  </Annotations>
+                </Command>
               </Commands>
               <CalculationProperties>
                 <CalculationProperty>
@@ -10856,6 +11741,132 @@ CREATE MEASURE '01 Продажи'[Количество маршрутов]=DIST
                   <CalculationReference>[Количество маршрутов]</CalculationReference>
                   <CalculationType>Member</CalculationType>
                   <FormatString>'#,0'</FormatString>
+                </CalculationProperty>
+                <CalculationProperty>
+                  <Annotations>
+                    <Annotation>
+                      <Name>Type</Name>
+                      <Value>User</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>IsPrivate</Name>
+                      <Value>False</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>Format</Name>
+                      <Value>
+                        <Format Format="General" xmlns="" />
+                      </Value>
+                    </Annotation>
+                  </Annotations>
+                  <CalculationReference>[Средняя себестоимость]</CalculationReference>
+                  <CalculationType>Member</CalculationType>
+                  <FormatString>''</FormatString>
+                </CalculationProperty>
+                <CalculationProperty>
+                  <Annotations>
+                    <Annotation>
+                      <Name>Type</Name>
+                      <Value>User</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>IsPrivate</Name>
+                      <Value>False</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>Format</Name>
+                      <Value>
+                        <Format Format="General" xmlns="" />
+                      </Value>
+                    </Annotation>
+                  </Annotations>
+                  <CalculationReference>[Максимальная себестоимость]</CalculationReference>
+                  <CalculationType>Member</CalculationType>
+                  <FormatString>''</FormatString>
+                </CalculationProperty>
+                <CalculationProperty>
+                  <Annotations>
+                    <Annotation>
+                      <Name>Type</Name>
+                      <Value>User</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>IsPrivate</Name>
+                      <Value>False</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>Format</Name>
+                      <Value>
+                        <Format Format="General" xmlns="" />
+                      </Value>
+                    </Annotation>
+                  </Annotations>
+                  <CalculationReference>[Минимальная себестоимость]</CalculationReference>
+                  <CalculationType>Member</CalculationType>
+                  <FormatString>''</FormatString>
+                </CalculationProperty>
+                <CalculationProperty>
+                  <Annotations>
+                    <Annotation>
+                      <Name>Type</Name>
+                      <Value>User</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>IsPrivate</Name>
+                      <Value>False</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>Format</Name>
+                      <Value>
+                        <Format Format="NumberDecimal" Accuracy="2" ThousandSeparator="True" xmlns="" />
+                      </Value>
+                    </Annotation>
+                  </Annotations>
+                  <CalculationReference>[Себестоимость]</CalculationReference>
+                  <CalculationType>Member</CalculationType>
+                  <FormatString>'#,0.00'</FormatString>
+                </CalculationProperty>
+                <CalculationProperty>
+                  <Annotations>
+                    <Annotation>
+                      <Name>Type</Name>
+                      <Value>User</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>IsPrivate</Name>
+                      <Value>False</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>Format</Name>
+                      <Value>
+                        <Format Format="NumberDecimal" Accuracy="2" ThousandSeparator="True" xmlns="" />
+                      </Value>
+                    </Annotation>
+                  </Annotations>
+                  <CalculationReference>[Наценка от себестоимости (руб)]</CalculationReference>
+                  <CalculationType>Member</CalculationType>
+                  <FormatString>'#,0.00'</FormatString>
+                </CalculationProperty>
+                <CalculationProperty>
+                  <Annotations>
+                    <Annotation>
+                      <Name>Type</Name>
+                      <Value>User</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>IsPrivate</Name>
+                      <Value>False</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>Format</Name>
+                      <Value>
+                        <Format Format="Percentage" Accuracy="2" ThousandSeparator="True" xmlns="" />
+                      </Value>
+                    </Annotation>
+                  </Annotations>
+                  <CalculationReference>[Наценка от себестоимости (%)]</CalculationReference>
+                  <CalculationType>Member</CalculationType>
+                  <FormatString>'#,0.00%;-#,0.00%;#,0.00%'</FormatString>
                 </CalculationProperty>
                 <CalculationProperty>
                   <CalculationReference>Measures.[__Не определено ни одной меры]</CalculationReference>
@@ -11271,7 +12282,7 @@ CREATE MEASURE '01 Продажи'[Количество маршрутов]=DIST
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
-                    <xs:element name="Calendar_a2616ec2-6d56-4d2c-b015-f1e300f370ff" msdata:Locale="" msprop:IsLogical="True" msprop:FriendlyName="01 Период" msprop:DbTableName="Calendar" msprop:TableType="View" msprop:Description="Calendar" msprop:QueryDefinition="DECLARE @StartDay Date&#xD;&#xA;DECLARE @EndDay Date&#xD;&#xA;&#xD;&#xA;SET @StartDay = (SELECT TOP 1 DATEADD(year, -1*(SELECT TOP 1 Offset FROM dbo._YearOffset), MIN(CAST(_Period as date))) AS [Date] FROM dbo._AccumRg2026)&#xD;&#xA;SET @EndDay = (SELECT TOP 1 DATEADD(year, -1*(SELECT TOP 1 Offset FROM dbo._YearOffset), MAX(CAST(_Period as date))) AS [Date] FROM dbo._AccumRg2026)&#xD;&#xA;;&#xD;&#xA;WITH Calendar AS &#xD;&#xA;(&#xD;&#xA;SELECT&#xD;&#xA;  @StartDay AS [Date]&#xD;&#xA;UNION ALL&#xD;&#xA;SELECT&#xD;&#xA; DATEADD(DAY, 1, [Date])&#xD;&#xA;FROM Calendar&#xD;&#xA;WHERE [Date] &lt;= @EndDay&#xD;&#xA;)&#xD;&#xA; SELECT&#xD;&#xA; [Date]&#xD;&#xA; ,DATENAME(year, [Date]) AS [Year]&#xD;&#xA; ,DATENAME(quarter, [Date]) AS [Quarter]&#xD;&#xA; ,DATENAME(quarter, [Date])+' квартал' AS [NameQuarter]&#xD;&#xA; ,DATEPART(month, [Date]) AS [Month]&#xD;&#xA; ,DATENAME(month, [Date]) AS [NameOfMonth]&#xD;&#xA; ,DATENAME(week, [Date]) AS [Week]&#xD;&#xA; ,DATENAME(dayofyear, [Date]) AS [DayOfYear]&#xD;&#xA; ,DATENAME(day, [Date]) AS [DayOfMonth]&#xD;&#xA; ,DATEPART(weekday, [Date]) AS [Weekday]&#xD;&#xA; ,DATENAME(weekday, [Date]) AS [WeekdayName]&#xD;&#xA; FROM Calendar&#xD;&#xA; OPTION (MAXRECURSION 7300)">
+                    <xs:element name="Calendar_a2616ec2-6d56-4d2c-b015-f1e300f370ff" msdata:Locale="" msprop:IsLogical="True" msprop:FriendlyName="01 Период" msprop:DbTableName="Calendar" msprop:TableType="View" msprop:Description="Calendar" msprop:QueryDefinition="DECLARE @StartDay Date&#xD;&#xA;DECLARE @EndDay Date&#xD;&#xA;&#xD;&#xA;SET @StartDay = '2013-12-31'--(SELECT TOP 1 DATEADD(year, -1*(SELECT TOP 1 Offset FROM dbo._YearOffset), MIN(CAST(_Period as date))) AS [Date] FROM dbo._AccumRg2026)&#xD;&#xA;SET @EndDay = (SELECT TOP 1 DATEADD(year, -1*(SELECT TOP 1 Offset FROM dbo._YearOffset), MAX(CAST(_Period as date))) AS [Date] FROM dbo._AccumRg2026)&#xD;&#xA;;&#xD;&#xA;WITH Calendar AS &#xD;&#xA;(&#xD;&#xA;SELECT&#xD;&#xA; @StartDay AS [Date]&#xD;&#xA;UNION ALL&#xD;&#xA;SELECT&#xD;&#xA; DATEADD(DAY, 1, [Date])&#xD;&#xA;FROM Calendar&#xD;&#xA;WHERE [Date] &lt;= @EndDay&#xD;&#xA;)&#xD;&#xA;SELECT&#xD;&#xA; [Date]&#xD;&#xA; ,DATENAME(year, [Date]) AS [Year]&#xD;&#xA; ,DATENAME(quarter, [Date]) AS [Quarter]&#xD;&#xA; ,DATENAME(quarter, [Date])+' квартал' AS [NameQuarter]&#xD;&#xA; ,DATEPART(month, [Date]) AS [Month]&#xD;&#xA; ,DATENAME(month, [Date]) AS [NameOfMonth]&#xD;&#xA; ,DATENAME(week, [Date]) AS [Week]&#xD;&#xA; ,DATENAME(dayofyear, [Date]) AS [DayOfYear]&#xD;&#xA; ,DATENAME(day, [Date]) AS [DayOfMonth]&#xD;&#xA; ,DATEPART(weekday, [Date]) AS [Weekday]&#xD;&#xA; ,DATENAME(weekday, [Date]) AS [WeekdayName]&#xD;&#xA;FROM Calendar&#xD;&#xA;OPTION (MAXRECURSION 7300)">
                       <xs:complexType>
                         <xs:sequence>
                           <xs:element name="Date" msprop:DbColumnName="Date" msprop:FriendlyName="Date" type="xs:dateTime" minOccurs="0" />
@@ -11450,7 +12461,7 @@ CREATE MEASURE '01 Продажи'[Количество маршрутов]=DIST
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
-                    <xs:element name="Sales_66bec93a-15a0-4ede-bb32-d916264ea6f3" msdata:Locale="" msprop:IsLogical="True" msprop:FriendlyName="01 Продажи" msprop:DbTableName="Sales" msprop:TableType="View" msprop:Description="Sales" msprop:QueryDefinition="DECLARE @Offset int&#xD;&#xA;DECLARE @StartDate datetime&#xD;&#xA;DECLARE @EndDate datetime&#xD;&#xA;&#xD;&#xA;SET @Offset = (SELECT TOP 1 Offset FROM dbo._YearOffset)&#xD;&#xA;SET @StartDate = DATEADD(year, @Offset, '2014-01-01 00:00:00')&#xD;&#xA;SET @EndDate = DATEADD(year, @Offset, '2014-31-12 23:59:59')&#xD;&#xA;&#xD;&#xA;SELECT&#xD;&#xA; DATEADD(year, -1*@Offset, CAST(RegSales._Period AS date)) AS TransactionDate -- Дата операции&#xD;&#xA; ,CASE&#xD;&#xA;  WHEN RegSales._RecorderTRef = 0x00000051 THEN DocSales._Number&#xD;&#xA;  WHEN RegSales._RecorderTRef = 0x0000050C THEN DocRefunds._Number&#xD;&#xA;  ELSE 'UNKNOW'&#xD;&#xA; END AS DocNumber                -- Номер документа&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2037RRef, 2) AS TransactionTypeID   -- ID типа операции&#xD;&#xA; ,CASE&#xD;&#xA;  WHEN RegSales._RecorderTRef = 0x00000051 THEN CONVERT(varchar(32), DocSales._Fld584RRef, 2)&#xD;&#xA;  WHEN RegSales._RecorderTRef = 0x0000050C THEN CONVERT(varchar(32), DocRefunds._Fld1397RRef, 2)&#xD;&#xA; END AS DocumentTypeID               -- ID типа документа&#xD;&#xA; ,CASE&#xD;&#xA;  WHEN RegSales._RecorderTRef = 0x00000051 THEN CONVERT(varchar(32), DocSales._Fld583RRef, 2)&#xD;&#xA;  WHEN RegSales._RecorderTRef = 0x0000050C THEN CONVERT(varchar(32), DocRefunds._Fld1429RRef, 2)&#xD;&#xA; END AS PaymentMethodID               -- ID спсособа оплаты&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2032RRef, 2) AS BusinessID     -- ID направления бизнеса&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2030RRef, 2) AS CompanyID     -- ID организации&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2031RRef, 2) AS BranchID      -- ID филиала&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2106RRef, 2) AS StorehouseID     -- ID склада&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2028RRef, 2) AS CustomerID     -- ID контрагента&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2029RRef, 2) AS TardeShopID     -- ID точки доставки (продажи)&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2033RRef, 2) AS CreditLineID     -- ID крединого направления&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2035RRef, 2) AS RouteID      -- ID марушрта (торгового представителя)&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2036RRef, 2) AS AgentID      -- ID торгового агента (сотрудника)&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2027RRef, 2) AS GoodsID      -- ID номенклатуры&#xD;&#xA; ,RegSales._Fld2038 AS Quantity             -- Количество в базовых единицах измерения&#xD;&#xA; ,RegSales._Fld2039 AS AmountVAT                -- Сумма НДС&#xD;&#xA; ,RegSales._Fld2040 AS AmountWithoutDiscount          -- Сумма без скидки&#xD;&#xA; ,RegSales._Fld2041 AS Amount             -- Сумма&#xD;&#xA;FROM dbo._AccumRg2026 AS RegSales&#xD;&#xA;LEFT JOIN dbo._Document81 AS DocSales ON DocSales._IDRRef = RegSales._RecorderRRef AND RegSales._RecorderTRef = 0x00000051   -- Документы продаж&#xD;&#xA;LEFT JOIN dbo._Document1292 AS DocRefunds ON DocRefunds._IDRRef = RegSales._RecorderRRef AND RegSales._RecorderTRef = 0x0000050C -- Документы возврата&#xD;&#xA;WHERE RegSales._Active = 0x01&#xD;&#xA; AND RegSales._Period BETWEEN @StartDate AND @EndDate">
+                    <xs:element name="Sales_66bec93a-15a0-4ede-bb32-d916264ea6f3" msdata:Locale="" msprop:IsLogical="True" msprop:FriendlyName="01 Продажи" msprop:DbTableName="Sales" msprop:TableType="View" msprop:Description="Sales" msprop:QueryDefinition="DECLARE @Offset int&#xD;&#xA;DECLARE @StartDate datetime&#xD;&#xA;DECLARE @EndDate datetime&#xD;&#xA;&#xD;&#xA;SET @Offset = (SELECT TOP 1 Offset FROM dbo._YearOffset)&#xD;&#xA;SET @StartDate = DATEADD(year, @Offset, '2014-01-01 00:00:00')&#xD;&#xA;SET @EndDate = DATEADD(year, @Offset, '2014-31-12 23:59:59')&#xD;&#xA;&#xD;&#xA;SELECT&#xD;&#xA; DATEADD(year, -1*@Offset, CAST(RegSales._Period AS date)) AS TransactionDate -- Дата операции&#xD;&#xA; ,CASE&#xD;&#xA;  WHEN RegSales._RecorderTRef = 0x00000051 THEN DocSales._Number&#xD;&#xA;  WHEN RegSales._RecorderTRef = 0x0000050C THEN DocRefunds._Number&#xD;&#xA;  ELSE 'UNKNOW'&#xD;&#xA; END AS DocNumber                -- Номер документа&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2037RRef, 2) AS TransactionTypeID   -- ID типа операции&#xD;&#xA; ,CASE&#xD;&#xA;  WHEN RegSales._RecorderTRef = 0x00000051 THEN CONVERT(varchar(32), DocSales._Fld584RRef, 2)&#xD;&#xA;  WHEN RegSales._RecorderTRef = 0x0000050C THEN CONVERT(varchar(32), DocRefunds._Fld1397RRef, 2)&#xD;&#xA; END AS DocumentTypeID               -- ID типа документа&#xD;&#xA; ,CASE&#xD;&#xA;  WHEN RegSales._RecorderTRef = 0x00000051 THEN CONVERT(varchar(32), DocSales._Fld583RRef, 2)&#xD;&#xA;  WHEN RegSales._RecorderTRef = 0x0000050C THEN CONVERT(varchar(32), DocRefunds._Fld1429RRef, 2)&#xD;&#xA; END AS PaymentMethodID               -- ID спсособа оплаты&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2032RRef, 2) AS BusinessID     -- ID направления бизнеса&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2030RRef, 2) AS CompanyID     -- ID организации&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2031RRef, 2) AS BranchID      -- ID филиала&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2106RRef, 2) AS StorehouseID     -- ID склада&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2028RRef, 2) AS CustomerID     -- ID контрагента&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2029RRef, 2) AS TardeShopID     -- ID точки доставки (продажи)&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2033RRef, 2) AS CreditLineID     -- ID кредитного направления&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2035RRef, 2) AS RouteID      -- ID марушрта (торгового представителя)&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2036RRef, 2) AS AgentID      -- ID торгового агента (сотрудника)&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2027RRef, 2) AS GoodID      -- ID номенклатуры&#xD;&#xA; --,CONVERT(varchar(32), RegSales._Fld2027RRef, 2)+'-'+CAST(DATEADD(year, -1*@Offset, CAST(RegSales._Period AS date)) AS varchar) AS GoodDateID -- ID пары номенклатуры и даты&#xD;&#xA; ,RegSales._Fld2038 AS Quantity             -- Количество в базовых единицах измерения&#xD;&#xA; ,RegSales._Fld2039 AS AmountVAT             -- Сумма НДС&#xD;&#xA; ,RegSales._Fld2040 AS AmountWithoutDiscount          -- Сумма без скидки&#xD;&#xA; ,RegSales._Fld2041 AS Amount             -- Сумма&#xD;&#xA; ,(SELECT TOP 1&#xD;&#xA;  Cost._Fld1587 AS Ammount&#xD;&#xA;  FROM dbo._InfoRg1585 AS Cost&#xD;&#xA;  WHERE Cost._Active = 0x01&#xD;&#xA;  AND Cost._Fld1586RRef = RegSales._Fld2027RRef&#xD;&#xA;  AND Cost._Period &lt;= RegSales._Period&#xD;&#xA; ORDER BY Cost._Period DESC) CostPrice           -- Себестоимость&#xD;&#xA;FROM dbo._AccumRg2026 AS RegSales&#xD;&#xA;LEFT JOIN dbo._Document81 AS DocSales ON DocSales._IDRRef = RegSales._RecorderRRef AND RegSales._RecorderTRef = 0x00000051   -- Документы продаж&#xD;&#xA;LEFT JOIN dbo._Document1292 AS DocRefunds ON DocRefunds._IDRRef = RegSales._RecorderRRef AND RegSales._RecorderTRef = 0x0000050C -- Документы возврата&#xD;&#xA;WHERE RegSales._Active = 0x01&#xD;&#xA; AND RegSales._Period BETWEEN @StartDate AND @EndDate">
                       <xs:complexType>
                         <xs:sequence>
                           <xs:element name="TransactionDate" msprop:DbColumnName="TransactionDate" msprop:FriendlyName="TransactionDate" type="xs:dateTime" minOccurs="0" />
@@ -11545,17 +12556,33 @@ CREATE MEASURE '01 Продажи'[Количество маршрутов]=DIST
                               </xs:restriction>
                             </xs:simpleType>
                           </xs:element>
-                          <xs:element name="GoodsID" msprop:DbColumnName="GoodsID" msprop:FriendlyName="GoodsID" minOccurs="0">
+                          <xs:element name="Quantity" msprop:DbColumnName="Quantity" msprop:FriendlyName="Quantity" type="xs:decimal" minOccurs="0" />
+                          <xs:element name="AmountVAT" msprop:DbColumnName="AmountVAT" msprop:FriendlyName="AmountVAT" type="xs:decimal" minOccurs="0" />
+                          <xs:element name="AmountWithoutDiscount" msprop:DbColumnName="AmountWithoutDiscount" msprop:FriendlyName="AmountWithoutDiscount" type="xs:decimal" minOccurs="0" />
+                          <xs:element name="Amount" msprop:DbColumnName="Amount" msprop:FriendlyName="Amount" type="xs:decimal" minOccurs="0" />
+                          <xs:element name="GoodID" msprop:DbColumnName="GoodID" msprop:FriendlyName="GoodID" minOccurs="0">
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
                                 <xs:maxLength value="32768" />
                               </xs:restriction>
                             </xs:simpleType>
                           </xs:element>
-                          <xs:element name="Quantity" msprop:DbColumnName="Quantity" msprop:FriendlyName="Quantity" type="xs:decimal" minOccurs="0" />
-                          <xs:element name="AmountVAT" msprop:DbColumnName="AmountVAT" msprop:FriendlyName="AmountVAT" type="xs:decimal" minOccurs="0" />
-                          <xs:element name="AmountWithoutDiscount" msprop:DbColumnName="AmountWithoutDiscount" msprop:FriendlyName="AmountWithoutDiscount" type="xs:decimal" minOccurs="0" />
-                          <xs:element name="Amount" msprop:DbColumnName="Amount" msprop:FriendlyName="Amount" type="xs:decimal" minOccurs="0" />
+                          <xs:element name="CostPrice" msprop:DbColumnName="CostPrice" msprop:FriendlyName="CostPrice" type="xs:decimal" minOccurs="0" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Cost_ba5b515e-2ff0-47ec-bcd9-9b2936191797" msdata:Locale="" msprop:IsLogical="True" msprop:FriendlyName="04 Себестоимость" msprop:DbTableName="Cost" msprop:TableType="View" msprop:Description="Cost" msprop:QueryDefinition="DECLARE @Offset int&#xD;&#xA;&#xD;&#xA;SET @Offset = (SELECT TOP 1 Offset FROM dbo._YearOffset)&#xD;&#xA;&#xD;&#xA;SELECT&#xD;&#xA; DATEADD(year, -1*@Offset, CAST(Cost._Period AS date)) AS Date&#xD;&#xA; ,CONVERT(varchar(32), Cost._Fld1586RRef, 2) AS GoodID&#xD;&#xA; ,Cost._Fld1587 AS Ammount&#xD;&#xA;FROM dbo._InfoRg1585 AS Cost&#xD;&#xA;WHERE Cost._Active = 0x01">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Date" msprop:DbColumnName="Date" msprop:FriendlyName="Date" type="xs:dateTime" minOccurs="0" />
+                          <xs:element name="GoodID" msprop:DbColumnName="GoodID" msprop:FriendlyName="GoodID" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:maxLength value="32768" />
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="Ammount" msprop:DbColumnName="Ammount" msprop:FriendlyName="Ammount" type="xs:decimal" minOccurs="0" />
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
