@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Измерения">
+  <Items>
+    <LogicalFolder Name="Соединения" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="V-APP8283:sa">
+          <Created>2014-11-19T18:09:51.1984207+03:00</Created>
+          <Type>SQL</Type>
+          <Server>V-APP8283</Server>
+          <UserName>sa</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName />
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Запросы" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="01 Периоды.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>01 Периоды.sql</FullPath>
+        </FileNode>
+        <FileNode Name="02 Направления бизнеса.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>02 Направления бизнеса.sql</FullPath>
+        </FileNode>
+        <FileNode Name="03 Филиалы.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>03 Филиалы.sql</FullPath>
+        </FileNode>
+        <FileNode Name="04 Организации.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>04 Организации.sql</FullPath>
+        </FileNode>
+        <FileNode Name="05 Контрагенты.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>05 Контрагенты.sql</FullPath>
+        </FileNode>
+        <FileNode Name="06 Торговые точки.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>06 Торговые точки.sql</FullPath>
+        </FileNode>
+        <FileNode Name="07 Маршруты.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>07 Маршруты.sql</FullPath>
+        </FileNode>
+        <FileNode Name="07-01 Команды торговых агентов.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>07-01 Команды торговых агентов.sql</FullPath>
+        </FileNode>
+        <FileNode Name="07-01-01 Системы мобильной торговли.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>07-01-01 Системы мобильной торговли.sql</FullPath>
+        </FileNode>
+        <FileNode Name="08 Кредитные направления.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>08 Кредитные направления.sql</FullPath>
+        </FileNode>
+        <FileNode Name="09 Склады.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>09 Склады.sql</FullPath>
+        </FileNode>
+        <FileNode Name="10 Типы цен.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>10 Типы цен.sql</FullPath>
+        </FileNode>
+        <FileNode Name="11 Сотрудники.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>11 Сотрудники.sql</FullPath>
+        </FileNode>
+        <FileNode Name="12 Виды операций.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>12 Виды операций.sql</FullPath>
+        </FileNode>
+        <FileNode Name="13 Типы документов.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>13 Типы документов.sql</FullPath>
+        </FileNode>
+        <FileNode Name="14 Типы оплат.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>14 Типы оплат.sql</FullPath>
+        </FileNode>
+        <FileNode Name="20 Номенклатура.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>20 Номенклатура.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Разное" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+</SqlWorkbenchSqlProject>
