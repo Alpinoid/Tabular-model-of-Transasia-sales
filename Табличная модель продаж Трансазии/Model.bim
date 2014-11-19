@@ -1849,6 +1849,7 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
               <AttributeRelationships>
                 <AttributeRelationship>
                   <AttributeID>ID</AttributeID>
+                  <Cardinality>One</Cardinality>
                   <OverrideBehavior>None</OverrideBehavior>
                   <Name>ID_</Name>
                 </AttributeRelationship>
@@ -1881,6 +1882,7 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
                 <KeyColumn>
                   <DataType>WChar</DataType>
                   <DataSize>32768</DataSize>
+                  <NullProcessing>Error</NullProcessing>
                   <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
                   <Source xsi:type="ColumnBinding">
                     <TableID>PriceTypes_aedc92ca-e002-4f85-a82d-3078b2efbfd9</TableID>
@@ -4007,19 +4009,19 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
                   <Name>GoodID</Name>
                 </AttributeRelationship>
                 <AttributeRelationship>
-                  <AttributeID>CostPrice</AttributeID>
-                  <OverrideBehavior>None</OverrideBehavior>
-                  <Name>CostPrice</Name>
-                </AttributeRelationship>
-                <AttributeRelationship>
-                  <AttributeID>Вычисляемый столбец1 1</AttributeID>
-                  <OverrideBehavior>None</OverrideBehavior>
-                  <Name>Cost</Name>
-                </AttributeRelationship>
-                <AttributeRelationship>
                   <AttributeID>Вычисляемый столбец1 2</AttributeID>
                   <OverrideBehavior>None</OverrideBehavior>
                   <Name>MarginByCost</Name>
+                </AttributeRelationship>
+                <AttributeRelationship>
+                  <AttributeID>TypePriceID</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>TypePriceID</Name>
+                </AttributeRelationship>
+                <AttributeRelationship>
+                  <AttributeID>Cost</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>Cost</Name>
                 </AttributeRelationship>
               </AttributeRelationships>
               <OrderBy>Key</OrderBy>
@@ -4758,59 +4760,6 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
               <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
             </Attribute>
             <Attribute>
-              <ID>CostPrice</ID>
-              <Name>CostPrice</Name>
-              <KeyColumns>
-                <KeyColumn>
-                  <DataType>Double</DataType>
-                  <DataSize>-1</DataSize>
-                  <NullProcessing>Preserve</NullProcessing>
-                  <Source xsi:type="ColumnBinding">
-                    <TableID>Sales_66bec93a-15a0-4ede-bb32-d916264ea6f3</TableID>
-                    <ColumnID>CostPrice</ColumnID>
-                  </Source>
-                </KeyColumn>
-              </KeyColumns>
-              <NameColumn>
-                <DataType>WChar</DataType>
-                <DataSize>-1</DataSize>
-                <NullProcessing>ZeroOrBlank</NullProcessing>
-                <Source xsi:type="ColumnBinding">
-                  <TableID>Sales_66bec93a-15a0-4ede-bb32-d916264ea6f3</TableID>
-                  <ColumnID>CostPrice</ColumnID>
-                </Source>
-              </NameColumn>
-              <OrderBy>Key</OrderBy>
-              <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
-            </Attribute>
-            <Attribute>
-              <Annotations>
-                <Annotation>
-                  <Name>Format</Name>
-                  <Value>
-                    <Format Format="General" xmlns="" />
-                  </Value>
-                </Annotation>
-              </Annotations>
-              <ID>Вычисляемый столбец1 1</ID>
-              <Name>Cost</Name>
-              <KeyColumns>
-                <KeyColumn>
-                  <DataType>Empty</DataType>
-                  <Source xsi:type="ddl200_200:ExpressionBinding">
-                    <Expression>[Quantity]*[CostPrice]</Expression>
-                  </Source>
-                </KeyColumn>
-              </KeyColumns>
-              <NameColumn>
-                <DataType>WChar</DataType>
-                <Source xsi:type="ddl200_200:ExpressionBinding">
-                  <Expression>[Quantity]*[CostPrice]</Expression>
-                </Source>
-              </NameColumn>
-              <OrderBy>Key</OrderBy>
-            </Attribute>
-            <Attribute>
               <Annotations>
                 <Annotation>
                   <Name>Format</Name>
@@ -4833,6 +4782,58 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
                 <DataType>WChar</DataType>
                 <Source xsi:type="ddl200_200:ExpressionBinding">
                   <Expression>[Amount]-[Cost]</Expression>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+              <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+            </Attribute>
+            <Attribute>
+              <ID>TypePriceID</ID>
+              <Name>TypePriceID</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>32768</DataSize>
+                  <NullProcessing>Preserve</NullProcessing>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>Sales_66bec93a-15a0-4ede-bb32-d916264ea6f3</TableID>
+                    <ColumnID>TypePriceID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>32768</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>Sales_66bec93a-15a0-4ede-bb32-d916264ea6f3</TableID>
+                  <ColumnID>TypePriceID</ColumnID>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+              <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+            </Attribute>
+            <Attribute>
+              <ID>Cost</ID>
+              <Name>Cost</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Double</DataType>
+                  <DataSize>-1</DataSize>
+                  <NullProcessing>Preserve</NullProcessing>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>Sales_66bec93a-15a0-4ede-bb32-d916264ea6f3</TableID>
+                    <ColumnID>Cost</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>-1</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>Sales_66bec93a-15a0-4ede-bb32-d916264ea6f3</TableID>
+                  <ColumnID>Cost</ColumnID>
                 </Source>
               </NameColumn>
               <OrderBy>Key</OrderBy>
@@ -5146,6 +5147,52 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
                 </Attributes>
               </ddl300_300:ToRelationshipEnd>
             </ddl300_300:Relationship>
+            <ddl300_300:Relationship>
+              <ID>847ce2b7-c50e-40c1-994b-20734b68bcb4</ID>
+              <ddl300_300:FromRelationshipEnd>
+                <ddl300_300:Multiplicity>Many</ddl300_300:Multiplicity>
+                <ddl300:VisualizationProperties />
+                <DimensionID>Sales_66bec93a-15a0-4ede-bb32-d916264ea6f3</DimensionID>
+                <Attributes>
+                  <Attribute>
+                    <AttributeID>TypePriceID</AttributeID>
+                  </Attribute>
+                </Attributes>
+              </ddl300_300:FromRelationshipEnd>
+              <ddl300_300:ToRelationshipEnd>
+                <ddl300_300:Multiplicity>One</ddl300_300:Multiplicity>
+                <ddl300:VisualizationProperties />
+                <DimensionID>PriceTypes_aedc92ca-e002-4f85-a82d-3078b2efbfd9</DimensionID>
+                <Attributes>
+                  <Attribute>
+                    <AttributeID>ID</AttributeID>
+                  </Attribute>
+                </Attributes>
+              </ddl300_300:ToRelationshipEnd>
+            </ddl300_300:Relationship>
+            <ddl300_300:Relationship>
+              <ID>8cae9507-b729-49b7-8e2d-94de1a025151</ID>
+              <ddl300_300:FromRelationshipEnd>
+                <ddl300_300:Multiplicity>Many</ddl300_300:Multiplicity>
+                <ddl300:VisualizationProperties />
+                <DimensionID>Sales_66bec93a-15a0-4ede-bb32-d916264ea6f3</DimensionID>
+                <Attributes>
+                  <Attribute>
+                    <AttributeID>AgentID</AttributeID>
+                  </Attribute>
+                </Attributes>
+              </ddl300_300:FromRelationshipEnd>
+              <ddl300_300:ToRelationshipEnd>
+                <ddl300_300:Multiplicity>One</ddl300_300:Multiplicity>
+                <ddl300:VisualizationProperties />
+                <DimensionID>11 Сотрудники_8e8ae07b-ee30-4a02-b17f-adebca7e9cc4</DimensionID>
+                <Attributes>
+                  <Attribute>
+                    <AttributeID>ID</AttributeID>
+                  </Attribute>
+                </Attributes>
+              </ddl300_300:ToRelationshipEnd>
+            </ddl300_300:Relationship>
           </ddl300_300:Relationships>
         </Dimension>
         <Dimension>
@@ -5413,6 +5460,155 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
               </ddl300_300:ToRelationshipEnd>
             </ddl300_300:Relationship>
           </ddl300_300:Relationships>
+        </Dimension>
+        <Dimension>
+          <ID>11 Сотрудники_8e8ae07b-ee30-4a02-b17f-adebca7e9cc4</ID>
+          <Name>11 Сотрудники</Name>
+          <Annotations>
+            <Annotation>
+              <Name>IsQueryEditorUsed</Name>
+              <Value>True</Value>
+            </Annotation>
+            <Annotation>
+              <Name>QueryEditorSerialization</Name>
+            </Annotation>
+            <Annotation>
+              <Name>TableWidgetSerialization</Name>
+            </Annotation>
+            <Annotation>
+              <Name>DataMarketWebBaseUrl</Name>
+            </Annotation>
+            <Annotation>
+              <Name>DataMarketWebQueryUrl</Name>
+            </Annotation>
+          </Annotations>
+          <Source xsi:type="DataSourceViewBinding">
+            <DataSourceViewID>Sandbox</DataSourceViewID>
+          </Source>
+          <UnknownMember valuens="ddl200_200">AutomaticNull</UnknownMember>
+          <ErrorConfiguration>
+            <KeyNotFound>IgnoreError</KeyNotFound>
+            <KeyDuplicate>ReportAndStop</KeyDuplicate>
+            <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+          </ErrorConfiguration>
+          <StorageMode valuens="ddl200_200">InMemory</StorageMode>
+          <Language>1049</Language>
+          <UnknownMemberName>Unknown</UnknownMemberName>
+          <Attributes>
+            <Attribute>
+              <ID>RowNumber</ID>
+              <Name>RowNumber</Name>
+              <Type valuens="ddl200_200">RowNumber</Type>
+              <Usage>Key</Usage>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <DataSize>4</DataSize>
+                  <NullProcessing>Error</NullProcessing>
+                  <Source xsi:type="ddl200_200:RowNumberBinding" />
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>4</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <Source xsi:type="ddl200_200:RowNumberBinding" />
+              </NameColumn>
+              <AttributeRelationships>
+                <AttributeRelationship>
+                  <AttributeID>ID</AttributeID>
+                  <Cardinality>One</Cardinality>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>ID_</Name>
+                </AttributeRelationship>
+                <AttributeRelationship>
+                  <AttributeID>Description</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>Сотрудник</Name>
+                </AttributeRelationship>
+              </AttributeRelationships>
+              <OrderBy>Key</OrderBy>
+              <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+            </Attribute>
+            <Attribute>
+              <Annotations>
+                <Annotation>
+                  <Name>Format</Name>
+                  <Value>
+                    <Format Format="Text" xmlns="" />
+                  </Value>
+                </Annotation>
+              </Annotations>
+              <ID>ID</ID>
+              <Name>ID</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>32768</DataSize>
+                  <NullProcessing>Error</NullProcessing>
+                  <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>_x0031_1_x0020_Сотрудники_8e8ae07b-ee30-4a02-b17f-adebca7e9cc4</TableID>
+                    <ColumnID>ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>32768</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>_x0031_1_x0020_Сотрудники_8e8ae07b-ee30-4a02-b17f-adebca7e9cc4</TableID>
+                  <ColumnID>ID</ColumnID>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+              <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+            </Attribute>
+            <Attribute>
+              <Annotations>
+                <Annotation>
+                  <Name>Format</Name>
+                  <Value>
+                    <Format Format="Text" xmlns="" />
+                  </Value>
+                </Annotation>
+              </Annotations>
+              <ID>Description</ID>
+              <Name>Сотрудник</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>32768</DataSize>
+                  <NullProcessing>Preserve</NullProcessing>
+                  <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>_x0031_1_x0020_Сотрудники_8e8ae07b-ee30-4a02-b17f-adebca7e9cc4</TableID>
+                    <ColumnID>Description</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>32768</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>_x0031_1_x0020_Сотрудники_8e8ae07b-ee30-4a02-b17f-adebca7e9cc4</TableID>
+                  <ColumnID>Description</ColumnID>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+            </Attribute>
+          </Attributes>
+          <ProactiveCaching>
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" />
+          </ProactiveCaching>
         </Dimension>
       </Dimensions>
       <Cubes>
@@ -6010,14 +6206,15 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
                   <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
                 </Attribute>
                 <Attribute>
-                  <AttributeID>CostPrice</AttributeID>
+                  <AttributeID>Вычисляемый столбец1 2</AttributeID>
                   <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
                 </Attribute>
                 <Attribute>
-                  <AttributeID>Вычисляемый столбец1 1</AttributeID>
+                  <AttributeID>TypePriceID</AttributeID>
+                  <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
                 </Attribute>
                 <Attribute>
-                  <AttributeID>Вычисляемый столбец1 2</AttributeID>
+                  <AttributeID>Cost</AttributeID>
                   <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
                 </Attribute>
               </Attributes>
@@ -6045,6 +6242,24 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
                 <Attribute>
                   <AttributeID>Вычисляемый столбец1 1</AttributeID>
                   <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <ID>11 Сотрудники_8e8ae07b-ee30-4a02-b17f-adebca7e9cc4</ID>
+              <Name>11 Сотрудники</Name>
+              <DimensionID>11 Сотрудники_8e8ae07b-ee30-4a02-b17f-adebca7e9cc4</DimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>RowNumber</AttributeID>
+                  <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>ID</AttributeID>
+                  <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Description</AttributeID>
                 </Attribute>
               </Attributes>
             </Dimension>
@@ -9386,7 +9601,32 @@ SELECT
                       </KeyColumns>
                     </Attribute>
                     <Attribute>
-                      <AttributeID>CostPrice</AttributeID>
+                      <AttributeID>Вычисляемый столбец1 2</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Empty</DataType>
+                          <Source xsi:type="ddl200_200:ExpressionBinding">
+                            <Expression>[Amount]-[Cost]</Expression>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>TypePriceID</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Sales_66bec93a-15a0-4ede-bb32-d916264ea6f3</TableID>
+                            <ColumnID>TypePriceID</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Cost</AttributeID>
                       <KeyColumns>
                         <KeyColumn>
                           <DataType>Double</DataType>
@@ -9394,29 +9634,7 @@ SELECT
                           <NullProcessing>Preserve</NullProcessing>
                           <Source xsi:type="ColumnBinding">
                             <TableID>Sales_66bec93a-15a0-4ede-bb32-d916264ea6f3</TableID>
-                            <ColumnID>CostPrice</ColumnID>
-                          </Source>
-                        </KeyColumn>
-                      </KeyColumns>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>Вычисляемый столбец1 1</AttributeID>
-                      <KeyColumns>
-                        <KeyColumn>
-                          <DataType>Empty</DataType>
-                          <Source xsi:type="ddl200_200:ExpressionBinding">
-                            <Expression>[Quantity]*[CostPrice]</Expression>
-                          </Source>
-                        </KeyColumn>
-                      </KeyColumns>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>Вычисляемый столбец1 2</AttributeID>
-                      <KeyColumns>
-                        <KeyColumn>
-                          <DataType>Empty</DataType>
-                          <Source xsi:type="ddl200_200:ExpressionBinding">
-                            <Expression>[Amount]-[Cost]</Expression>
+                            <ColumnID>Cost</ColumnID>
                           </Source>
                         </KeyColumn>
                       </KeyColumns>
@@ -10628,6 +10846,122 @@ SELECT
                   <Materialization>Regular</Materialization>
                   <ddl300:RelationshipID>2a728f56-5240-4062-bf59-2db7d49311b1</ddl300:RelationshipID>
                 </Dimension>
+                <Dimension xsi:type="ReferenceMeasureGroupDimension">
+                  <CubeDimensionID>PriceTypes_aedc92ca-e002-4f85-a82d-3078b2efbfd9</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>RowNumber</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Integer</DataType>
+                          <DataSize>4</DataSize>
+                          <NullProcessing>Error</NullProcessing>
+                          <Source xsi:type="ddl200_200:RowNumberBinding" />
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>ID</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Error</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>PriceTypes_aedc92ca-e002-4f85-a82d-3078b2efbfd9</TableID>
+                            <ColumnID>ID</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                      <Type>Granularity</Type>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Description</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>PriceTypes_aedc92ca-e002-4f85-a82d-3078b2efbfd9</TableID>
+                            <ColumnID>Description</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Business</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>PriceTypes_aedc92ca-e002-4f85-a82d-3078b2efbfd9</TableID>
+                            <ColumnID>Business</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                  </Attributes>
+                  <IntermediateCubeDimensionID>Sales_66bec93a-15a0-4ede-bb32-d916264ea6f3</IntermediateCubeDimensionID>
+                  <IntermediateGranularityAttributeID>TypePriceID</IntermediateGranularityAttributeID>
+                  <Materialization>Regular</Materialization>
+                  <ddl300:RelationshipID>847ce2b7-c50e-40c1-994b-20734b68bcb4</ddl300:RelationshipID>
+                </Dimension>
+                <Dimension xsi:type="ReferenceMeasureGroupDimension">
+                  <CubeDimensionID>11 Сотрудники_8e8ae07b-ee30-4a02-b17f-adebca7e9cc4</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>RowNumber</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Integer</DataType>
+                          <DataSize>4</DataSize>
+                          <NullProcessing>Error</NullProcessing>
+                          <Source xsi:type="ddl200_200:RowNumberBinding" />
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>ID</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Error</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>_x0031_1_x0020_Сотрудники_8e8ae07b-ee30-4a02-b17f-adebca7e9cc4</TableID>
+                            <ColumnID>ID</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                      <Type>Granularity</Type>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Description</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>_x0031_1_x0020_Сотрудники_8e8ae07b-ee30-4a02-b17f-adebca7e9cc4</TableID>
+                            <ColumnID>Description</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                  </Attributes>
+                  <IntermediateCubeDimensionID>Sales_66bec93a-15a0-4ede-bb32-d916264ea6f3</IntermediateCubeDimensionID>
+                  <IntermediateGranularityAttributeID>AgentID</IntermediateGranularityAttributeID>
+                  <Materialization>Regular</Materialization>
+                  <ddl300:RelationshipID>8cae9507-b729-49b7-8e2d-94de1a025151</ddl300:RelationshipID>
+                </Dimension>
               </Dimensions>
               <Partitions>
                 <Partition>
@@ -10683,8 +11017,8 @@ SELECT
 	,CONVERT(varchar(32), RegSales._Fld2033RRef, 2) AS CreditLineID					-- ID кредитного направления
 	,CONVERT(varchar(32), RegSales._Fld2035RRef, 2) AS RouteID						-- ID марушрта (торгового представителя)
 	,CONVERT(varchar(32), RegSales._Fld2036RRef, 2) AS AgentID						-- ID торгового агента (сотрудника)
+	,CONVERT(varchar(32), RegSales._Fld2243RRef, 2) AS TypePriceID					-- ID типа цены
 	,CONVERT(varchar(32), RegSales._Fld2027RRef, 2) AS GoodID						-- ID номенклатуры
-	--,CONVERT(varchar(32), RegSales._Fld2027RRef, 2)+'-'+CAST(DATEADD(year, -1*@Offset, CAST(RegSales._Period AS date)) AS varchar) AS GoodDateID	-- ID пары номенклатуры и даты
 	,RegSales._Fld2038 AS Quantity													-- Количество в базовых единицах измерения
 	,RegSales._Fld2039 AS AmountVAT													-- Сумма НДС
 	,RegSales._Fld2040 AS AmountWithoutDiscount										-- Сумма без скидки
@@ -10695,7 +11029,7 @@ SELECT
 		WHERE Cost._Active = 0x01
 		AND Cost._Fld1586RRef = RegSales._Fld2027RRef
 		AND Cost._Period &lt;= RegSales._Period
-	ORDER BY Cost._Period DESC) CostPrice											-- Себестоимость
+	ORDER BY Cost._Period DESC) * RegSales._Fld2038 AS Cost							-- Сумма себестоимости
 FROM dbo._AccumRg2026 AS RegSales
 LEFT JOIN dbo._Document81 AS DocSales ON DocSales._IDRRef = RegSales._RecorderRRef AND RegSales._RecorderTRef = 0x00000051			-- Документы продаж
 LEFT JOIN dbo._Document1292 AS DocRefunds ON DocRefunds._IDRRef = RegSales._RecorderRRef AND RegSales._RecorderTRef = 0x0000050C	-- Документы возврата
@@ -11172,6 +11506,135 @@ WHERE Cost._Active = 0x01</QueryDefinition>
                 <Source xsi:type="ProactiveCachingInheritedBinding" />
               </ProactiveCaching>
             </MeasureGroup>
+            <MeasureGroup>
+              <ID>11 Сотрудники_8e8ae07b-ee30-4a02-b17f-adebca7e9cc4</ID>
+              <Name>11 Сотрудники</Name>
+              <Measures>
+                <Measure>
+                  <ID>11 Сотрудники_8e8ae07b-ee30-4a02-b17f-adebca7e9cc4</ID>
+                  <Name>_Количество 11 Сотрудники</Name>
+                  <AggregateFunction>Count</AggregateFunction>
+                  <DataType>BigInt</DataType>
+                  <Source>
+                    <DataType>BigInt</DataType>
+                    <DataSize>8</DataSize>
+                    <Source xsi:type="RowBinding">
+                      <TableID>_x0031_1_x0020_Сотрудники_8e8ae07b-ee30-4a02-b17f-adebca7e9cc4</TableID>
+                    </Source>
+                  </Source>
+                  <Visible>false</Visible>
+                </Measure>
+              </Measures>
+              <StorageMode valuens="ddl200_200">InMemory</StorageMode>
+              <ErrorConfiguration>
+                <KeyNotFound>IgnoreError</KeyNotFound>
+                <KeyDuplicate>ReportAndStop</KeyDuplicate>
+                <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+              </ErrorConfiguration>
+              <ProcessingMode>Regular</ProcessingMode>
+              <Dimensions>
+                <Dimension xsi:type="DegenerateMeasureGroupDimension">
+                  <CubeDimensionID>11 Сотрудники_8e8ae07b-ee30-4a02-b17f-adebca7e9cc4</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>RowNumber</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Integer</DataType>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>_x0031_1_x0020_Сотрудники</TableID>
+                            <ColumnID>RowNumber</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                      <Type>Granularity</Type>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>ID</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Error</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>_x0031_1_x0020_Сотрудники_8e8ae07b-ee30-4a02-b17f-adebca7e9cc4</TableID>
+                            <ColumnID>ID</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Description</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>_x0031_1_x0020_Сотрудники_8e8ae07b-ee30-4a02-b17f-adebca7e9cc4</TableID>
+                            <ColumnID>Description</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                  </Attributes>
+                  <ddl200_200:ShareDimensionStorage>Shared</ddl200_200:ShareDimensionStorage>
+                </Dimension>
+              </Dimensions>
+              <Partitions>
+                <Partition>
+                  <ID>11 Сотрудники_8e8ae07b-ee30-4a02-b17f-adebca7e9cc4</ID>
+                  <Name>11 Сотрудники</Name>
+                  <Annotations>
+                    <Annotation>
+                      <Name>IsQueryEditorUsed</Name>
+                      <Value>True</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>QueryEditorSerialization</Name>
+                    </Annotation>
+                    <Annotation>
+                      <Name>TableWidgetSerialization</Name>
+                    </Annotation>
+                  </Annotations>
+                  <Source xsi:type="QueryBinding">
+                    <DataSourceID>55e78742-7a14-415d-ade9-8f42bea1a5bb</DataSourceID>
+                    <QueryDefinition>SELECT
+	CONVERT(varchar(32), Element._IDRRef, 2) AS ID
+	,Element._Description AS Description
+FROM dbo._Reference64 AS Element
+WHERE Element._Folder = 0x01
+UNION ALL
+SELECT
+	'00000000000000000000000000000000' AS ID
+	,'Без сотрудника' AS Description</QueryDefinition>
+                  </Source>
+                  <StorageMode valuens="ddl200_200">InMemory</StorageMode>
+                  <ProcessingMode>Regular</ProcessingMode>
+                  <ErrorConfiguration>
+                    <KeyNotFound>IgnoreError</KeyNotFound>
+                    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+                    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+                  </ErrorConfiguration>
+                  <ProactiveCaching>
+                    <SilenceInterval>-PT1S</SilenceInterval>
+                    <Latency>-PT1S</Latency>
+                    <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+                    <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+                    <Source xsi:type="ProactiveCachingInheritedBinding" />
+                  </ProactiveCaching>
+                </Partition>
+              </Partitions>
+              <ProactiveCaching>
+                <SilenceInterval>-PT1S</SilenceInterval>
+                <Latency>-PT1S</Latency>
+                <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+                <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+                <Source xsi:type="ProactiveCachingInheritedBinding" />
+              </ProactiveCaching>
+            </MeasureGroup>
           </MeasureGroups>
           <Source>
             <DataSourceViewID>Sandbox</DataSourceViewID>
@@ -11249,12 +11712,12 @@ CREATE MEASURE '01 Продажи'[Сумма без скидки]=SUM([AmountWi
 ----------------------------------------------------------
 
 
-CREATE MEASURE '01 Продажи'[Сумма]=SUM([Amount]);
+CREATE MEASURE '01 Продажи'[Сумма продаж]=SUM([Amount]);
 </Text>
                   <Annotations>
                     <Annotation>
                       <Name>FullName</Name>
-                      <Value>Сумма</Value>
+                      <Value>Сумма продаж</Value>
                     </Annotation>
                     <Annotation>
                       <Name>Table</Name>
@@ -11458,25 +11921,6 @@ CREATE MEASURE '04 Себестоимость'[Минимальная себес
 ----------------------------------------------------------
 
 
-CREATE MEASURE '01 Продажи'[Себестоимость]=SUM([Cost]);
-</Text>
-                  <Annotations>
-                    <Annotation>
-                      <Name>FullName</Name>
-                      <Value>Себестоимость</Value>
-                    </Annotation>
-                    <Annotation>
-                      <Name>Table</Name>
-                      <Value>01 Продажи</Value>
-                    </Annotation>
-                  </Annotations>
-                </Command>
-                <Command>
-                  <Text>----------------------------------------------------------
--- PowerPivot measures command (do not modify manually) --
-----------------------------------------------------------
-
-
 CREATE MEASURE '01 Продажи'[Наценка от себестоимости (руб)]=SUM([MarginByCost]);
 </Text>
                   <Annotations>
@@ -11502,6 +11946,25 @@ CREATE MEASURE '01 Продажи'[Наценка от себестоимост�
                     <Annotation>
                       <Name>FullName</Name>
                       <Value>Наценка от себестоимости (%)</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>Table</Name>
+                      <Value>01 Продажи</Value>
+                    </Annotation>
+                  </Annotations>
+                </Command>
+                <Command>
+                  <Text>----------------------------------------------------------
+-- PowerPivot measures command (do not modify manually) --
+----------------------------------------------------------
+
+
+CREATE MEASURE '01 Продажи'[Сумма себестоимостиt]=SUM([Cost]);
+</Text>
+                  <Annotations>
+                    <Annotation>
+                      <Name>FullName</Name>
+                      <Value>Сумма себестоимостиt</Value>
                     </Annotation>
                     <Annotation>
                       <Name>Table</Name>
@@ -11591,7 +12054,7 @@ CREATE MEASURE '01 Продажи'[Наценка от себестоимост�
                       </Value>
                     </Annotation>
                   </Annotations>
-                  <CalculationReference>[Сумма]</CalculationReference>
+                  <CalculationReference>[Сумма продаж]</CalculationReference>
                   <CalculationType>Member</CalculationType>
                   <FormatString>'#,0.00'</FormatString>
                 </CalculationProperty>
@@ -11822,27 +12285,6 @@ CREATE MEASURE '01 Продажи'[Наценка от себестоимост�
                       </Value>
                     </Annotation>
                   </Annotations>
-                  <CalculationReference>[Себестоимость]</CalculationReference>
-                  <CalculationType>Member</CalculationType>
-                  <FormatString>'#,0.00'</FormatString>
-                </CalculationProperty>
-                <CalculationProperty>
-                  <Annotations>
-                    <Annotation>
-                      <Name>Type</Name>
-                      <Value>User</Value>
-                    </Annotation>
-                    <Annotation>
-                      <Name>IsPrivate</Name>
-                      <Value>False</Value>
-                    </Annotation>
-                    <Annotation>
-                      <Name>Format</Name>
-                      <Value>
-                        <Format Format="NumberDecimal" Accuracy="2" ThousandSeparator="True" xmlns="" />
-                      </Value>
-                    </Annotation>
-                  </Annotations>
                   <CalculationReference>[Наценка от себестоимости (руб)]</CalculationReference>
                   <CalculationType>Member</CalculationType>
                   <FormatString>'#,0.00'</FormatString>
@@ -11867,6 +12309,27 @@ CREATE MEASURE '01 Продажи'[Наценка от себестоимост�
                   <CalculationReference>[Наценка от себестоимости (%)]</CalculationReference>
                   <CalculationType>Member</CalculationType>
                   <FormatString>'#,0.00%;-#,0.00%;#,0.00%'</FormatString>
+                </CalculationProperty>
+                <CalculationProperty>
+                  <Annotations>
+                    <Annotation>
+                      <Name>Type</Name>
+                      <Value>User</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>IsPrivate</Name>
+                      <Value>False</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>Format</Name>
+                      <Value>
+                        <Format Format="NumberDecimal" Accuracy="2" ThousandSeparator="True" xmlns="" />
+                      </Value>
+                    </Annotation>
+                  </Annotations>
+                  <CalculationReference>[Сумма себестоимостиt]</CalculationReference>
+                  <CalculationType>Member</CalculationType>
+                  <FormatString>'#,0.00'</FormatString>
                 </CalculationProperty>
                 <CalculationProperty>
                   <CalculationReference>Measures.[__Не определено ни одной меры]</CalculationReference>
@@ -12461,7 +12924,7 @@ CREATE MEASURE '01 Продажи'[Наценка от себестоимост�
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
-                    <xs:element name="Sales_66bec93a-15a0-4ede-bb32-d916264ea6f3" msdata:Locale="" msprop:IsLogical="True" msprop:FriendlyName="01 Продажи" msprop:DbTableName="Sales" msprop:TableType="View" msprop:Description="Sales" msprop:QueryDefinition="DECLARE @Offset int&#xD;&#xA;DECLARE @StartDate datetime&#xD;&#xA;DECLARE @EndDate datetime&#xD;&#xA;&#xD;&#xA;SET @Offset = (SELECT TOP 1 Offset FROM dbo._YearOffset)&#xD;&#xA;SET @StartDate = DATEADD(year, @Offset, '2014-01-01 00:00:00')&#xD;&#xA;SET @EndDate = DATEADD(year, @Offset, '2014-31-12 23:59:59')&#xD;&#xA;&#xD;&#xA;SELECT&#xD;&#xA; DATEADD(year, -1*@Offset, CAST(RegSales._Period AS date)) AS TransactionDate -- Дата операции&#xD;&#xA; ,CASE&#xD;&#xA;  WHEN RegSales._RecorderTRef = 0x00000051 THEN DocSales._Number&#xD;&#xA;  WHEN RegSales._RecorderTRef = 0x0000050C THEN DocRefunds._Number&#xD;&#xA;  ELSE 'UNKNOW'&#xD;&#xA; END AS DocNumber                -- Номер документа&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2037RRef, 2) AS TransactionTypeID   -- ID типа операции&#xD;&#xA; ,CASE&#xD;&#xA;  WHEN RegSales._RecorderTRef = 0x00000051 THEN CONVERT(varchar(32), DocSales._Fld584RRef, 2)&#xD;&#xA;  WHEN RegSales._RecorderTRef = 0x0000050C THEN CONVERT(varchar(32), DocRefunds._Fld1397RRef, 2)&#xD;&#xA; END AS DocumentTypeID               -- ID типа документа&#xD;&#xA; ,CASE&#xD;&#xA;  WHEN RegSales._RecorderTRef = 0x00000051 THEN CONVERT(varchar(32), DocSales._Fld583RRef, 2)&#xD;&#xA;  WHEN RegSales._RecorderTRef = 0x0000050C THEN CONVERT(varchar(32), DocRefunds._Fld1429RRef, 2)&#xD;&#xA; END AS PaymentMethodID               -- ID спсособа оплаты&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2032RRef, 2) AS BusinessID     -- ID направления бизнеса&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2030RRef, 2) AS CompanyID     -- ID организации&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2031RRef, 2) AS BranchID      -- ID филиала&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2106RRef, 2) AS StorehouseID     -- ID склада&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2028RRef, 2) AS CustomerID     -- ID контрагента&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2029RRef, 2) AS TardeShopID     -- ID точки доставки (продажи)&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2033RRef, 2) AS CreditLineID     -- ID кредитного направления&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2035RRef, 2) AS RouteID      -- ID марушрта (торгового представителя)&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2036RRef, 2) AS AgentID      -- ID торгового агента (сотрудника)&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2027RRef, 2) AS GoodID      -- ID номенклатуры&#xD;&#xA; --,CONVERT(varchar(32), RegSales._Fld2027RRef, 2)+'-'+CAST(DATEADD(year, -1*@Offset, CAST(RegSales._Period AS date)) AS varchar) AS GoodDateID -- ID пары номенклатуры и даты&#xD;&#xA; ,RegSales._Fld2038 AS Quantity             -- Количество в базовых единицах измерения&#xD;&#xA; ,RegSales._Fld2039 AS AmountVAT             -- Сумма НДС&#xD;&#xA; ,RegSales._Fld2040 AS AmountWithoutDiscount          -- Сумма без скидки&#xD;&#xA; ,RegSales._Fld2041 AS Amount             -- Сумма&#xD;&#xA; ,(SELECT TOP 1&#xD;&#xA;  Cost._Fld1587 AS Ammount&#xD;&#xA;  FROM dbo._InfoRg1585 AS Cost&#xD;&#xA;  WHERE Cost._Active = 0x01&#xD;&#xA;  AND Cost._Fld1586RRef = RegSales._Fld2027RRef&#xD;&#xA;  AND Cost._Period &lt;= RegSales._Period&#xD;&#xA; ORDER BY Cost._Period DESC) CostPrice           -- Себестоимость&#xD;&#xA;FROM dbo._AccumRg2026 AS RegSales&#xD;&#xA;LEFT JOIN dbo._Document81 AS DocSales ON DocSales._IDRRef = RegSales._RecorderRRef AND RegSales._RecorderTRef = 0x00000051   -- Документы продаж&#xD;&#xA;LEFT JOIN dbo._Document1292 AS DocRefunds ON DocRefunds._IDRRef = RegSales._RecorderRRef AND RegSales._RecorderTRef = 0x0000050C -- Документы возврата&#xD;&#xA;WHERE RegSales._Active = 0x01&#xD;&#xA; AND RegSales._Period BETWEEN @StartDate AND @EndDate">
+                    <xs:element name="Sales_66bec93a-15a0-4ede-bb32-d916264ea6f3" msdata:Locale="" msprop:IsLogical="True" msprop:FriendlyName="01 Продажи" msprop:DbTableName="Sales" msprop:TableType="View" msprop:Description="Sales" msprop:QueryDefinition="DECLARE @Offset int&#xD;&#xA;DECLARE @StartDate datetime&#xD;&#xA;DECLARE @EndDate datetime&#xD;&#xA;&#xD;&#xA;SET @Offset = (SELECT TOP 1 Offset FROM dbo._YearOffset)&#xD;&#xA;SET @StartDate = DATEADD(year, @Offset, '2014-01-01 00:00:00')&#xD;&#xA;SET @EndDate = DATEADD(year, @Offset, '2014-31-12 23:59:59')&#xD;&#xA;&#xD;&#xA;SELECT&#xD;&#xA; DATEADD(year, -1*@Offset, CAST(RegSales._Period AS date)) AS TransactionDate -- Дата операции&#xD;&#xA; ,CASE&#xD;&#xA;  WHEN RegSales._RecorderTRef = 0x00000051 THEN DocSales._Number&#xD;&#xA;  WHEN RegSales._RecorderTRef = 0x0000050C THEN DocRefunds._Number&#xD;&#xA;  ELSE 'UNKNOW'&#xD;&#xA; END AS DocNumber                -- Номер документа&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2037RRef, 2) AS TransactionTypeID   -- ID типа операции&#xD;&#xA; ,CASE&#xD;&#xA;  WHEN RegSales._RecorderTRef = 0x00000051 THEN CONVERT(varchar(32), DocSales._Fld584RRef, 2)&#xD;&#xA;  WHEN RegSales._RecorderTRef = 0x0000050C THEN CONVERT(varchar(32), DocRefunds._Fld1397RRef, 2)&#xD;&#xA; END AS DocumentTypeID               -- ID типа документа&#xD;&#xA; ,CASE&#xD;&#xA;  WHEN RegSales._RecorderTRef = 0x00000051 THEN CONVERT(varchar(32), DocSales._Fld583RRef, 2)&#xD;&#xA;  WHEN RegSales._RecorderTRef = 0x0000050C THEN CONVERT(varchar(32), DocRefunds._Fld1429RRef, 2)&#xD;&#xA; END AS PaymentMethodID               -- ID спсособа оплаты&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2032RRef, 2) AS BusinessID     -- ID направления бизнеса&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2030RRef, 2) AS CompanyID     -- ID организации&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2031RRef, 2) AS BranchID      -- ID филиала&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2106RRef, 2) AS StorehouseID     -- ID склада&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2028RRef, 2) AS CustomerID     -- ID контрагента&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2029RRef, 2) AS TardeShopID     -- ID точки доставки (продажи)&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2033RRef, 2) AS CreditLineID     -- ID кредитного направления&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2035RRef, 2) AS RouteID      -- ID марушрта (торгового представителя)&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2036RRef, 2) AS AgentID      -- ID торгового агента (сотрудника)&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2243RRef, 2) AS TypePriceID     -- ID типа цены&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2027RRef, 2) AS GoodID      -- ID номенклатуры&#xD;&#xA; ,RegSales._Fld2038 AS Quantity             -- Количество в базовых единицах измерения&#xD;&#xA; ,RegSales._Fld2039 AS AmountVAT             -- Сумма НДС&#xD;&#xA; ,RegSales._Fld2040 AS AmountWithoutDiscount          -- Сумма без скидки&#xD;&#xA; ,RegSales._Fld2041 AS Amount             -- Сумма&#xD;&#xA; ,(SELECT TOP 1&#xD;&#xA;  Cost._Fld1587 AS Ammount&#xD;&#xA;  FROM dbo._InfoRg1585 AS Cost&#xD;&#xA;  WHERE Cost._Active = 0x01&#xD;&#xA;  AND Cost._Fld1586RRef = RegSales._Fld2027RRef&#xD;&#xA;  AND Cost._Period &lt;= RegSales._Period&#xD;&#xA; ORDER BY Cost._Period DESC) * RegSales._Fld2038 AS Cost       -- Сумма себестоимости&#xD;&#xA;FROM dbo._AccumRg2026 AS RegSales&#xD;&#xA;LEFT JOIN dbo._Document81 AS DocSales ON DocSales._IDRRef = RegSales._RecorderRRef AND RegSales._RecorderTRef = 0x00000051   -- Документы продаж&#xD;&#xA;LEFT JOIN dbo._Document1292 AS DocRefunds ON DocRefunds._IDRRef = RegSales._RecorderRRef AND RegSales._RecorderTRef = 0x0000050C -- Документы возврата&#xD;&#xA;WHERE RegSales._Active = 0x01&#xD;&#xA; AND RegSales._Period BETWEEN @StartDate AND @EndDate">
                       <xs:complexType>
                         <xs:sequence>
                           <xs:element name="TransactionDate" msprop:DbColumnName="TransactionDate" msprop:FriendlyName="TransactionDate" type="xs:dateTime" minOccurs="0" />
@@ -12567,7 +13030,14 @@ CREATE MEASURE '01 Продажи'[Наценка от себестоимост�
                               </xs:restriction>
                             </xs:simpleType>
                           </xs:element>
-                          <xs:element name="CostPrice" msprop:DbColumnName="CostPrice" msprop:FriendlyName="CostPrice" type="xs:decimal" minOccurs="0" />
+                          <xs:element name="TypePriceID" msprop:DbColumnName="TypePriceID" msprop:FriendlyName="TypePriceID" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:maxLength value="32768" />
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="Cost" msprop:DbColumnName="Cost" msprop:FriendlyName="Cost" type="xs:decimal" minOccurs="0" />
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
@@ -12583,6 +13053,26 @@ CREATE MEASURE '01 Продажи'[Наценка от себестоимост�
                             </xs:simpleType>
                           </xs:element>
                           <xs:element name="Ammount" msprop:DbColumnName="Ammount" msprop:FriendlyName="Ammount" type="xs:decimal" minOccurs="0" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="_x0031_1_x0020_Сотрудники_8e8ae07b-ee30-4a02-b17f-adebca7e9cc4" msdata:Locale="" msprop:IsLogical="True" msprop:FriendlyName="11 Сотрудники" msprop:DbTableName="11 Сотрудники" msprop:TableType="View" msprop:Description="11 Сотрудники" msprop:QueryDefinition="SELECT&#xD;&#xA; CONVERT(varchar(32), Element._IDRRef, 2) AS ID&#xD;&#xA; ,Element._Description AS Description&#xD;&#xA;FROM dbo._Reference64 AS Element&#xD;&#xA;WHERE Element._Folder = 0x01&#xD;&#xA;UNION ALL&#xD;&#xA;SELECT&#xD;&#xA; '00000000000000000000000000000000' AS ID&#xD;&#xA; ,'Без сотрудника' AS Description">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ID" msprop:DbColumnName="ID" msprop:FriendlyName="ID" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:maxLength value="32768" />
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="Description" msprop:DbColumnName="Description" msprop:FriendlyName="Description" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:maxLength value="32768" />
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
