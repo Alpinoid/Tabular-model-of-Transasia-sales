@@ -8,20 +8,8 @@ SET @EndDate = DATEADD(year, @Offset, '2014-31-12 23:59:59')
 
 SELECT
 	DATEADD(year, -1*@Offset, CAST(RegSales._Period AS date)) AS TransactionDate	-- Дата операции
-	,CASE
-		WHEN RegSales._RecorderTRef = 0x00000051 THEN DocSales._Number
-		WHEN RegSales._RecorderTRef = 0x0000050C THEN DocRefunds._Number
-		ELSE 'UNKNOW'
-	END AS DocNumber																-- Номер документа
+	,CONVERT(varchar(32), RegSales._RecorderRRef, 2) AS DocumentID
 	,CONVERT(varchar(32), RegSales._Fld2037RRef, 2) AS TransactionTypeID			-- ID типа операции
-	,CASE
-		WHEN RegSales._RecorderTRef = 0x00000051 THEN CONVERT(varchar(32), DocSales._Fld584RRef, 2)
-		WHEN RegSales._RecorderTRef = 0x0000050C THEN CONVERT(varchar(32), DocRefunds._Fld1397RRef, 2)
-	END AS DocumentTypeID															-- ID типа документа
-	,CASE
-		WHEN RegSales._RecorderTRef = 0x00000051 THEN CONVERT(varchar(32), DocSales._Fld583RRef, 2)
-		WHEN RegSales._RecorderTRef = 0x0000050C THEN CONVERT(varchar(32), DocRefunds._Fld1429RRef, 2)
-	END AS PaymentMethodID															-- ID спсособа оплаты
 	,CONVERT(varchar(32), RegSales._Fld2032RRef, 2) AS BusinessID					-- ID направления бизнеса
 	,CONVERT(varchar(32), RegSales._Fld2030RRef, 2) AS CompanyID					-- ID организации
 	,CONVERT(varchar(32), RegSales._Fld2031RRef, 2) AS BranchID						-- ID филиала
@@ -45,7 +33,5 @@ SELECT
 		AND Cost._Period <= RegSales._Period
 	ORDER BY Cost._Period DESC) * RegSales._Fld2038 AS Cost							-- Сумма себестоимости
 FROM dbo._AccumRg2026 AS RegSales
-LEFT JOIN dbo._Document81 AS DocSales ON DocSales._IDRRef = RegSales._RecorderRRef AND RegSales._RecorderTRef = 0x00000051			-- Документы продаж
-LEFT JOIN dbo._Document1292 AS DocRefunds ON DocRefunds._IDRRef = RegSales._RecorderRRef AND RegSales._RecorderTRef = 0x0000050C	-- Документы возврата
 WHERE RegSales._Active = 0x01
 	AND RegSales._Period BETWEEN @StartDate AND @EndDate

@@ -25,12 +25,6 @@
           <AssociatedConnUserName>sa</AssociatedConnUserName>
           <FullPath>01 Продажи.sql</FullPath>
         </FileNode>
-        <FileNode Name="04 Себестоимость.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V-APP8283:False:sa</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>V-APP8283</AssociatedConnSrvName>
-          <AssociatedConnUserName>sa</AssociatedConnUserName>
-          <FullPath>04 Себестоимость.sql</FullPath>
-        </FileNode>
       </Items>
     </LogicalFolder>
     <LogicalFolder Name="Разное" Type="3" Sorted="true">

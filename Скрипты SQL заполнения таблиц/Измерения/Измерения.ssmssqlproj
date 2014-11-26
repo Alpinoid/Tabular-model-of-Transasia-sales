@@ -20,9 +20,9 @@
     <LogicalFolder Name="Запросы" Type="0" Sorted="true">
       <Items>
         <FileNode Name="01 Периоды.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V-APP8283:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V-APP8283</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
           <FullPath>01 Периоды.sql</FullPath>
         </FileNode>
         <FileNode Name="02 Направления бизнеса.sql">
@@ -86,9 +86,9 @@
           <FullPath>09 Склады.sql</FullPath>
         </FileNode>
         <FileNode Name="10 Типы цен.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V-APP8283:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V-APP8283</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
           <FullPath>10 Типы цен.sql</FullPath>
         </FileNode>
         <FileNode Name="11 Сотрудники.sql">
@@ -120,6 +120,12 @@
           <AssociatedConnSrvName />
           <AssociatedConnUserName />
           <FullPath>20 Номенклатура.sql</FullPath>
+        </FileNode>
+        <FileNode Name="20-01 Цены.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V-APP8283:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V-APP8283</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>20-01 Цены.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>
