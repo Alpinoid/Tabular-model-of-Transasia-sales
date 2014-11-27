@@ -4013,6 +4013,11 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
                   <OverrideBehavior>None</OverrideBehavior>
                   <Name>DocumentID</Name>
                 </AttributeRelationship>
+                <AttributeRelationship>
+                  <AttributeID>SalesDocumentID</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>SalesDocumentID</Name>
+                </AttributeRelationship>
               </AttributeRelationships>
               <OrderBy>Key</OrderBy>
               <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
@@ -4747,6 +4752,32 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
               <OrderBy>Key</OrderBy>
               <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
             </Attribute>
+            <Attribute>
+              <ID>SalesDocumentID</ID>
+              <Name>SalesDocumentID</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>32768</DataSize>
+                  <NullProcessing>Preserve</NullProcessing>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>Sales_66bec93a-15a0-4ede-bb32-d916264ea6f3</TableID>
+                    <ColumnID>SalesDocumentID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>32768</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>Sales_66bec93a-15a0-4ede-bb32-d916264ea6f3</TableID>
+                  <ColumnID>SalesDocumentID</ColumnID>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+              <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+            </Attribute>
           </Attributes>
           <ProactiveCaching>
             <SilenceInterval>-PT1S</SilenceInterval>
@@ -5056,7 +5087,30 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
               </ddl300_300:ToRelationshipEnd>
             </ddl300_300:Relationship>
             <ddl300_300:Relationship>
-              <ID>adf3e83a-05f8-4b90-a11b-982bfd5ea7d3</ID>
+              <ID>65517a5d-aae1-4aec-948b-7f62acfdfae3</ID>
+              <ddl300_300:FromRelationshipEnd>
+                <ddl300_300:Multiplicity>Many</ddl300_300:Multiplicity>
+                <ddl300:VisualizationProperties />
+                <DimensionID>Sales_66bec93a-15a0-4ede-bb32-d916264ea6f3</DimensionID>
+                <Attributes>
+                  <Attribute>
+                    <AttributeID>SalesDocumentID</AttributeID>
+                  </Attribute>
+                </Attributes>
+              </ddl300_300:FromRelationshipEnd>
+              <ddl300_300:ToRelationshipEnd>
+                <ddl300_300:Multiplicity>One</ddl300_300:Multiplicity>
+                <ddl300:VisualizationProperties />
+                <DimensionID>13_6c9159c1-a4d7-45c1-83ca-7e903d3dd671</DimensionID>
+                <Attributes>
+                  <Attribute>
+                    <AttributeID>ID</AttributeID>
+                  </Attribute>
+                </Attributes>
+              </ddl300_300:ToRelationshipEnd>
+            </ddl300_300:Relationship>
+            <ddl300_300:Relationship>
+              <ID>6aef1c15-fe7c-4ff6-83a8-b2e49eeb7d0f</ID>
               <ddl300_300:FromRelationshipEnd>
                 <ddl300_300:Multiplicity>Many</ddl300_300:Multiplicity>
                 <ddl300:VisualizationProperties />
@@ -5070,7 +5124,7 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
               <ddl300_300:ToRelationshipEnd>
                 <ddl300_300:Multiplicity>One</ddl300_300:Multiplicity>
                 <ddl300:VisualizationProperties />
-                <DimensionID>13_6c9159c1-a4d7-45c1-83ca-7e903d3dd671</DimensionID>
+                <DimensionID>14 Документы_8ef758f4-56d8-499d-9de6-7ad799be140f</DimensionID>
                 <Attributes>
                   <Attribute>
                     <AttributeID>ID</AttributeID>
@@ -5507,23 +5561,17 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
         </Dimension>
         <Dimension>
           <ID>13_6c9159c1-a4d7-45c1-83ca-7e903d3dd671</ID>
-          <Name>13 Документы</Name>
+          <Name>13 Документы продаж</Name>
           <Annotations>
             <Annotation>
-              <Name>IsQueryEditorUsed</Name>
-              <Value>True</Value>
+              <Name>TableWidgetSerialization</Name>
             </Annotation>
             <Annotation>
               <Name>QueryEditorSerialization</Name>
             </Annotation>
             <Annotation>
-              <Name>TableWidgetSerialization</Name>
-            </Annotation>
-            <Annotation>
-              <Name>DataMarketWebBaseUrl</Name>
-            </Annotation>
-            <Annotation>
-              <Name>DataMarketWebQueryUrl</Name>
+              <Name>IsQueryEditorUsed</Name>
+              <Value>True</Value>
             </Annotation>
           </Annotations>
           <Source xsi:type="DataSourceViewBinding">
@@ -5566,11 +5614,6 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
                   <Name>ID_</Name>
                 </AttributeRelationship>
                 <AttributeRelationship>
-                  <AttributeID>Document</AttributeID>
-                  <OverrideBehavior>None</OverrideBehavior>
-                  <Name>Документ</Name>
-                </AttributeRelationship>
-                <AttributeRelationship>
                   <AttributeID>DocDate</AttributeID>
                   <OverrideBehavior>None</OverrideBehavior>
                   <Name>Дата документа</Name>
@@ -5599,6 +5642,11 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
                   <AttributeID>DocPaymentDay</AttributeID>
                   <OverrideBehavior>None</OverrideBehavior>
                   <Name>Дата оплаты</Name>
+                </AttributeRelationship>
+                <AttributeRelationship>
+                  <AttributeID>Вычисляемый столбец1</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>Документ продажи</Name>
                 </AttributeRelationship>
               </AttributeRelationships>
               <OrderBy>Key</OrderBy>
@@ -5639,41 +5687,6 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
               </NameColumn>
               <OrderBy>Key</OrderBy>
               <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
-            </Attribute>
-            <Attribute>
-              <Annotations>
-                <Annotation>
-                  <Name>Format</Name>
-                  <Value>
-                    <Format Format="Text" xmlns="" />
-                  </Value>
-                </Annotation>
-              </Annotations>
-              <ID>Document</ID>
-              <Name>Документ</Name>
-              <KeyColumns>
-                <KeyColumn>
-                  <DataType>WChar</DataType>
-                  <DataSize>32768</DataSize>
-                  <NullProcessing>Preserve</NullProcessing>
-                  <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
-                  <Source xsi:type="ColumnBinding">
-                    <TableID>_x0031_3_6c9159c1-a4d7-45c1-83ca-7e903d3dd671</TableID>
-                    <ColumnID>Document</ColumnID>
-                  </Source>
-                </KeyColumn>
-              </KeyColumns>
-              <NameColumn>
-                <DataType>WChar</DataType>
-                <DataSize>32768</DataSize>
-                <NullProcessing>ZeroOrBlank</NullProcessing>
-                <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
-                <Source xsi:type="ColumnBinding">
-                  <TableID>_x0031_3_6c9159c1-a4d7-45c1-83ca-7e903d3dd671</TableID>
-                  <ColumnID>Document</ColumnID>
-                </Source>
-              </NameColumn>
-              <OrderBy>Key</OrderBy>
             </Attribute>
             <Attribute>
               <Annotations>
@@ -5890,6 +5903,33 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
               <OrderBy>Key</OrderBy>
               <ddl300_300:FormatString>General Date</ddl300_300:FormatString>
             </Attribute>
+            <Attribute>
+              <Annotations>
+                <Annotation>
+                  <Name>Format</Name>
+                  <Value>
+                    <Format Format="Text" xmlns="" />
+                  </Value>
+                </Annotation>
+              </Annotations>
+              <ID>Вычисляемый столбец1</ID>
+              <Name>Документ продажи</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Empty</DataType>
+                  <Source xsi:type="ddl200_200:ExpressionBinding">
+                    <Expression>"Реализация товаров №"&amp;[Номер документа]&amp;" от "&amp;[Дата документа]</Expression>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <Source xsi:type="ddl200_200:ExpressionBinding">
+                  <Expression>"Реализация товаров №"&amp;[Номер документа]&amp;" от "&amp;[Дата документа]</Expression>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+            </Attribute>
           </Attributes>
           <ProactiveCaching>
             <SilenceInterval>-PT1S</SilenceInterval>
@@ -5946,6 +5986,268 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
               </ddl300_300:ToRelationshipEnd>
             </ddl300_300:Relationship>
           </ddl300_300:Relationships>
+        </Dimension>
+        <Dimension>
+          <ID>14 Документы_8ef758f4-56d8-499d-9de6-7ad799be140f</ID>
+          <Name>14 Документы</Name>
+          <Annotations>
+            <Annotation>
+              <Name>IsQueryEditorUsed</Name>
+              <Value>True</Value>
+            </Annotation>
+            <Annotation>
+              <Name>QueryEditorSerialization</Name>
+            </Annotation>
+            <Annotation>
+              <Name>TableWidgetSerialization</Name>
+            </Annotation>
+            <Annotation>
+              <Name>DataMarketWebBaseUrl</Name>
+            </Annotation>
+            <Annotation>
+              <Name>DataMarketWebQueryUrl</Name>
+            </Annotation>
+          </Annotations>
+          <Source xsi:type="DataSourceViewBinding">
+            <DataSourceViewID>Sandbox</DataSourceViewID>
+          </Source>
+          <UnknownMember valuens="ddl200_200">AutomaticNull</UnknownMember>
+          <ErrorConfiguration>
+            <KeyNotFound>IgnoreError</KeyNotFound>
+            <KeyDuplicate>ReportAndStop</KeyDuplicate>
+            <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+          </ErrorConfiguration>
+          <StorageMode valuens="ddl200_200">InMemory</StorageMode>
+          <Language>1049</Language>
+          <UnknownMemberName>Unknown</UnknownMemberName>
+          <Attributes>
+            <Attribute>
+              <ID>RowNumber</ID>
+              <Name>RowNumber</Name>
+              <Type valuens="ddl200_200">RowNumber</Type>
+              <Usage>Key</Usage>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <DataSize>4</DataSize>
+                  <NullProcessing>Error</NullProcessing>
+                  <Source xsi:type="ddl200_200:RowNumberBinding" />
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>4</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <Source xsi:type="ddl200_200:RowNumberBinding" />
+              </NameColumn>
+              <AttributeRelationships>
+                <AttributeRelationship>
+                  <AttributeID>ID</AttributeID>
+                  <Cardinality>One</Cardinality>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>ID_</Name>
+                </AttributeRelationship>
+                <AttributeRelationship>
+                  <AttributeID>Document</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>Вид документа</Name>
+                </AttributeRelationship>
+                <AttributeRelationship>
+                  <AttributeID>DocDate</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>Дата документа</Name>
+                </AttributeRelationship>
+                <AttributeRelationship>
+                  <AttributeID>DocNumber</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>Номер документа</Name>
+                </AttributeRelationship>
+                <AttributeRelationship>
+                  <AttributeID>Вычисляемый столбец1</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>Документ</Name>
+                </AttributeRelationship>
+              </AttributeRelationships>
+              <OrderBy>Key</OrderBy>
+              <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+            </Attribute>
+            <Attribute>
+              <Annotations>
+                <Annotation>
+                  <Name>Format</Name>
+                  <Value>
+                    <Format Format="Text" xmlns="" />
+                  </Value>
+                </Annotation>
+              </Annotations>
+              <ID>ID</ID>
+              <Name>ID</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>32768</DataSize>
+                  <NullProcessing>Error</NullProcessing>
+                  <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>_x0031_4_x0020_Документы_8ef758f4-56d8-499d-9de6-7ad799be140f</TableID>
+                    <ColumnID>ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>32768</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>_x0031_4_x0020_Документы_8ef758f4-56d8-499d-9de6-7ad799be140f</TableID>
+                  <ColumnID>ID</ColumnID>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+              <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+            </Attribute>
+            <Attribute>
+              <Annotations>
+                <Annotation>
+                  <Name>Format</Name>
+                  <Value>
+                    <Format Format="Text" xmlns="" />
+                  </Value>
+                </Annotation>
+              </Annotations>
+              <ID>Document</ID>
+              <Name>Вид документа</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>32768</DataSize>
+                  <NullProcessing>Preserve</NullProcessing>
+                  <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>_x0031_4_x0020_Документы_8ef758f4-56d8-499d-9de6-7ad799be140f</TableID>
+                    <ColumnID>Document</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>32768</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>_x0031_4_x0020_Документы_8ef758f4-56d8-499d-9de6-7ad799be140f</TableID>
+                  <ColumnID>Document</ColumnID>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+            </Attribute>
+            <Attribute>
+              <Annotations>
+                <Annotation>
+                  <Name>Format</Name>
+                  <Value>
+                    <Format Format="DateTimeGeneral" xmlns="" />
+                  </Value>
+                </Annotation>
+              </Annotations>
+              <ID>DocDate</ID>
+              <Name>Дата документа</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Date</DataType>
+                  <DataSize>-1</DataSize>
+                  <NullProcessing>Preserve</NullProcessing>
+                  <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>_x0031_4_x0020_Документы_8ef758f4-56d8-499d-9de6-7ad799be140f</TableID>
+                    <ColumnID>DocDate</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>-1</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>_x0031_4_x0020_Документы_8ef758f4-56d8-499d-9de6-7ad799be140f</TableID>
+                  <ColumnID>DocDate</ColumnID>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+              <ddl300_300:FormatString>General Date</ddl300_300:FormatString>
+            </Attribute>
+            <Attribute>
+              <Annotations>
+                <Annotation>
+                  <Name>Format</Name>
+                  <Value>
+                    <Format Format="Text" xmlns="" />
+                  </Value>
+                </Annotation>
+              </Annotations>
+              <ID>DocNumber</ID>
+              <Name>Номер документа</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>32768</DataSize>
+                  <NullProcessing>Preserve</NullProcessing>
+                  <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>_x0031_4_x0020_Документы_8ef758f4-56d8-499d-9de6-7ad799be140f</TableID>
+                    <ColumnID>DocNumber</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>32768</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>_x0031_4_x0020_Документы_8ef758f4-56d8-499d-9de6-7ad799be140f</TableID>
+                  <ColumnID>DocNumber</ColumnID>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+            </Attribute>
+            <Attribute>
+              <Annotations>
+                <Annotation>
+                  <Name>Format</Name>
+                  <Value>
+                    <Format Format="Text" xmlns="" />
+                  </Value>
+                </Annotation>
+              </Annotations>
+              <ID>Вычисляемый столбец1</ID>
+              <Name>Документ</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Empty</DataType>
+                  <Source xsi:type="ddl200_200:ExpressionBinding">
+                    <Expression>[Вид документа]&amp;" №"&amp;[Номер документа]&amp;" от "&amp;[Дата документа]</Expression>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <Source xsi:type="ddl200_200:ExpressionBinding">
+                  <Expression>[Вид документа]&amp;" №"&amp;[Номер документа]&amp;" от "&amp;[Дата документа]</Expression>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+            </Attribute>
+          </Attributes>
+          <ProactiveCaching>
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" />
+          </ProactiveCaching>
         </Dimension>
       </Dimensions>
       <Cubes>
@@ -6546,6 +6848,10 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
                   <AttributeID>DocumentID</AttributeID>
                   <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
                 </Attribute>
+                <Attribute>
+                  <AttributeID>SalesDocumentID</AttributeID>
+                  <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+                </Attribute>
               </Attributes>
             </Dimension>
             <Dimension>
@@ -6594,7 +6900,7 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
             </Dimension>
             <Dimension>
               <ID>13_6c9159c1-a4d7-45c1-83ca-7e903d3dd671</ID>
-              <Name>13 Документы</Name>
+              <Name>13 Документы продаж</Name>
               <DimensionID>13_6c9159c1-a4d7-45c1-83ca-7e903d3dd671</DimensionID>
               <Attributes>
                 <Attribute>
@@ -6604,9 +6910,6 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
                 <Attribute>
                   <AttributeID>ID</AttributeID>
                   <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Document</AttributeID>
                 </Attribute>
                 <Attribute>
                   <AttributeID>DocDate</AttributeID>
@@ -6627,6 +6930,36 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
                 </Attribute>
                 <Attribute>
                   <AttributeID>DocPaymentDay</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Вычисляемый столбец1</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <ID>14 Документы_8ef758f4-56d8-499d-9de6-7ad799be140f</ID>
+              <Name>14 Документы</Name>
+              <DimensionID>14 Документы_8ef758f4-56d8-499d-9de6-7ad799be140f</DimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>RowNumber</AttributeID>
+                  <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>ID</AttributeID>
+                  <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Document</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>DocDate</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>DocNumber</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Вычисляемый столбец1</AttributeID>
                 </Attribute>
               </Attributes>
             </Dimension>
@@ -9975,6 +10308,20 @@ SELECT
                         </KeyColumn>
                       </KeyColumns>
                     </Attribute>
+                    <Attribute>
+                      <AttributeID>SalesDocumentID</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Sales_66bec93a-15a0-4ede-bb32-d916264ea6f3</TableID>
+                            <ColumnID>SalesDocumentID</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
                   </Attributes>
                   <ddl200_200:ShareDimensionStorage>Shared</ddl200_200:ShareDimensionStorage>
                 </Dimension>
@@ -11231,21 +11578,6 @@ SELECT
                       <Type>Granularity</Type>
                     </Attribute>
                     <Attribute>
-                      <AttributeID>Document</AttributeID>
-                      <KeyColumns>
-                        <KeyColumn>
-                          <DataType>WChar</DataType>
-                          <DataSize>32768</DataSize>
-                          <NullProcessing>Preserve</NullProcessing>
-                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
-                          <Source xsi:type="ColumnBinding">
-                            <TableID>_x0031_3_6c9159c1-a4d7-45c1-83ca-7e903d3dd671</TableID>
-                            <ColumnID>Document</ColumnID>
-                          </Source>
-                        </KeyColumn>
-                      </KeyColumns>
-                    </Attribute>
-                    <Attribute>
                       <AttributeID>DocDate</AttributeID>
                       <KeyColumns>
                         <KeyColumn>
@@ -11335,11 +11667,22 @@ SELECT
                         </KeyColumn>
                       </KeyColumns>
                     </Attribute>
+                    <Attribute>
+                      <AttributeID>Вычисляемый столбец1</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Empty</DataType>
+                          <Source xsi:type="ddl200_200:ExpressionBinding">
+                            <Expression>"Реализация товаров №"&amp;[Номер документа]&amp;" от "&amp;[Дата документа]</Expression>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
                   </Attributes>
                   <IntermediateCubeDimensionID>Sales_66bec93a-15a0-4ede-bb32-d916264ea6f3</IntermediateCubeDimensionID>
-                  <IntermediateGranularityAttributeID>DocumentID</IntermediateGranularityAttributeID>
+                  <IntermediateGranularityAttributeID>SalesDocumentID</IntermediateGranularityAttributeID>
                   <Materialization>Regular</Materialization>
-                  <ddl300:RelationshipID>adf3e83a-05f8-4b90-a11b-982bfd5ea7d3</ddl300:RelationshipID>
+                  <ddl300:RelationshipID>65517a5d-aae1-4aec-948b-7f62acfdfae3</ddl300:RelationshipID>
                 </Dimension>
                 <Dimension xsi:type="ReferenceMeasureGroupDimension">
                   <CubeDimensionID>DocumentTypes_b5e8064c-e8f8-4c02-aa14-b8fe421bfb14</CubeDimensionID>
@@ -11434,6 +11777,98 @@ SELECT
                   <IntermediateCubeDimensionID>13_6c9159c1-a4d7-45c1-83ca-7e903d3dd671</IntermediateCubeDimensionID>
                   <IntermediateGranularityAttributeID>PaymentMethodID</IntermediateGranularityAttributeID>
                 </Dimension>
+                <Dimension xsi:type="ReferenceMeasureGroupDimension">
+                  <CubeDimensionID>14 Документы_8ef758f4-56d8-499d-9de6-7ad799be140f</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>RowNumber</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Integer</DataType>
+                          <DataSize>4</DataSize>
+                          <NullProcessing>Error</NullProcessing>
+                          <Source xsi:type="ddl200_200:RowNumberBinding" />
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>ID</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Error</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>_x0031_4_x0020_Документы_8ef758f4-56d8-499d-9de6-7ad799be140f</TableID>
+                            <ColumnID>ID</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                      <Type>Granularity</Type>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Document</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>_x0031_4_x0020_Документы_8ef758f4-56d8-499d-9de6-7ad799be140f</TableID>
+                            <ColumnID>Document</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>DocDate</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Date</DataType>
+                          <DataSize>-1</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>_x0031_4_x0020_Документы_8ef758f4-56d8-499d-9de6-7ad799be140f</TableID>
+                            <ColumnID>DocDate</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>DocNumber</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>_x0031_4_x0020_Документы_8ef758f4-56d8-499d-9de6-7ad799be140f</TableID>
+                            <ColumnID>DocNumber</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Вычисляемый столбец1</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Empty</DataType>
+                          <Source xsi:type="ddl200_200:ExpressionBinding">
+                            <Expression>[Вид документа]&amp;" №"&amp;[Номер документа]&amp;" от "&amp;[Дата документа]</Expression>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                  </Attributes>
+                  <IntermediateCubeDimensionID>Sales_66bec93a-15a0-4ede-bb32-d916264ea6f3</IntermediateCubeDimensionID>
+                  <IntermediateGranularityAttributeID>DocumentID</IntermediateGranularityAttributeID>
+                  <Materialization>Regular</Materialization>
+                  <ddl300:RelationshipID>6aef1c15-fe7c-4ff6-83a8-b2e49eeb7d0f</ddl300:RelationshipID>
+                </Dimension>
               </Dimensions>
               <Partitions>
                 <Partition>
@@ -11466,7 +11901,8 @@ SET @EndDate = DATEADD(year, @Offset, '2014-31-12 23:59:59')
 
 SELECT
 	DATEADD(year, -1*@Offset, CAST(RegSales._Period AS date)) AS TransactionDate	-- Дата операции
-	,CONVERT(varchar(32), RegSales._RecorderRRef, 2) AS DocumentID
+	,CONVERT(varchar(32), RegSales._RecorderRRef, 2) AS DocumentID					-- ID документа
+	,CONVERT(varchar(32), RegSales._Fld2034RRef, 2) AS SalesDocumentID				-- ID документа продажи
 	,CONVERT(varchar(32), RegSales._Fld2037RRef, 2) AS TransactionTypeID			-- ID типа операции
 	,CONVERT(varchar(32), RegSales._Fld2032RRef, 2) AS BusinessID					-- ID направления бизнеса
 	,CONVERT(varchar(32), RegSales._Fld2030RRef, 2) AS CompanyID					-- ID организации
@@ -12172,11 +12608,11 @@ SELECT
             </MeasureGroup>
             <MeasureGroup>
               <ID>13_6c9159c1-a4d7-45c1-83ca-7e903d3dd671</ID>
-              <Name>13 Документы</Name>
+              <Name>13 Документы продаж</Name>
               <Measures>
                 <Measure>
                   <ID>13_6c9159c1-a4d7-45c1-83ca-7e903d3dd671</ID>
-                  <Name>_Количество 13 Документы</Name>
+                  <Name>_Количество 13 Документы продаж</Name>
                   <AggregateFunction>Count</AggregateFunction>
                   <DataType>BigInt</DataType>
                   <Source>
@@ -12224,21 +12660,6 @@ SELECT
                           <Source xsi:type="ColumnBinding">
                             <TableID>_x0031_3_6c9159c1-a4d7-45c1-83ca-7e903d3dd671</TableID>
                             <ColumnID>ID</ColumnID>
-                          </Source>
-                        </KeyColumn>
-                      </KeyColumns>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>Document</AttributeID>
-                      <KeyColumns>
-                        <KeyColumn>
-                          <DataType>WChar</DataType>
-                          <DataSize>32768</DataSize>
-                          <NullProcessing>Preserve</NullProcessing>
-                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
-                          <Source xsi:type="ColumnBinding">
-                            <TableID>_x0031_3_6c9159c1-a4d7-45c1-83ca-7e903d3dd671</TableID>
-                            <ColumnID>Document</ColumnID>
                           </Source>
                         </KeyColumn>
                       </KeyColumns>
@@ -12329,6 +12750,17 @@ SELECT
                           <Source xsi:type="ColumnBinding">
                             <TableID>_x0031_3_6c9159c1-a4d7-45c1-83ca-7e903d3dd671</TableID>
                             <ColumnID>DocPaymentDay</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Вычисляемый столбец1</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Empty</DataType>
+                          <Source xsi:type="ddl200_200:ExpressionBinding">
+                            <Expression>"Реализация товаров №"&amp;[Номер документа]&amp;" от "&amp;[Дата документа]</Expression>
                           </Source>
                         </KeyColumn>
                       </KeyColumns>
@@ -12440,6 +12872,193 @@ SELECT
                   <Name>13</Name>
                   <Annotations>
                     <Annotation>
+                      <Name>TableWidgetSerialization</Name>
+                    </Annotation>
+                    <Annotation>
+                      <Name>TableWidgetSourceTable</Name>
+                    </Annotation>
+                    <Annotation>
+                      <Name>QueryEditorSerialization</Name>
+                    </Annotation>
+                    <Annotation>
+                      <Name>IsQueryEditorUsed</Name>
+                      <Value>True</Value>
+                    </Annotation>
+                  </Annotations>
+                  <Source xsi:type="QueryBinding">
+                    <DataSourceID>55e78742-7a14-415d-ade9-8f42bea1a5bb</DataSourceID>
+                    <QueryDefinition>DECLARE @Offset int
+DECLARE @StartDate datetime
+DECLARE @EndDate datetime
+
+SET @Offset = (SELECT TOP 1 Offset FROM dbo._YearOffset)
+SET @StartDate = DATEADD(year, @Offset, '2014-01-01 00:00:00')
+SET @EndDate = DATEADD(year, @Offset, '2014-31-12 23:59:59')
+
+SELECT
+	CONVERT(varchar(32), DocSales._IDRRef, 2) AS ID
+	,DATEADD(year, -1*@Offset, CAST(DocSales._Date_Time AS date)) AS DocDate		-- Дата документа
+	,DocSales._Number AS DocNumber													-- Номер документа
+	,CONVERT(varchar(32), DocSales._Fld584RRef, 2) AS DocumentTypeID				-- ID типа документа
+	,CONVERT(varchar(32), DocSales._Fld583RRef, 2) AS PaymentMethodID				-- ID способа оплаты документа
+	,CASE
+		WHEN YEAR(CAST(DocSales._Fld1244 AS date))-@Offset = 1753
+			OR YEAR(CAST(DocSales._Fld1244 AS date))-@Offset = 1 THEN NULL
+		ELSE DATEADD(year, -1*@Offset, CAST(DocSales._Fld1244 AS date))
+	END AS DocDeliveryDate															-- Дата доставки
+	,DATEADD(year, -1*@Offset, CAST(DocSales._Fld574 AS date)) AS DocPaymentDay		-- Дата оплаты
+FROM dbo._Document81 AS DocSales
+WHERE DocSales._Posted = 0x01
+	AND DocSales._Date_Time BETWEEN @StartDate AND @EndDate</QueryDefinition>
+                  </Source>
+                  <StorageMode valuens="ddl200_200">InMemory</StorageMode>
+                  <ProcessingMode>Regular</ProcessingMode>
+                  <ErrorConfiguration>
+                    <KeyNotFound>IgnoreError</KeyNotFound>
+                    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+                    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+                  </ErrorConfiguration>
+                  <ProactiveCaching>
+                    <SilenceInterval>-PT1S</SilenceInterval>
+                    <Latency>-PT1S</Latency>
+                    <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+                    <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+                    <Source xsi:type="ProactiveCachingInheritedBinding" />
+                  </ProactiveCaching>
+                </Partition>
+              </Partitions>
+              <ProactiveCaching>
+                <SilenceInterval>-PT1S</SilenceInterval>
+                <Latency>-PT1S</Latency>
+                <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+                <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+                <Source xsi:type="ProactiveCachingInheritedBinding" />
+              </ProactiveCaching>
+            </MeasureGroup>
+            <MeasureGroup>
+              <ID>14 Документы_8ef758f4-56d8-499d-9de6-7ad799be140f</ID>
+              <Name>14 Документы</Name>
+              <Measures>
+                <Measure>
+                  <ID>14 Документы_8ef758f4-56d8-499d-9de6-7ad799be140f</ID>
+                  <Name>_Количество 14 Документы</Name>
+                  <AggregateFunction>Count</AggregateFunction>
+                  <DataType>BigInt</DataType>
+                  <Source>
+                    <DataType>BigInt</DataType>
+                    <DataSize>8</DataSize>
+                    <Source xsi:type="RowBinding">
+                      <TableID>_x0031_4_x0020_Документы_8ef758f4-56d8-499d-9de6-7ad799be140f</TableID>
+                    </Source>
+                  </Source>
+                  <Visible>false</Visible>
+                </Measure>
+              </Measures>
+              <StorageMode valuens="ddl200_200">InMemory</StorageMode>
+              <ErrorConfiguration>
+                <KeyNotFound>IgnoreError</KeyNotFound>
+                <KeyDuplicate>ReportAndStop</KeyDuplicate>
+                <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+              </ErrorConfiguration>
+              <ProcessingMode>Regular</ProcessingMode>
+              <Dimensions>
+                <Dimension xsi:type="DegenerateMeasureGroupDimension">
+                  <CubeDimensionID>14 Документы_8ef758f4-56d8-499d-9de6-7ad799be140f</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>RowNumber</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Integer</DataType>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>_x0031_4_x0020_Документы</TableID>
+                            <ColumnID>RowNumber</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                      <Type>Granularity</Type>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>ID</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Error</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>_x0031_4_x0020_Документы_8ef758f4-56d8-499d-9de6-7ad799be140f</TableID>
+                            <ColumnID>ID</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Document</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>_x0031_4_x0020_Документы_8ef758f4-56d8-499d-9de6-7ad799be140f</TableID>
+                            <ColumnID>Document</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>DocDate</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Date</DataType>
+                          <DataSize>-1</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>_x0031_4_x0020_Документы_8ef758f4-56d8-499d-9de6-7ad799be140f</TableID>
+                            <ColumnID>DocDate</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>DocNumber</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>_x0031_4_x0020_Документы_8ef758f4-56d8-499d-9de6-7ad799be140f</TableID>
+                            <ColumnID>DocNumber</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Вычисляемый столбец1</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Empty</DataType>
+                          <Source xsi:type="ddl200_200:ExpressionBinding">
+                            <Expression>[Вид документа]&amp;" №"&amp;[Номер документа]&amp;" от "&amp;[Дата документа]</Expression>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                  </Attributes>
+                  <ddl200_200:ShareDimensionStorage>Shared</ddl200_200:ShareDimensionStorage>
+                </Dimension>
+              </Dimensions>
+              <Partitions>
+                <Partition>
+                  <ID>14 Документы_8ef758f4-56d8-499d-9de6-7ad799be140f</ID>
+                  <Name>14 Документы</Name>
+                  <Annotations>
+                    <Annotation>
                       <Name>IsQueryEditorUsed</Name>
                       <Value>True</Value>
                     </Annotation>
@@ -12465,14 +13084,6 @@ SELECT
 	,'Реализация товаров' AS Document
 	,DATEADD(year, -1*@Offset, CAST(DocSales._Date_Time AS date)) AS DocDate		-- Дата документа
 	,DocSales._Number AS DocNumber													-- Номер документа
-	,CONVERT(varchar(32), DocSales._Fld584RRef, 2) AS DocumentTypeID				-- ID типа документа
-	,CONVERT(varchar(32), DocSales._Fld583RRef, 2) AS PaymentMethodID				-- ID способа оплаты документа
-	,CASE
-		WHEN YEAR(CAST(DocSales._Fld1244 AS date))-@Offset = 1753
-			OR YEAR(CAST(DocSales._Fld1244 AS date))-@Offset = 1 THEN NULL
-		ELSE DATEADD(year, -1*@Offset, CAST(DocSales._Fld1244 AS date))
-	END AS DocDeliveryDate	-- Дата доставки
-	,DATEADD(year, -1*@Offset, CAST(DocSales._Fld574 AS date)) AS DocPaymentDay		-- Дата оплаты
 FROM dbo._Document81 AS DocSales
 WHERE DocSales._Posted = 0x01
 	AND DocSales._Date_Time BETWEEN @StartDate AND @EndDate
@@ -12482,10 +13093,6 @@ SELECT
 	,'Возврат товаров от покупателя' AS Document
 	,DATEADD(year, -1*@Offset, CAST(DocRefunds._Date_Time AS date)) AS DocDate		-- Дата документа
 	,DocRefunds._Number AS DocNumber												-- Номер документа
-	,CONVERT(varchar(32), DocRefunds._Fld1397RRef, 2) AS DocumentTypeID				-- ID типа документа
-	,CONVERT(varchar(32), DocRefunds._Fld1429RRef, 2) AS PaymentMethodID			-- ID способа оплаты документа
-	,NULL AS DocDeliveryDate														-- Дата доставки
-	,NULL AS DocPaymentDay															-- Дата оплаты
 FROM dbo._Document1292 AS DocRefunds
 WHERE DocRefunds._Posted = 0x01
 	AND DocRefunds._Date_Time BETWEEN @StartDate AND @EndDate
@@ -12494,11 +13101,7 @@ SELECT
 	'00000000000000000000000000000000' AS ID
 	,'Документ не определен' AS Document
 	,NULL AS DocDate
-	,NULL AS DocNumber
-	,'00000000000000000000000000000000' AS DocumentTypeID
-	,'00000000000000000000000000000000' AS PaymentMethodID
-	,NULL AS DocDeliveryDate
-	,NULL AS DocPaymentDay</QueryDefinition>
+	,NULL AS DocNumber</QueryDefinition>
                   </Source>
                   <StorageMode valuens="ddl200_200">InMemory</StorageMode>
                   <ProcessingMode>Regular</ProcessingMode>
@@ -12877,6 +13480,44 @@ CREATE MEASURE '20-01 Цены'[Цена]=FIRSTNONBLANK('20-01 Цены'[Price],
                     <Annotation>
                       <Name>Table</Name>
                       <Value>20-01 Цены</Value>
+                    </Annotation>
+                  </Annotations>
+                </Command>
+                <Command>
+                  <Text>----------------------------------------------------------
+-- PowerPivot measures command (do not modify manually) --
+----------------------------------------------------------
+
+
+CREATE MEASURE '01 Продажи'[Количество документов продаж]=DISTINCTCOUNT([SalesDocumentID]);
+</Text>
+                  <Annotations>
+                    <Annotation>
+                      <Name>FullName</Name>
+                      <Value>Количество документов продаж</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>Table</Name>
+                      <Value>01 Продажи</Value>
+                    </Annotation>
+                  </Annotations>
+                </Command>
+                <Command>
+                  <Text>----------------------------------------------------------
+-- PowerPivot measures command (do not modify manually) --
+----------------------------------------------------------
+
+
+CREATE MEASURE '01 Продажи'[Количество товаров]=DISTINCTCOUNT([GoodID]);
+</Text>
+                  <Annotations>
+                    <Annotation>
+                      <Name>FullName</Name>
+                      <Value>Количество товаров</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>Table</Name>
+                      <Value>01 Продажи</Value>
                     </Annotation>
                   </Annotations>
                 </Command>
@@ -13259,6 +13900,48 @@ CREATE MEASURE '20-01 Цены'[Цена]=FIRSTNONBLANK('20-01 Цены'[Price],
                   <CalculationReference>[Цена]</CalculationReference>
                   <CalculationType>Member</CalculationType>
                   <FormatString>'#,0.00'</FormatString>
+                </CalculationProperty>
+                <CalculationProperty>
+                  <Annotations>
+                    <Annotation>
+                      <Name>Type</Name>
+                      <Value>User</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>IsPrivate</Name>
+                      <Value>False</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>Format</Name>
+                      <Value>
+                        <Format Format="NumberWhole" ThousandSeparator="True" xmlns="" />
+                      </Value>
+                    </Annotation>
+                  </Annotations>
+                  <CalculationReference>[Количество документов продаж]</CalculationReference>
+                  <CalculationType>Member</CalculationType>
+                  <FormatString>'#,0'</FormatString>
+                </CalculationProperty>
+                <CalculationProperty>
+                  <Annotations>
+                    <Annotation>
+                      <Name>Type</Name>
+                      <Value>User</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>IsPrivate</Name>
+                      <Value>False</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>Format</Name>
+                      <Value>
+                        <Format Format="NumberWhole" ThousandSeparator="True" xmlns="" />
+                      </Value>
+                    </Annotation>
+                  </Annotations>
+                  <CalculationReference>[Количество товаров]</CalculationReference>
+                  <CalculationType>Member</CalculationType>
+                  <FormatString>'#,0'</FormatString>
                 </CalculationProperty>
                 <CalculationProperty>
                   <CalculationReference>Measures.[__Не определено ни одной меры]</CalculationReference>
@@ -13853,7 +14536,7 @@ CREATE MEASURE '20-01 Цены'[Цена]=FIRSTNONBLANK('20-01 Цены'[Price],
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
-                    <xs:element name="Sales_66bec93a-15a0-4ede-bb32-d916264ea6f3" msdata:Locale="" msprop:IsLogical="True" msprop:FriendlyName="01 Продажи" msprop:DbTableName="Sales" msprop:TableType="View" msprop:Description="Sales" msprop:QueryDefinition="DECLARE @Offset int&#xD;&#xA;DECLARE @StartDate datetime&#xD;&#xA;DECLARE @EndDate datetime&#xD;&#xA;&#xD;&#xA;SET @Offset = (SELECT TOP 1 Offset FROM dbo._YearOffset)&#xD;&#xA;SET @StartDate = DATEADD(year, @Offset, '2014-01-01 00:00:00')&#xD;&#xA;SET @EndDate = DATEADD(year, @Offset, '2014-31-12 23:59:59')&#xD;&#xA;&#xD;&#xA;SELECT&#xD;&#xA; DATEADD(year, -1*@Offset, CAST(RegSales._Period AS date)) AS TransactionDate -- Дата операции&#xD;&#xA; ,CONVERT(varchar(32), RegSales._RecorderRRef, 2) AS DocumentID&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2037RRef, 2) AS TransactionTypeID   -- ID типа операции&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2032RRef, 2) AS BusinessID     -- ID направления бизнеса&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2030RRef, 2) AS CompanyID     -- ID организации&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2031RRef, 2) AS BranchID      -- ID филиала&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2106RRef, 2) AS StorehouseID     -- ID склада&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2028RRef, 2) AS CustomerID     -- ID контрагента&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2029RRef, 2) AS TardeShopID     -- ID точки доставки (продажи)&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2033RRef, 2) AS CreditLineID     -- ID кредитного направления&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2035RRef, 2) AS RouteID      -- ID марушрта (торгового представителя)&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2036RRef, 2) AS AgentID      -- ID торгового агента (сотрудника)&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2243RRef, 2) AS TypePriceID     -- ID типа цены&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2027RRef, 2) AS GoodID      -- ID номенклатуры&#xD;&#xA; ,RegSales._Fld2038 AS Quantity             -- Количество в базовых единицах измерения&#xD;&#xA; ,RegSales._Fld2039 AS AmountVAT             -- Сумма НДС&#xD;&#xA; ,RegSales._Fld2040 AS AmountWithoutDiscount          -- Сумма без скидки&#xD;&#xA; ,RegSales._Fld2041 AS Amount             -- Сумма&#xD;&#xA; ,(SELECT TOP 1&#xD;&#xA;  Cost._Fld1587 AS Ammount&#xD;&#xA;  FROM dbo._InfoRg1585 AS Cost&#xD;&#xA;  WHERE Cost._Active = 0x01&#xD;&#xA;  AND Cost._Fld1586RRef = RegSales._Fld2027RRef&#xD;&#xA;  AND Cost._Period &lt;= RegSales._Period&#xD;&#xA; ORDER BY Cost._Period DESC) * RegSales._Fld2038 AS Cost       -- Сумма себестоимости&#xD;&#xA;FROM dbo._AccumRg2026 AS RegSales&#xD;&#xA;WHERE RegSales._Active = 0x01&#xD;&#xA; AND RegSales._Period BETWEEN @StartDate AND @EndDate">
+                    <xs:element name="Sales_66bec93a-15a0-4ede-bb32-d916264ea6f3" msdata:Locale="" msprop:IsLogical="True" msprop:FriendlyName="01 Продажи" msprop:DbTableName="Sales" msprop:TableType="View" msprop:Description="Sales" msprop:QueryDefinition="DECLARE @Offset int&#xD;&#xA;DECLARE @StartDate datetime&#xD;&#xA;DECLARE @EndDate datetime&#xD;&#xA;&#xD;&#xA;SET @Offset = (SELECT TOP 1 Offset FROM dbo._YearOffset)&#xD;&#xA;SET @StartDate = DATEADD(year, @Offset, '2014-01-01 00:00:00')&#xD;&#xA;SET @EndDate = DATEADD(year, @Offset, '2014-31-12 23:59:59')&#xD;&#xA;&#xD;&#xA;SELECT&#xD;&#xA; DATEADD(year, -1*@Offset, CAST(RegSales._Period AS date)) AS TransactionDate -- Дата операции&#xD;&#xA; ,CONVERT(varchar(32), RegSales._RecorderRRef, 2) AS DocumentID     -- ID документа&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2034RRef, 2) AS SalesDocumentID    -- ID документа продажи&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2037RRef, 2) AS TransactionTypeID   -- ID типа операции&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2032RRef, 2) AS BusinessID     -- ID направления бизнеса&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2030RRef, 2) AS CompanyID     -- ID организации&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2031RRef, 2) AS BranchID      -- ID филиала&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2106RRef, 2) AS StorehouseID     -- ID склада&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2028RRef, 2) AS CustomerID     -- ID контрагента&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2029RRef, 2) AS TardeShopID     -- ID точки доставки (продажи)&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2033RRef, 2) AS CreditLineID     -- ID кредитного направления&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2035RRef, 2) AS RouteID      -- ID марушрта (торгового представителя)&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2036RRef, 2) AS AgentID      -- ID торгового агента (сотрудника)&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2243RRef, 2) AS TypePriceID     -- ID типа цены&#xD;&#xA; ,CONVERT(varchar(32), RegSales._Fld2027RRef, 2) AS GoodID      -- ID номенклатуры&#xD;&#xA; ,RegSales._Fld2038 AS Quantity             -- Количество в базовых единицах измерения&#xD;&#xA; ,RegSales._Fld2039 AS AmountVAT             -- Сумма НДС&#xD;&#xA; ,RegSales._Fld2040 AS AmountWithoutDiscount          -- Сумма без скидки&#xD;&#xA; ,RegSales._Fld2041 AS Amount             -- Сумма&#xD;&#xA; ,(SELECT TOP 1&#xD;&#xA;  Cost._Fld1587 AS Ammount&#xD;&#xA;  FROM dbo._InfoRg1585 AS Cost&#xD;&#xA;  WHERE Cost._Active = 0x01&#xD;&#xA;  AND Cost._Fld1586RRef = RegSales._Fld2027RRef&#xD;&#xA;  AND Cost._Period &lt;= RegSales._Period&#xD;&#xA; ORDER BY Cost._Period DESC) * RegSales._Fld2038 AS Cost       -- Сумма себестоимости&#xD;&#xA;FROM dbo._AccumRg2026 AS RegSales&#xD;&#xA;WHERE RegSales._Active = 0x01&#xD;&#xA; AND RegSales._Period BETWEEN @StartDate AND @EndDate">
                       <xs:complexType>
                         <xs:sequence>
                           <xs:element name="TransactionDate" msprop:DbColumnName="TransactionDate" msprop:FriendlyName="TransactionDate" type="xs:dateTime" minOccurs="0" />
@@ -13953,6 +14636,13 @@ CREATE MEASURE '20-01 Цены'[Цена]=FIRSTNONBLANK('20-01 Цены'[Price],
                               </xs:restriction>
                             </xs:simpleType>
                           </xs:element>
+                          <xs:element name="SalesDocumentID" msprop:DbColumnName="SalesDocumentID" msprop:FriendlyName="SalesDocumentID" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:maxLength value="32768" />
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
@@ -13998,17 +14688,10 @@ CREATE MEASURE '20-01 Цены'[Цена]=FIRSTNONBLANK('20-01 Цены'[Price],
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
-                    <xs:element name="_x0031_3_6c9159c1-a4d7-45c1-83ca-7e903d3dd671" msdata:Locale="" msprop:IsLogical="True" msprop:FriendlyName="13 Документы" msprop:DbTableName="13" msprop:TableType="View" msprop:Description="13" msprop:QueryDefinition="DECLARE @Offset int&#xD;&#xA;DECLARE @StartDate datetime&#xD;&#xA;DECLARE @EndDate datetime&#xD;&#xA;&#xD;&#xA;SET @Offset = (SELECT TOP 1 Offset FROM dbo._YearOffset)&#xD;&#xA;SET @StartDate = DATEADD(year, @Offset, '2014-01-01 00:00:00')&#xD;&#xA;SET @EndDate = DATEADD(year, @Offset, '2014-31-12 23:59:59')&#xD;&#xA;&#xD;&#xA;SELECT&#xD;&#xA; CONVERT(varchar(32), DocSales._IDRRef, 2) AS ID&#xD;&#xA; ,'Реализация товаров' AS Document&#xD;&#xA; ,DATEADD(year, -1*@Offset, CAST(DocSales._Date_Time AS date)) AS DocDate  -- Дата документа&#xD;&#xA; ,DocSales._Number AS DocNumber             -- Номер документа&#xD;&#xA; ,CONVERT(varchar(32), DocSales._Fld584RRef, 2) AS DocumentTypeID    -- ID типа документа&#xD;&#xA; ,CONVERT(varchar(32), DocSales._Fld583RRef, 2) AS PaymentMethodID    -- ID способа оплаты документа&#xD;&#xA; ,CASE&#xD;&#xA;  WHEN YEAR(CAST(DocSales._Fld1244 AS date))-@Offset = 1753&#xD;&#xA;   OR YEAR(CAST(DocSales._Fld1244 AS date))-@Offset = 1 THEN NULL&#xD;&#xA;  ELSE DATEADD(year, -1*@Offset, CAST(DocSales._Fld1244 AS date))&#xD;&#xA; END AS DocDeliveryDate -- Дата доставки&#xD;&#xA; ,DATEADD(year, -1*@Offset, CAST(DocSales._Fld574 AS date)) AS DocPaymentDay  -- Дата оплаты&#xD;&#xA;FROM dbo._Document81 AS DocSales&#xD;&#xA;WHERE DocSales._Posted = 0x01&#xD;&#xA; AND DocSales._Date_Time BETWEEN @StartDate AND @EndDate&#xD;&#xA;UNION ALL&#xD;&#xA;SELECT&#xD;&#xA; CONVERT(varchar(32), DocRefunds._IDRRef, 2) AS ID&#xD;&#xA; ,'Возврат товаров от покупателя' AS Document&#xD;&#xA; ,DATEADD(year, -1*@Offset, CAST(DocRefunds._Date_Time AS date)) AS DocDate  -- Дата документа&#xD;&#xA; ,DocRefunds._Number AS DocNumber            -- Номер документа&#xD;&#xA; ,CONVERT(varchar(32), DocRefunds._Fld1397RRef, 2) AS DocumentTypeID    -- ID типа документа&#xD;&#xA; ,CONVERT(varchar(32), DocRefunds._Fld1429RRef, 2) AS PaymentMethodID   -- ID способа оплаты документа&#xD;&#xA; ,NULL AS DocDeliveryDate              -- Дата доставки&#xD;&#xA; ,NULL AS DocPaymentDay               -- Дата оплаты&#xD;&#xA;FROM dbo._Document1292 AS DocRefunds&#xD;&#xA;WHERE DocRefunds._Posted = 0x01&#xD;&#xA; AND DocRefunds._Date_Time BETWEEN @StartDate AND @EndDate&#xD;&#xA;UNION ALL&#xD;&#xA;SELECT&#xD;&#xA; '00000000000000000000000000000000' AS ID&#xD;&#xA; ,'Документ не определен' AS Document&#xD;&#xA; ,NULL AS DocDate&#xD;&#xA; ,NULL AS DocNumber&#xD;&#xA; ,'00000000000000000000000000000000' AS DocumentTypeID&#xD;&#xA; ,'00000000000000000000000000000000' AS PaymentMethodID&#xD;&#xA; ,NULL AS DocDeliveryDate&#xD;&#xA; ,NULL AS DocPaymentDay">
+                    <xs:element name="_x0031_3_6c9159c1-a4d7-45c1-83ca-7e903d3dd671" msdata:Locale="" msprop:IsLogical="True" msprop:FriendlyName="13 Документы продаж" msprop:DbTableName="13" msprop:TableType="View" msprop:Description="13" msprop:QueryDefinition="DECLARE @Offset int&#xD;&#xA;DECLARE @StartDate datetime&#xD;&#xA;DECLARE @EndDate datetime&#xD;&#xA;&#xD;&#xA;SET @Offset = (SELECT TOP 1 Offset FROM dbo._YearOffset)&#xD;&#xA;SET @StartDate = DATEADD(year, @Offset, '2014-01-01 00:00:00')&#xD;&#xA;SET @EndDate = DATEADD(year, @Offset, '2014-31-12 23:59:59')&#xD;&#xA;&#xD;&#xA;SELECT&#xD;&#xA; CONVERT(varchar(32), DocSales._IDRRef, 2) AS ID&#xD;&#xA; ,DATEADD(year, -1*@Offset, CAST(DocSales._Date_Time AS date)) AS DocDate  -- Дата документа&#xD;&#xA; ,DocSales._Number AS DocNumber             -- Номер документа&#xD;&#xA; ,CONVERT(varchar(32), DocSales._Fld584RRef, 2) AS DocumentTypeID    -- ID типа документа&#xD;&#xA; ,CONVERT(varchar(32), DocSales._Fld583RRef, 2) AS PaymentMethodID    -- ID способа оплаты документа&#xD;&#xA; ,CASE&#xD;&#xA;  WHEN YEAR(CAST(DocSales._Fld1244 AS date))-@Offset = 1753&#xD;&#xA;   OR YEAR(CAST(DocSales._Fld1244 AS date))-@Offset = 1 THEN NULL&#xD;&#xA;  ELSE DATEADD(year, -1*@Offset, CAST(DocSales._Fld1244 AS date))&#xD;&#xA; END AS DocDeliveryDate               -- Дата доставки&#xD;&#xA; ,DATEADD(year, -1*@Offset, CAST(DocSales._Fld574 AS date)) AS DocPaymentDay  -- Дата оплаты&#xD;&#xA;FROM dbo._Document81 AS DocSales&#xD;&#xA;WHERE DocSales._Posted = 0x01&#xD;&#xA; AND DocSales._Date_Time BETWEEN @StartDate AND @EndDate">
                       <xs:complexType>
                         <xs:sequence>
                           <xs:element name="ID" msprop:DbColumnName="ID" msprop:FriendlyName="ID" minOccurs="0">
-                            <xs:simpleType>
-                              <xs:restriction base="xs:string">
-                                <xs:maxLength value="32768" />
-                              </xs:restriction>
-                            </xs:simpleType>
-                          </xs:element>
-                          <xs:element name="Document" msprop:DbColumnName="Document" msprop:FriendlyName="Document" minOccurs="0">
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
                                 <xs:maxLength value="32768" />
@@ -14039,6 +14722,34 @@ CREATE MEASURE '20-01 Цены'[Цена]=FIRSTNONBLANK('20-01 Цены'[Price],
                           </xs:element>
                           <xs:element name="DocDeliveryDate" msprop:DbColumnName="DocDeliveryDate" msprop:FriendlyName="DocDeliveryDate" type="xs:dateTime" minOccurs="0" />
                           <xs:element name="DocPaymentDay" msprop:DbColumnName="DocPaymentDay" msprop:FriendlyName="DocPaymentDay" type="xs:dateTime" minOccurs="0" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="_x0031_4_x0020_Документы_8ef758f4-56d8-499d-9de6-7ad799be140f" msdata:Locale="" msprop:IsLogical="True" msprop:FriendlyName="14 Документы" msprop:DbTableName="14 Документы" msprop:TableType="View" msprop:Description="14 Документы" msprop:QueryDefinition="DECLARE @Offset int&#xD;&#xA;DECLARE @StartDate datetime&#xD;&#xA;DECLARE @EndDate datetime&#xD;&#xA;&#xD;&#xA;SET @Offset = (SELECT TOP 1 Offset FROM dbo._YearOffset)&#xD;&#xA;SET @StartDate = DATEADD(year, @Offset, '2014-01-01 00:00:00')&#xD;&#xA;SET @EndDate = DATEADD(year, @Offset, '2014-31-12 23:59:59')&#xD;&#xA;&#xD;&#xA;SELECT&#xD;&#xA; CONVERT(varchar(32), DocSales._IDRRef, 2) AS ID&#xD;&#xA; ,'Реализация товаров' AS Document&#xD;&#xA; ,DATEADD(year, -1*@Offset, CAST(DocSales._Date_Time AS date)) AS DocDate  -- Дата документа&#xD;&#xA; ,DocSales._Number AS DocNumber             -- Номер документа&#xD;&#xA;FROM dbo._Document81 AS DocSales&#xD;&#xA;WHERE DocSales._Posted = 0x01&#xD;&#xA; AND DocSales._Date_Time BETWEEN @StartDate AND @EndDate&#xD;&#xA;UNION ALL&#xD;&#xA;SELECT&#xD;&#xA; CONVERT(varchar(32), DocRefunds._IDRRef, 2) AS ID&#xD;&#xA; ,'Возврат товаров от покупателя' AS Document&#xD;&#xA; ,DATEADD(year, -1*@Offset, CAST(DocRefunds._Date_Time AS date)) AS DocDate  -- Дата документа&#xD;&#xA; ,DocRefunds._Number AS DocNumber            -- Номер документа&#xD;&#xA;FROM dbo._Document1292 AS DocRefunds&#xD;&#xA;WHERE DocRefunds._Posted = 0x01&#xD;&#xA; AND DocRefunds._Date_Time BETWEEN @StartDate AND @EndDate&#xD;&#xA;UNION ALL&#xD;&#xA;SELECT&#xD;&#xA; '00000000000000000000000000000000' AS ID&#xD;&#xA; ,'Документ не определен' AS Document&#xD;&#xA; ,NULL AS DocDate&#xD;&#xA; ,NULL AS DocNumber">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ID" msprop:DbColumnName="ID" msprop:FriendlyName="ID" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:maxLength value="32768" />
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="Document" msprop:DbColumnName="Document" msprop:FriendlyName="Document" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:maxLength value="32768" />
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="DocDate" msprop:DbColumnName="DocDate" msprop:FriendlyName="DocDate" type="xs:dateTime" minOccurs="0" />
+                          <xs:element name="DocNumber" msprop:DbColumnName="DocNumber" msprop:FriendlyName="DocNumber" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:maxLength value="32768" />
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>

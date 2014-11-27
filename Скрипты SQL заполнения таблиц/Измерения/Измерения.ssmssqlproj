@@ -103,17 +103,23 @@
           <AssociatedConnUserName />
           <FullPath>12 Виды операций.sql</FullPath>
         </FileNode>
-        <FileNode Name="13 Типы документов.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
-          <FullPath>13 Типы документов.sql</FullPath>
+        <FileNode Name="13 Документы.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V-APP8283:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V-APP8283</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>13 Документы.sql</FullPath>
         </FileNode>
-        <FileNode Name="14 Типы оплат.sql">
+        <FileNode Name="13-01 Типы документов.sql">
           <AssociatedConnectionMoniker />
           <AssociatedConnSrvName />
           <AssociatedConnUserName />
-          <FullPath>14 Типы оплат.sql</FullPath>
+          <FullPath>13-01 Типы документов.sql</FullPath>
+        </FileNode>
+        <FileNode Name="13-02  Виды оплат документов.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>13-02  Виды оплат документов.sql</FullPath>
         </FileNode>
         <FileNode Name="20 Номенклатура.sql">
           <AssociatedConnectionMoniker />

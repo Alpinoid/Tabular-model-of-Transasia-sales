@@ -8,7 +8,8 @@ SET @EndDate = DATEADD(year, @Offset, '2014-31-12 23:59:59')
 
 SELECT
 	DATEADD(year, -1*@Offset, CAST(RegSales._Period AS date)) AS TransactionDate	-- Дата операции
-	,CONVERT(varchar(32), RegSales._RecorderRRef, 2) AS DocumentID
+	,CONVERT(varchar(32), RegSales._RecorderRRef, 2) AS DocumentID					-- ID документа
+	,CONVERT(varchar(32), RegSales._Fld2034RRef, 2) AS SalesDocumentID				-- ID документа продажи
 	,CONVERT(varchar(32), RegSales._Fld2037RRef, 2) AS TransactionTypeID			-- ID типа операции
 	,CONVERT(varchar(32), RegSales._Fld2032RRef, 2) AS BusinessID					-- ID направления бизнеса
 	,CONVERT(varchar(32), RegSales._Fld2030RRef, 2) AS CompanyID					-- ID организации
