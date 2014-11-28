@@ -15,6 +15,18 @@
           <ConnectionProtocol>NotSpecified</ConnectionProtocol>
           <ApplicationName />
         </ConnectionNode>
+        <ConnectionNode Name="V-SQL5:sa">
+          <Created>2014-11-28T12:53:25.1982879+03:00</Created>
+          <Type>SQL</Type>
+          <Server>V-SQL5</Server>
+          <UserName>sa</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB>PG_CentralBase</InitialDB>
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Среда Microsoft SQL Server Management Studio - запрос</ApplicationName>
+        </ConnectionNode>
       </Items>
     </LogicalFolder>
     <LogicalFolder Name="Запросы" Type="0" Sorted="true">
@@ -103,16 +115,16 @@
           <AssociatedConnUserName />
           <FullPath>12 Виды операций.sql</FullPath>
         </FileNode>
-        <FileNode Name="13 Документы.sql">
+        <FileNode Name="13 Документы продаж.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V-APP8283:False:sa</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>V-APP8283</AssociatedConnSrvName>
           <AssociatedConnUserName>sa</AssociatedConnUserName>
-          <FullPath>13 Документы.sql</FullPath>
+          <FullPath>13 Документы продаж.sql</FullPath>
         </FileNode>
         <FileNode Name="13-01 Типы документов.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V-APP8283:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V-APP8283</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
           <FullPath>13-01 Типы документов.sql</FullPath>
         </FileNode>
         <FileNode Name="13-02  Виды оплат документов.sql">
@@ -121,17 +133,35 @@
           <AssociatedConnUserName />
           <FullPath>13-02  Виды оплат документов.sql</FullPath>
         </FileNode>
-        <FileNode Name="20 Номенклатура.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
-          <FullPath>20 Номенклатура.sql</FullPath>
-        </FileNode>
-        <FileNode Name="20-01 Цены.sql">
+        <FileNode Name="14 Документы.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V-APP8283:False:sa</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>V-APP8283</AssociatedConnSrvName>
           <AssociatedConnUserName>sa</AssociatedConnUserName>
-          <FullPath>20-01 Цены.sql</FullPath>
+          <FullPath>14 Документы.sql</FullPath>
+        </FileNode>
+        <FileNode Name="20 Номенклатура.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V-SQL5:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V-SQL5</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>20 Номенклатура.sql</FullPath>
+        </FileNode>
+        <FileNode Name="20-01 Единицы измерения.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V-APP8283:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V-APP8283</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>20-01 Единицы измерения.sql</FullPath>
+        </FileNode>
+        <FileNode Name="20-01-01 Классификатор единиц измерения.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V-APP8283:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V-APP8283</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>20-01-01 Классификатор единиц измерения.sql</FullPath>
+        </FileNode>
+        <FileNode Name="20-XX Цены.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V-APP8283:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V-APP8283</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>20-XX Цены.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>

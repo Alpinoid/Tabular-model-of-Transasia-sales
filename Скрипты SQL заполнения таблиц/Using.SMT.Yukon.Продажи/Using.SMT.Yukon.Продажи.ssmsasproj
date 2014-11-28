@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlAsProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Using.SMT.Yukon.Продажи">
+  <Items>
+    <LogicalFolder Name="Соединения" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="V-APP8283:TRANSASIA\avramko.vv">
+          <Created>2014-11-27T15:31:18.8339201+03:00</Created>
+          <Type>Сервер анализа данных</Type>
+          <Server>V-APP8283</Server>
+          <UserName />
+          <Authentication>Проверка подлинности Windows</Authentication>
+          <InitialDB>Табличная модель продаж Трансазии_avramkovv_94021c4d-4c0e-4c6f-b78c-807818096cad</InitialDB>
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Среда Microsoft SQL Server Management Studio - запрос</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Запросы" Type="1" Sorted="true">
+      <Items>
+        <FileNode Name="t_Sales. Данные для заполнения таблицы.mdx">
+          <AssociatedConnectionMoniker>1396ffcb-10d7-4f8c-aaef-4696d541f554:V-APP8283:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V-APP8283</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>t_Sales. Данные для заполнения таблицы.mdx</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Разное" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+</SqlWorkbenchSqlAsProject>

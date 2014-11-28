@@ -7,6 +7,8 @@ Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Измерения", "Из�
 EndProject
 Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Черновики", "Черновики\Черновики.ssmssqlproj", "{C2E7FB26-DB91-4865-ADA9-F2051EAF1172}"
 EndProject
+Project("{54D695D8-3FC1-47A3-8D60-959ECE458279}") = "Using.SMT.Yukon.Продажи", "Using.SMT.Yukon.Продажи\Using.SMT.Yukon.Продажи.ssmsasproj", "{8AA00721-4ED4-440D-97E4-8016A981FD11}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Default|Default = Default|Default
@@ -14,8 +16,8 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{BB8EE5C4-65C8-4BB8-9621-84D42886DA2C}.Default|Default.ActiveCfg = Default
 		{20E9CFEC-581E-415C-B27B-469BB8BC7E43}.Default|Default.ActiveCfg = Default
-		{4F577ED0-C938-4CF2-9CA1-2EB1030A8E93}.Default|Default.ActiveCfg = Default
 		{C2E7FB26-DB91-4865-ADA9-F2051EAF1172}.Default|Default.ActiveCfg = Default
+		{9735784B-5981-4925-BA00-3A858574D87E}.Default|Default.ActiveCfg = Default
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

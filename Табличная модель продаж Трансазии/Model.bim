@@ -136,7 +136,6 @@
                 </Source>
               </NameColumn>
               <OrderBy>Key</OrderBy>
-              <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
             </Attribute>
             <Attribute>
               <ID>Code</ID>
@@ -691,7 +690,6 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
                 </Source>
               </NameColumn>
               <OrderBy>Key</OrderBy>
-              <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
             </Attribute>
             <Attribute>
               <ID>Code</ID>
@@ -1658,7 +1656,6 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
                 </Source>
               </NameColumn>
               <OrderBy>Key</OrderBy>
-              <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
             </Attribute>
             <Attribute>
               <Annotations>
@@ -1983,256 +1980,6 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
               </Levels>
             </Hierarchy>
           </Hierarchies>
-          <ProactiveCaching>
-            <SilenceInterval>-PT1S</SilenceInterval>
-            <Latency>-PT1S</Latency>
-            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
-            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
-            <Source xsi:type="ProactiveCachingInheritedBinding" />
-          </ProactiveCaching>
-        </Dimension>
-        <Dimension>
-          <ID>GoodsMeasures_a3ff564d-8c9b-4a02-a90b-5eee62652fef</ID>
-          <Name>MeasureUnits</Name>
-          <Annotations>
-            <Annotation>
-              <Name>TableWidgetSerialization</Name>
-            </Annotation>
-            <Annotation>
-              <Name>QueryEditorSerialization</Name>
-            </Annotation>
-            <Annotation>
-              <Name>IsQueryEditorUsed</Name>
-              <Value>True</Value>
-            </Annotation>
-          </Annotations>
-          <Source xsi:type="DataSourceViewBinding">
-            <DataSourceViewID>Sandbox</DataSourceViewID>
-          </Source>
-          <UnknownMember valuens="ddl200_200">AutomaticNull</UnknownMember>
-          <ErrorConfiguration>
-            <KeyNotFound>IgnoreError</KeyNotFound>
-            <KeyDuplicate>ReportAndStop</KeyDuplicate>
-            <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
-          </ErrorConfiguration>
-          <StorageMode valuens="ddl200_200">InMemory</StorageMode>
-          <Language>1049</Language>
-          <UnknownMemberName>Unknown</UnknownMemberName>
-          <Attributes>
-            <Attribute>
-              <ID>RowNumber</ID>
-              <Name>RowNumber</Name>
-              <Type valuens="ddl200_200">RowNumber</Type>
-              <Usage>Key</Usage>
-              <KeyColumns>
-                <KeyColumn>
-                  <DataType>Integer</DataType>
-                  <DataSize>4</DataSize>
-                  <NullProcessing>Error</NullProcessing>
-                  <Source xsi:type="ddl200_200:RowNumberBinding" />
-                </KeyColumn>
-              </KeyColumns>
-              <NameColumn>
-                <DataType>WChar</DataType>
-                <DataSize>4</DataSize>
-                <NullProcessing>ZeroOrBlank</NullProcessing>
-                <Source xsi:type="ddl200_200:RowNumberBinding" />
-              </NameColumn>
-              <AttributeRelationships>
-                <AttributeRelationship>
-                  <AttributeID>ID</AttributeID>
-                  <OverrideBehavior>None</OverrideBehavior>
-                  <Name>ID_</Name>
-                </AttributeRelationship>
-                <AttributeRelationship>
-                  <AttributeID>GoodsID</AttributeID>
-                  <OverrideBehavior>None</OverrideBehavior>
-                  <Name>GoodsID</Name>
-                </AttributeRelationship>
-                <AttributeRelationship>
-                  <AttributeID>Code</AttributeID>
-                  <OverrideBehavior>None</OverrideBehavior>
-                  <Name>Code</Name>
-                </AttributeRelationship>
-                <AttributeRelationship>
-                  <AttributeID>Description</AttributeID>
-                  <OverrideBehavior>None</OverrideBehavior>
-                  <Name>Description</Name>
-                </AttributeRelationship>
-                <AttributeRelationship>
-                  <AttributeID>ClassifierID</AttributeID>
-                  <OverrideBehavior>None</OverrideBehavior>
-                  <Name>ClassifierID</Name>
-                </AttributeRelationship>
-              </AttributeRelationships>
-              <OrderBy>Key</OrderBy>
-              <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
-            </Attribute>
-            <Attribute>
-              <Annotations>
-                <Annotation>
-                  <Name>Format</Name>
-                  <Value>
-                    <Format Format="Text" xmlns="" />
-                  </Value>
-                </Annotation>
-              </Annotations>
-              <ID>ID</ID>
-              <Name>ID</Name>
-              <KeyColumns>
-                <KeyColumn>
-                  <DataType>WChar</DataType>
-                  <DataSize>32768</DataSize>
-                  <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
-                  <Source xsi:type="ColumnBinding">
-                    <TableID>GoodsMeasures_a3ff564d-8c9b-4a02-a90b-5eee62652fef</TableID>
-                    <ColumnID>ID</ColumnID>
-                  </Source>
-                </KeyColumn>
-              </KeyColumns>
-              <NameColumn>
-                <DataType>WChar</DataType>
-                <DataSize>32768</DataSize>
-                <NullProcessing>ZeroOrBlank</NullProcessing>
-                <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
-                <Source xsi:type="ColumnBinding">
-                  <TableID>GoodsMeasures_a3ff564d-8c9b-4a02-a90b-5eee62652fef</TableID>
-                  <ColumnID>ID</ColumnID>
-                </Source>
-              </NameColumn>
-              <OrderBy>Key</OrderBy>
-            </Attribute>
-            <Attribute>
-              <Annotations>
-                <Annotation>
-                  <Name>Format</Name>
-                  <Value>
-                    <Format Format="Text" xmlns="" />
-                  </Value>
-                </Annotation>
-              </Annotations>
-              <ID>GoodsID</ID>
-              <Name>GoodsID</Name>
-              <KeyColumns>
-                <KeyColumn>
-                  <DataType>WChar</DataType>
-                  <DataSize>32768</DataSize>
-                  <NullProcessing>Preserve</NullProcessing>
-                  <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
-                  <Source xsi:type="ColumnBinding">
-                    <TableID>GoodsMeasures_a3ff564d-8c9b-4a02-a90b-5eee62652fef</TableID>
-                    <ColumnID>GoodsID</ColumnID>
-                  </Source>
-                </KeyColumn>
-              </KeyColumns>
-              <NameColumn>
-                <DataType>WChar</DataType>
-                <DataSize>32768</DataSize>
-                <NullProcessing>ZeroOrBlank</NullProcessing>
-                <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
-                <Source xsi:type="ColumnBinding">
-                  <TableID>GoodsMeasures_a3ff564d-8c9b-4a02-a90b-5eee62652fef</TableID>
-                  <ColumnID>GoodsID</ColumnID>
-                </Source>
-              </NameColumn>
-              <OrderBy>Key</OrderBy>
-            </Attribute>
-            <Attribute>
-              <Annotations>
-                <Annotation>
-                  <Name>Format</Name>
-                  <Value>
-                    <Format Format="Text" xmlns="" />
-                  </Value>
-                </Annotation>
-              </Annotations>
-              <ID>Code</ID>
-              <Name>Code</Name>
-              <KeyColumns>
-                <KeyColumn>
-                  <DataType>WChar</DataType>
-                  <DataSize>32768</DataSize>
-                  <NullProcessing>Preserve</NullProcessing>
-                  <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
-                  <Source xsi:type="ColumnBinding">
-                    <TableID>GoodsMeasures_a3ff564d-8c9b-4a02-a90b-5eee62652fef</TableID>
-                    <ColumnID>Code</ColumnID>
-                  </Source>
-                </KeyColumn>
-              </KeyColumns>
-              <NameColumn>
-                <DataType>WChar</DataType>
-                <DataSize>32768</DataSize>
-                <NullProcessing>ZeroOrBlank</NullProcessing>
-                <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
-                <Source xsi:type="ColumnBinding">
-                  <TableID>GoodsMeasures_a3ff564d-8c9b-4a02-a90b-5eee62652fef</TableID>
-                  <ColumnID>Code</ColumnID>
-                </Source>
-              </NameColumn>
-              <OrderBy>Key</OrderBy>
-            </Attribute>
-            <Attribute>
-              <Annotations>
-                <Annotation>
-                  <Name>Format</Name>
-                  <Value>
-                    <Format Format="Text" xmlns="" />
-                  </Value>
-                </Annotation>
-              </Annotations>
-              <ID>Description</ID>
-              <Name>Description</Name>
-              <KeyColumns>
-                <KeyColumn>
-                  <DataType>WChar</DataType>
-                  <DataSize>32768</DataSize>
-                  <NullProcessing>Preserve</NullProcessing>
-                  <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
-                  <Source xsi:type="ColumnBinding">
-                    <TableID>GoodsMeasures_a3ff564d-8c9b-4a02-a90b-5eee62652fef</TableID>
-                    <ColumnID>Description</ColumnID>
-                  </Source>
-                </KeyColumn>
-              </KeyColumns>
-              <NameColumn>
-                <DataType>WChar</DataType>
-                <DataSize>32768</DataSize>
-                <NullProcessing>ZeroOrBlank</NullProcessing>
-                <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
-                <Source xsi:type="ColumnBinding">
-                  <TableID>GoodsMeasures_a3ff564d-8c9b-4a02-a90b-5eee62652fef</TableID>
-                  <ColumnID>Description</ColumnID>
-                </Source>
-              </NameColumn>
-              <OrderBy>Key</OrderBy>
-            </Attribute>
-            <Attribute>
-              <ID>ClassifierID</ID>
-              <Name>ClassifierID</Name>
-              <KeyColumns>
-                <KeyColumn>
-                  <DataType>WChar</DataType>
-                  <DataSize>32768</DataSize>
-                  <NullProcessing>Preserve</NullProcessing>
-                  <Source xsi:type="ColumnBinding">
-                    <TableID>GoodsMeasures_a3ff564d-8c9b-4a02-a90b-5eee62652fef</TableID>
-                    <ColumnID>ClassifierID</ColumnID>
-                  </Source>
-                </KeyColumn>
-              </KeyColumns>
-              <NameColumn>
-                <DataType>WChar</DataType>
-                <DataSize>32768</DataSize>
-                <NullProcessing>ZeroOrBlank</NullProcessing>
-                <Source xsi:type="ColumnBinding">
-                  <TableID>GoodsMeasures_a3ff564d-8c9b-4a02-a90b-5eee62652fef</TableID>
-                  <ColumnID>ClassifierID</ColumnID>
-                </Source>
-              </NameColumn>
-              <OrderBy>Key</OrderBy>
-            </Attribute>
-          </Attributes>
           <ProactiveCaching>
             <SilenceInterval>-PT1S</SilenceInterval>
             <Latency>-PT1S</Latency>
@@ -5136,7 +4883,7 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
         </Dimension>
         <Dimension>
           <ID>Cost_ba5b515e-2ff0-47ec-bcd9-9b2936191797</ID>
-          <Name>20-01 Цены</Name>
+          <Name>20-XX Цены</Name>
           <Annotations>
             <Annotation>
               <Name>TableWidgetSerialization</Name>
@@ -5686,7 +5433,6 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
                 </Source>
               </NameColumn>
               <OrderBy>Key</OrderBy>
-              <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
             </Attribute>
             <Attribute>
               <Annotations>
@@ -6249,6 +5995,823 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
             <Source xsi:type="ProactiveCachingInheritedBinding" />
           </ProactiveCaching>
         </Dimension>
+        <Dimension>
+          <ID>20-01 Единицы измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</ID>
+          <Name>20-01 Единицы измерения</Name>
+          <Annotations>
+            <Annotation>
+              <Name>TableWidgetSerialization</Name>
+            </Annotation>
+            <Annotation>
+              <Name>QueryEditorSerialization</Name>
+            </Annotation>
+            <Annotation>
+              <Name>IsQueryEditorUsed</Name>
+              <Value>True</Value>
+            </Annotation>
+          </Annotations>
+          <Source xsi:type="DataSourceViewBinding">
+            <DataSourceViewID>Sandbox</DataSourceViewID>
+          </Source>
+          <UnknownMember valuens="ddl200_200">AutomaticNull</UnknownMember>
+          <ErrorConfiguration>
+            <KeyNotFound>IgnoreError</KeyNotFound>
+            <KeyDuplicate>ReportAndStop</KeyDuplicate>
+            <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+          </ErrorConfiguration>
+          <StorageMode valuens="ddl200_200">InMemory</StorageMode>
+          <Language>1049</Language>
+          <UnknownMemberName>Unknown</UnknownMemberName>
+          <Attributes>
+            <Attribute>
+              <ID>RowNumber</ID>
+              <Name>RowNumber</Name>
+              <Type valuens="ddl200_200">RowNumber</Type>
+              <Usage>Key</Usage>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <DataSize>4</DataSize>
+                  <NullProcessing>Error</NullProcessing>
+                  <Source xsi:type="ddl200_200:RowNumberBinding" />
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>4</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <Source xsi:type="ddl200_200:RowNumberBinding" />
+              </NameColumn>
+              <AttributeRelationships>
+                <AttributeRelationship>
+                  <AttributeID>ID</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>ID_</Name>
+                </AttributeRelationship>
+                <AttributeRelationship>
+                  <AttributeID>GoodsID</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>GoodsID</Name>
+                </AttributeRelationship>
+                <AttributeRelationship>
+                  <AttributeID>ClassifierUnitsID</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>ClassifierUnitsID</Name>
+                </AttributeRelationship>
+                <AttributeRelationship>
+                  <AttributeID>Factor</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>Factor</Name>
+                </AttributeRelationship>
+                <AttributeRelationship>
+                  <AttributeID>Volume</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>Volume</Name>
+                </AttributeRelationship>
+                <AttributeRelationship>
+                  <AttributeID>NetWeight</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>NetWeight</Name>
+                </AttributeRelationship>
+                <AttributeRelationship>
+                  <AttributeID>GrossWeight</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>GrossWeight</Name>
+                </AttributeRelationship>
+                <AttributeRelationship>
+                  <AttributeID>Lenght</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>Lenght</Name>
+                </AttributeRelationship>
+                <AttributeRelationship>
+                  <AttributeID>Widt</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>Widt</Name>
+                </AttributeRelationship>
+                <AttributeRelationship>
+                  <AttributeID>Height</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>Height</Name>
+                </AttributeRelationship>
+                <AttributeRelationship>
+                  <AttributeID>CodeEAN</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>CodeEAN</Name>
+                </AttributeRelationship>
+                <AttributeRelationship>
+                  <AttributeID>IsBasicUnit</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>IsBasicUnit</Name>
+                </AttributeRelationship>
+              </AttributeRelationships>
+              <OrderBy>Key</OrderBy>
+              <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+            </Attribute>
+            <Attribute>
+              <Annotations>
+                <Annotation>
+                  <Name>Format</Name>
+                  <Value>
+                    <Format Format="Text" xmlns="" />
+                  </Value>
+                </Annotation>
+              </Annotations>
+              <ID>ID</ID>
+              <Name>ID</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>32768</DataSize>
+                  <NullProcessing>Preserve</NullProcessing>
+                  <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>_x0032_0-01_x0020_Единицы_x0020_измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</TableID>
+                    <ColumnID>ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>32768</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>_x0032_0-01_x0020_Единицы_x0020_измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</TableID>
+                  <ColumnID>ID</ColumnID>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+            </Attribute>
+            <Attribute>
+              <Annotations>
+                <Annotation>
+                  <Name>Format</Name>
+                  <Value>
+                    <Format Format="Text" xmlns="" />
+                  </Value>
+                </Annotation>
+              </Annotations>
+              <ID>GoodsID</ID>
+              <Name>GoodsID</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>32768</DataSize>
+                  <NullProcessing>Preserve</NullProcessing>
+                  <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>_x0032_0-01_x0020_Единицы_x0020_измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</TableID>
+                    <ColumnID>GoodsID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>32768</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>_x0032_0-01_x0020_Единицы_x0020_измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</TableID>
+                  <ColumnID>GoodsID</ColumnID>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+            </Attribute>
+            <Attribute>
+              <Annotations>
+                <Annotation>
+                  <Name>Format</Name>
+                  <Value>
+                    <Format Format="Text" xmlns="" />
+                  </Value>
+                </Annotation>
+              </Annotations>
+              <ID>ClassifierUnitsID</ID>
+              <Name>ClassifierUnitsID</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>32768</DataSize>
+                  <NullProcessing>Preserve</NullProcessing>
+                  <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>_x0032_0-01_x0020_Единицы_x0020_измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</TableID>
+                    <ColumnID>ClassifierUnitsID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>32768</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>_x0032_0-01_x0020_Единицы_x0020_измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</TableID>
+                  <ColumnID>ClassifierUnitsID</ColumnID>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+            </Attribute>
+            <Attribute>
+              <Annotations>
+                <Annotation>
+                  <Name>Format</Name>
+                  <Value>
+                    <Format Format="General" xmlns="" />
+                  </Value>
+                </Annotation>
+              </Annotations>
+              <ID>Factor</ID>
+              <Name>Factor</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Double</DataType>
+                  <DataSize>-1</DataSize>
+                  <NullProcessing>Preserve</NullProcessing>
+                  <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>_x0032_0-01_x0020_Единицы_x0020_измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</TableID>
+                    <ColumnID>Factor</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>-1</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>_x0032_0-01_x0020_Единицы_x0020_измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</TableID>
+                  <ColumnID>Factor</ColumnID>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+            </Attribute>
+            <Attribute>
+              <Annotations>
+                <Annotation>
+                  <Name>Format</Name>
+                  <Value>
+                    <Format Format="General" xmlns="" />
+                  </Value>
+                </Annotation>
+              </Annotations>
+              <ID>Volume</ID>
+              <Name>Volume</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Double</DataType>
+                  <DataSize>-1</DataSize>
+                  <NullProcessing>Preserve</NullProcessing>
+                  <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>_x0032_0-01_x0020_Единицы_x0020_измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</TableID>
+                    <ColumnID>Volume</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>-1</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>_x0032_0-01_x0020_Единицы_x0020_измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</TableID>
+                  <ColumnID>Volume</ColumnID>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+            </Attribute>
+            <Attribute>
+              <Annotations>
+                <Annotation>
+                  <Name>Format</Name>
+                  <Value>
+                    <Format Format="General" xmlns="" />
+                  </Value>
+                </Annotation>
+              </Annotations>
+              <ID>NetWeight</ID>
+              <Name>NetWeight</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Double</DataType>
+                  <DataSize>-1</DataSize>
+                  <NullProcessing>Preserve</NullProcessing>
+                  <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>_x0032_0-01_x0020_Единицы_x0020_измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</TableID>
+                    <ColumnID>NetWeight</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>-1</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>_x0032_0-01_x0020_Единицы_x0020_измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</TableID>
+                  <ColumnID>NetWeight</ColumnID>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+            </Attribute>
+            <Attribute>
+              <Annotations>
+                <Annotation>
+                  <Name>Format</Name>
+                  <Value>
+                    <Format Format="General" xmlns="" />
+                  </Value>
+                </Annotation>
+              </Annotations>
+              <ID>GrossWeight</ID>
+              <Name>GrossWeight</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Double</DataType>
+                  <DataSize>-1</DataSize>
+                  <NullProcessing>Preserve</NullProcessing>
+                  <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>_x0032_0-01_x0020_Единицы_x0020_измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</TableID>
+                    <ColumnID>GrossWeight</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>-1</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>_x0032_0-01_x0020_Единицы_x0020_измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</TableID>
+                  <ColumnID>GrossWeight</ColumnID>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+            </Attribute>
+            <Attribute>
+              <Annotations>
+                <Annotation>
+                  <Name>Format</Name>
+                  <Value>
+                    <Format Format="General" xmlns="" />
+                  </Value>
+                </Annotation>
+              </Annotations>
+              <ID>Lenght</ID>
+              <Name>Lenght</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Double</DataType>
+                  <DataSize>-1</DataSize>
+                  <NullProcessing>Preserve</NullProcessing>
+                  <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>_x0032_0-01_x0020_Единицы_x0020_измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</TableID>
+                    <ColumnID>Lenght</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>-1</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>_x0032_0-01_x0020_Единицы_x0020_измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</TableID>
+                  <ColumnID>Lenght</ColumnID>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+            </Attribute>
+            <Attribute>
+              <Annotations>
+                <Annotation>
+                  <Name>Format</Name>
+                  <Value>
+                    <Format Format="General" xmlns="" />
+                  </Value>
+                </Annotation>
+              </Annotations>
+              <ID>Widt</ID>
+              <Name>Widt</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Double</DataType>
+                  <DataSize>-1</DataSize>
+                  <NullProcessing>Preserve</NullProcessing>
+                  <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>_x0032_0-01_x0020_Единицы_x0020_измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</TableID>
+                    <ColumnID>Widt</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>-1</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>_x0032_0-01_x0020_Единицы_x0020_измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</TableID>
+                  <ColumnID>Widt</ColumnID>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+            </Attribute>
+            <Attribute>
+              <Annotations>
+                <Annotation>
+                  <Name>Format</Name>
+                  <Value>
+                    <Format Format="General" xmlns="" />
+                  </Value>
+                </Annotation>
+              </Annotations>
+              <ID>Height</ID>
+              <Name>Height</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Double</DataType>
+                  <DataSize>-1</DataSize>
+                  <NullProcessing>Preserve</NullProcessing>
+                  <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>_x0032_0-01_x0020_Единицы_x0020_измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</TableID>
+                    <ColumnID>Height</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>-1</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>_x0032_0-01_x0020_Единицы_x0020_измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</TableID>
+                  <ColumnID>Height</ColumnID>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+            </Attribute>
+            <Attribute>
+              <Annotations>
+                <Annotation>
+                  <Name>Format</Name>
+                  <Value>
+                    <Format Format="Text" xmlns="" />
+                  </Value>
+                </Annotation>
+              </Annotations>
+              <ID>CodeEAN</ID>
+              <Name>CodeEAN</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>32768</DataSize>
+                  <NullProcessing>Preserve</NullProcessing>
+                  <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>_x0032_0-01_x0020_Единицы_x0020_измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</TableID>
+                    <ColumnID>CodeEAN</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>32768</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>_x0032_0-01_x0020_Единицы_x0020_измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</TableID>
+                  <ColumnID>CodeEAN</ColumnID>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+            </Attribute>
+            <Attribute>
+              <Annotations>
+                <Annotation>
+                  <Name>Format</Name>
+                  <Value>
+                    <Format Format="General" xmlns="" />
+                  </Value>
+                </Annotation>
+              </Annotations>
+              <ID>IsBasicUnit</ID>
+              <Name>IsBasicUnit</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <DataSize>-1</DataSize>
+                  <NullProcessing>Preserve</NullProcessing>
+                  <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>_x0032_0-01_x0020_Единицы_x0020_измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</TableID>
+                    <ColumnID>IsBasicUnit</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>-1</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>_x0032_0-01_x0020_Единицы_x0020_измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</TableID>
+                  <ColumnID>IsBasicUnit</ColumnID>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+            </Attribute>
+          </Attributes>
+          <ProactiveCaching>
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" />
+          </ProactiveCaching>
+          <ddl300_300:Relationships>
+            <ddl300_300:Relationship>
+              <ID>95751972-eae9-4028-a706-0dafa9416345</ID>
+              <ddl300_300:FromRelationshipEnd>
+                <ddl300_300:Multiplicity>Many</ddl300_300:Multiplicity>
+                <ddl300:VisualizationProperties />
+                <DimensionID>20-01 Единицы измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</DimensionID>
+                <Attributes>
+                  <Attribute>
+                    <AttributeID>GoodsID</AttributeID>
+                  </Attribute>
+                </Attributes>
+              </ddl300_300:FromRelationshipEnd>
+              <ddl300_300:ToRelationshipEnd>
+                <ddl300_300:Multiplicity>One</ddl300_300:Multiplicity>
+                <ddl300:VisualizationProperties />
+                <DimensionID>Goods_1f62a172-7212-49c3-a93d-c32e3d7c1be0</DimensionID>
+                <Attributes>
+                  <Attribute>
+                    <AttributeID>ID</AttributeID>
+                  </Attribute>
+                </Attributes>
+              </ddl300_300:ToRelationshipEnd>
+            </ddl300_300:Relationship>
+            <ddl300_300:Relationship>
+              <ID>e917fed6-803c-4afe-86d6-d0ee86fd1781</ID>
+              <ddl300_300:FromRelationshipEnd>
+                <ddl300_300:Multiplicity>Many</ddl300_300:Multiplicity>
+                <ddl300:VisualizationProperties />
+                <DimensionID>20-01 Единицы измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</DimensionID>
+                <Attributes>
+                  <Attribute>
+                    <AttributeID>ClassifierUnitsID</AttributeID>
+                  </Attribute>
+                </Attributes>
+              </ddl300_300:FromRelationshipEnd>
+              <ddl300_300:ToRelationshipEnd>
+                <ddl300_300:Multiplicity>One</ddl300_300:Multiplicity>
+                <ddl300:VisualizationProperties />
+                <DimensionID>20-01-01 Классификатор единиц измерения_69846ab8-6978-4bba-8711-f92428bcdf32</DimensionID>
+                <Attributes>
+                  <Attribute>
+                    <AttributeID>ID</AttributeID>
+                  </Attribute>
+                </Attributes>
+              </ddl300_300:ToRelationshipEnd>
+            </ddl300_300:Relationship>
+          </ddl300_300:Relationships>
+        </Dimension>
+        <Dimension>
+          <ID>20-01-01 Классификатор единиц измерения_69846ab8-6978-4bba-8711-f92428bcdf32</ID>
+          <Name>20-01-01 Классификатор единиц измерения</Name>
+          <Annotations>
+            <Annotation>
+              <Name>IsQueryEditorUsed</Name>
+              <Value>True</Value>
+            </Annotation>
+            <Annotation>
+              <Name>QueryEditorSerialization</Name>
+            </Annotation>
+            <Annotation>
+              <Name>TableWidgetSerialization</Name>
+            </Annotation>
+            <Annotation>
+              <Name>DataMarketWebBaseUrl</Name>
+            </Annotation>
+            <Annotation>
+              <Name>DataMarketWebQueryUrl</Name>
+            </Annotation>
+          </Annotations>
+          <Source xsi:type="DataSourceViewBinding">
+            <DataSourceViewID>Sandbox</DataSourceViewID>
+          </Source>
+          <UnknownMember valuens="ddl200_200">AutomaticNull</UnknownMember>
+          <ErrorConfiguration>
+            <KeyNotFound>IgnoreError</KeyNotFound>
+            <KeyDuplicate>ReportAndStop</KeyDuplicate>
+            <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+          </ErrorConfiguration>
+          <StorageMode valuens="ddl200_200">InMemory</StorageMode>
+          <Language>1049</Language>
+          <UnknownMemberName>Unknown</UnknownMemberName>
+          <Attributes>
+            <Attribute>
+              <ID>RowNumber</ID>
+              <Name>RowNumber</Name>
+              <Type valuens="ddl200_200">RowNumber</Type>
+              <Usage>Key</Usage>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <DataSize>4</DataSize>
+                  <NullProcessing>Error</NullProcessing>
+                  <Source xsi:type="ddl200_200:RowNumberBinding" />
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>4</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <Source xsi:type="ddl200_200:RowNumberBinding" />
+              </NameColumn>
+              <AttributeRelationships>
+                <AttributeRelationship>
+                  <AttributeID>ID</AttributeID>
+                  <Cardinality>One</Cardinality>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>ID_</Name>
+                </AttributeRelationship>
+                <AttributeRelationship>
+                  <AttributeID>Code</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>Code</Name>
+                </AttributeRelationship>
+                <AttributeRelationship>
+                  <AttributeID>Description</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>Description</Name>
+                </AttributeRelationship>
+                <AttributeRelationship>
+                  <AttributeID>FullName</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>FullName</Name>
+                </AttributeRelationship>
+              </AttributeRelationships>
+              <OrderBy>Key</OrderBy>
+              <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+            </Attribute>
+            <Attribute>
+              <Annotations>
+                <Annotation>
+                  <Name>Format</Name>
+                  <Value>
+                    <Format Format="Text" xmlns="" />
+                  </Value>
+                </Annotation>
+              </Annotations>
+              <ID>ID</ID>
+              <Name>ID</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>32768</DataSize>
+                  <NullProcessing>Error</NullProcessing>
+                  <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>_x0032_0-01-01_x0020_Классификатор_x0020_единиц_x0020_измерения_69846ab8-6978-4bba-8711-f92428bcdf32</TableID>
+                    <ColumnID>ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>32768</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>_x0032_0-01-01_x0020_Классификатор_x0020_единиц_x0020_измерения_69846ab8-6978-4bba-8711-f92428bcdf32</TableID>
+                  <ColumnID>ID</ColumnID>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+            </Attribute>
+            <Attribute>
+              <Annotations>
+                <Annotation>
+                  <Name>Format</Name>
+                  <Value>
+                    <Format Format="Text" xmlns="" />
+                  </Value>
+                </Annotation>
+              </Annotations>
+              <ID>Code</ID>
+              <Name>Code</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>32768</DataSize>
+                  <NullProcessing>Preserve</NullProcessing>
+                  <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>_x0032_0-01-01_x0020_Классификатор_x0020_единиц_x0020_измерения_69846ab8-6978-4bba-8711-f92428bcdf32</TableID>
+                    <ColumnID>Code</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>32768</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>_x0032_0-01-01_x0020_Классификатор_x0020_единиц_x0020_измерения_69846ab8-6978-4bba-8711-f92428bcdf32</TableID>
+                  <ColumnID>Code</ColumnID>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+            </Attribute>
+            <Attribute>
+              <Annotations>
+                <Annotation>
+                  <Name>Format</Name>
+                  <Value>
+                    <Format Format="Text" xmlns="" />
+                  </Value>
+                </Annotation>
+              </Annotations>
+              <ID>Description</ID>
+              <Name>Description</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>32768</DataSize>
+                  <NullProcessing>Preserve</NullProcessing>
+                  <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>_x0032_0-01-01_x0020_Классификатор_x0020_единиц_x0020_измерения_69846ab8-6978-4bba-8711-f92428bcdf32</TableID>
+                    <ColumnID>Description</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>32768</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>_x0032_0-01-01_x0020_Классификатор_x0020_единиц_x0020_измерения_69846ab8-6978-4bba-8711-f92428bcdf32</TableID>
+                  <ColumnID>Description</ColumnID>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+            </Attribute>
+            <Attribute>
+              <Annotations>
+                <Annotation>
+                  <Name>Format</Name>
+                  <Value>
+                    <Format Format="Text" xmlns="" />
+                  </Value>
+                </Annotation>
+              </Annotations>
+              <ID>FullName</ID>
+              <Name>FullName</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>32768</DataSize>
+                  <NullProcessing>Preserve</NullProcessing>
+                  <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>_x0032_0-01-01_x0020_Классификатор_x0020_единиц_x0020_измерения_69846ab8-6978-4bba-8711-f92428bcdf32</TableID>
+                    <ColumnID>FullName</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <DataSize>32768</DataSize>
+                <NullProcessing>ZeroOrBlank</NullProcessing>
+                <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>_x0032_0-01-01_x0020_Классификатор_x0020_единиц_x0020_измерения_69846ab8-6978-4bba-8711-f92428bcdf32</TableID>
+                  <ColumnID>FullName</ColumnID>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+            </Attribute>
+          </Attributes>
+          <ProactiveCaching>
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" />
+          </ProactiveCaching>
+        </Dimension>
       </Dimensions>
       <Cubes>
         <Cube>
@@ -6273,7 +6836,6 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
                 </Attribute>
                 <Attribute>
                   <AttributeID>ID</AttributeID>
-                  <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
                 </Attribute>
                 <Attribute>
                   <AttributeID>Code</AttributeID>
@@ -6347,7 +6909,6 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
                 </Attribute>
                 <Attribute>
                   <AttributeID>ID</AttributeID>
-                  <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
                 </Attribute>
                 <Attribute>
                   <AttributeID>Code</AttributeID>
@@ -6484,7 +7045,6 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
                 </Attribute>
                 <Attribute>
                   <AttributeID>ID</AttributeID>
-                  <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
                 </Attribute>
                 <Attribute>
                   <AttributeID>Description</AttributeID>
@@ -6530,32 +7090,6 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
                   <HierarchyID>Направление бизнеса - Тип цены</HierarchyID>
                 </Hierarchy>
               </Hierarchies>
-            </Dimension>
-            <Dimension>
-              <ID>GoodsMeasures_a3ff564d-8c9b-4a02-a90b-5eee62652fef</ID>
-              <Name>MeasureUnits</Name>
-              <DimensionID>GoodsMeasures_a3ff564d-8c9b-4a02-a90b-5eee62652fef</DimensionID>
-              <Attributes>
-                <Attribute>
-                  <AttributeID>RowNumber</AttributeID>
-                  <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>ID</AttributeID>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>GoodsID</AttributeID>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Code</AttributeID>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Description</AttributeID>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>ClassifierID</AttributeID>
-                </Attribute>
-              </Attributes>
             </Dimension>
             <Dimension>
               <ID>Goods_1f62a172-7212-49c3-a93d-c32e3d7c1be0</ID>
@@ -6856,7 +7390,7 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
             </Dimension>
             <Dimension>
               <ID>Cost_ba5b515e-2ff0-47ec-bcd9-9b2936191797</ID>
-              <Name>20-01 Цены</Name>
+              <Name>20-XX Цены</Name>
               <DimensionID>Cost_ba5b515e-2ff0-47ec-bcd9-9b2936191797</DimensionID>
               <Attributes>
                 <Attribute>
@@ -6909,7 +7443,6 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
                 </Attribute>
                 <Attribute>
                   <AttributeID>ID</AttributeID>
-                  <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
                 </Attribute>
                 <Attribute>
                   <AttributeID>DocDate</AttributeID>
@@ -6963,7 +7496,113 @@ FROM [dbo].[_Reference57]&lt;/RSQueryCommandText&gt;&lt;RSQueryCommandType&gt;Te
                 </Attribute>
               </Attributes>
             </Dimension>
+            <Dimension>
+              <ID>20-01 Единицы измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</ID>
+              <Name>20-01 Единицы измерения</Name>
+              <DimensionID>20-01 Единицы измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</DimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>RowNumber</AttributeID>
+                  <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>ID</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>GoodsID</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>ClassifierUnitsID</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Factor</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Volume</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>NetWeight</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>GrossWeight</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Lenght</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Widt</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Height</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>CodeEAN</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>IsBasicUnit</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <ID>20-01-01 Классификатор единиц измерения_69846ab8-6978-4bba-8711-f92428bcdf32</ID>
+              <Name>20-01-01 Классификатор единиц измерения</Name>
+              <DimensionID>20-01-01 Классификатор единиц измерения_69846ab8-6978-4bba-8711-f92428bcdf32</DimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>RowNumber</AttributeID>
+                  <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>ID</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Code</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Description</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>FullName</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
           </Dimensions>
+          <Perspectives>
+            <Perspective>
+              <ID>Test</ID>
+              <Name>Test</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Routes_c732f24c-4049-4369-8753-a9d28fef97a2</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Description</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>ID</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>TeamID</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Branch</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                  <Hierarchies>
+                    <Hierarchy>
+                      <HierarchyID>Филиал - Маршрут</HierarchyID>
+                    </Hierarchy>
+                  </Hierarchies>
+                </Dimension>
+              </Dimensions>
+              <Calculations>
+                <Calculation>
+                  <Name>[Measures].[__Не определено ни одной меры]</Name>
+                  <Type>Member</Type>
+                </Calculation>
+              </Calculations>
+            </Perspective>
+          </Perspectives>
           <MeasureGroups>
             <MeasureGroup>
               <ID>Customers_5947d12c-0402-45e6-942e-86a816ac4eab</ID>
@@ -8536,180 +9175,6 @@ SELECT
 	,ISNULL(Bussiness._Description, 'None') AS Business
 FROM dbo._Reference66 AS Element
 LEFT JOIN dbo._Reference54 AS Bussiness ON Bussiness._IDRRef = Element._Fld165RRef</QueryDefinition>
-                  </Source>
-                  <StorageMode valuens="ddl200_200">InMemory</StorageMode>
-                  <ProcessingMode>Regular</ProcessingMode>
-                  <ErrorConfiguration>
-                    <KeyNotFound>IgnoreError</KeyNotFound>
-                    <KeyDuplicate>ReportAndStop</KeyDuplicate>
-                    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
-                  </ErrorConfiguration>
-                  <ProactiveCaching>
-                    <SilenceInterval>-PT1S</SilenceInterval>
-                    <Latency>-PT1S</Latency>
-                    <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
-                    <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
-                    <Source xsi:type="ProactiveCachingInheritedBinding" />
-                  </ProactiveCaching>
-                </Partition>
-              </Partitions>
-              <ProactiveCaching>
-                <SilenceInterval>-PT1S</SilenceInterval>
-                <Latency>-PT1S</Latency>
-                <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
-                <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
-                <Source xsi:type="ProactiveCachingInheritedBinding" />
-              </ProactiveCaching>
-            </MeasureGroup>
-            <MeasureGroup>
-              <ID>GoodsMeasures_a3ff564d-8c9b-4a02-a90b-5eee62652fef</ID>
-              <Name>MeasureUnits</Name>
-              <Measures>
-                <Measure>
-                  <ID>GoodsMeasures_a3ff564d-8c9b-4a02-a90b-5eee62652fef</ID>
-                  <Name>_Количество MeasureUnits</Name>
-                  <AggregateFunction>Count</AggregateFunction>
-                  <DataType>BigInt</DataType>
-                  <Source>
-                    <DataType>BigInt</DataType>
-                    <DataSize>8</DataSize>
-                    <Source xsi:type="RowBinding">
-                      <TableID>GoodsMeasures_a3ff564d-8c9b-4a02-a90b-5eee62652fef</TableID>
-                    </Source>
-                  </Source>
-                  <Visible>false</Visible>
-                </Measure>
-              </Measures>
-              <StorageMode valuens="ddl200_200">InMemory</StorageMode>
-              <ErrorConfiguration>
-                <KeyNotFound>IgnoreError</KeyNotFound>
-                <KeyDuplicate>ReportAndStop</KeyDuplicate>
-                <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
-              </ErrorConfiguration>
-              <ProcessingMode>Regular</ProcessingMode>
-              <Dimensions>
-                <Dimension xsi:type="DegenerateMeasureGroupDimension">
-                  <CubeDimensionID>GoodsMeasures_a3ff564d-8c9b-4a02-a90b-5eee62652fef</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>RowNumber</AttributeID>
-                      <KeyColumns>
-                        <KeyColumn>
-                          <DataType>Integer</DataType>
-                          <Source xsi:type="ColumnBinding">
-                            <TableID>GoodsMeasures</TableID>
-                            <ColumnID>RowNumber</ColumnID>
-                          </Source>
-                        </KeyColumn>
-                      </KeyColumns>
-                      <Type>Granularity</Type>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ID</AttributeID>
-                      <KeyColumns>
-                        <KeyColumn>
-                          <DataType>WChar</DataType>
-                          <DataSize>32768</DataSize>
-                          <NullProcessing>Error</NullProcessing>
-                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
-                          <Source xsi:type="ColumnBinding">
-                            <TableID>GoodsMeasures_a3ff564d-8c9b-4a02-a90b-5eee62652fef</TableID>
-                            <ColumnID>ID</ColumnID>
-                          </Source>
-                        </KeyColumn>
-                      </KeyColumns>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>GoodsID</AttributeID>
-                      <KeyColumns>
-                        <KeyColumn>
-                          <DataType>WChar</DataType>
-                          <DataSize>32768</DataSize>
-                          <NullProcessing>Preserve</NullProcessing>
-                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
-                          <Source xsi:type="ColumnBinding">
-                            <TableID>GoodsMeasures_a3ff564d-8c9b-4a02-a90b-5eee62652fef</TableID>
-                            <ColumnID>GoodsID</ColumnID>
-                          </Source>
-                        </KeyColumn>
-                      </KeyColumns>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>Code</AttributeID>
-                      <KeyColumns>
-                        <KeyColumn>
-                          <DataType>WChar</DataType>
-                          <DataSize>32768</DataSize>
-                          <NullProcessing>Preserve</NullProcessing>
-                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
-                          <Source xsi:type="ColumnBinding">
-                            <TableID>GoodsMeasures_a3ff564d-8c9b-4a02-a90b-5eee62652fef</TableID>
-                            <ColumnID>Code</ColumnID>
-                          </Source>
-                        </KeyColumn>
-                      </KeyColumns>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>Description</AttributeID>
-                      <KeyColumns>
-                        <KeyColumn>
-                          <DataType>WChar</DataType>
-                          <DataSize>32768</DataSize>
-                          <NullProcessing>Preserve</NullProcessing>
-                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
-                          <Source xsi:type="ColumnBinding">
-                            <TableID>GoodsMeasures_a3ff564d-8c9b-4a02-a90b-5eee62652fef</TableID>
-                            <ColumnID>Description</ColumnID>
-                          </Source>
-                        </KeyColumn>
-                      </KeyColumns>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ClassifierID</AttributeID>
-                      <KeyColumns>
-                        <KeyColumn>
-                          <DataType>WChar</DataType>
-                          <DataSize>32768</DataSize>
-                          <NullProcessing>Preserve</NullProcessing>
-                          <Source xsi:type="ColumnBinding">
-                            <TableID>GoodsMeasures_a3ff564d-8c9b-4a02-a90b-5eee62652fef</TableID>
-                            <ColumnID>ClassifierID</ColumnID>
-                          </Source>
-                        </KeyColumn>
-                      </KeyColumns>
-                    </Attribute>
-                  </Attributes>
-                  <ddl200_200:ShareDimensionStorage>Shared</ddl200_200:ShareDimensionStorage>
-                </Dimension>
-              </Dimensions>
-              <Partitions>
-                <Partition>
-                  <ID>GoodsMeasures_a3ff564d-8c9b-4a02-a90b-5eee62652fef</ID>
-                  <Name>GoodsMeasures</Name>
-                  <Annotations>
-                    <Annotation>
-                      <Name>TableWidgetSerialization</Name>
-                    </Annotation>
-                    <Annotation>
-                      <Name>TableWidgetSourceTable</Name>
-                    </Annotation>
-                    <Annotation>
-                      <Name>QueryEditorSerialization</Name>
-                    </Annotation>
-                    <Annotation>
-                      <Name>IsQueryEditorUsed</Name>
-                      <Value>True</Value>
-                    </Annotation>
-                  </Annotations>
-                  <Source xsi:type="QueryBinding">
-                    <DataSourceID>55e78742-7a14-415d-ade9-8f42bea1a5bb</DataSourceID>
-                    <QueryDefinition>SELECT
-	CONVERT(varchar(32), _IDRRef, 2) AS ID
-	,CONVERT(varchar(32), _OwnerIDRRef, 2) AS GoodsID
-	,_Code AS Code
-	,_Description AS [Description]
-	,CONVERT(varchar(32), _Fld151RRef, 2) AS ClassifierID
-FROM dbo._Reference46</QueryDefinition>
                   </Source>
                   <StorageMode valuens="ddl200_200">InMemory</StorageMode>
                   <ProcessingMode>Regular</ProcessingMode>
@@ -11956,11 +12421,11 @@ WHERE RegSales._Active = 0x01
             </MeasureGroup>
             <MeasureGroup>
               <ID>Cost_ba5b515e-2ff0-47ec-bcd9-9b2936191797</ID>
-              <Name>20-01 Цены</Name>
+              <Name>20-XX Цены</Name>
               <Measures>
                 <Measure>
                   <ID>Cost_ba5b515e-2ff0-47ec-bcd9-9b2936191797</ID>
-                  <Name>_Количество 20-01 Цены</Name>
+                  <Name>_Количество 20-XX Цены</Name>
                   <AggregateFunction>Count</AggregateFunction>
                   <DataType>BigInt</DataType>
                   <Source>
@@ -13127,6 +13592,647 @@ SELECT
                 <Source xsi:type="ProactiveCachingInheritedBinding" />
               </ProactiveCaching>
             </MeasureGroup>
+            <MeasureGroup>
+              <ID>20-01 Единицы измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</ID>
+              <Name>20-01 Единицы измерения</Name>
+              <Measures>
+                <Measure>
+                  <ID>20-01 Единицы измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</ID>
+                  <Name>_Количество 20-01 Единицы измерения</Name>
+                  <AggregateFunction>Count</AggregateFunction>
+                  <DataType>BigInt</DataType>
+                  <Source>
+                    <DataType>BigInt</DataType>
+                    <DataSize>8</DataSize>
+                    <Source xsi:type="RowBinding">
+                      <TableID>_x0032_0-01_x0020_Единицы_x0020_измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</TableID>
+                    </Source>
+                  </Source>
+                  <Visible>false</Visible>
+                </Measure>
+              </Measures>
+              <StorageMode valuens="ddl200_200">InMemory</StorageMode>
+              <ErrorConfiguration>
+                <KeyNotFound>IgnoreError</KeyNotFound>
+                <KeyDuplicate>ReportAndStop</KeyDuplicate>
+                <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+              </ErrorConfiguration>
+              <ProcessingMode>Regular</ProcessingMode>
+              <Dimensions>
+                <Dimension xsi:type="DegenerateMeasureGroupDimension">
+                  <CubeDimensionID>20-01 Единицы измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>RowNumber</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Integer</DataType>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>_x0032_0-01_x0020_Единицы_x0020_измерения</TableID>
+                            <ColumnID>RowNumber</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                      <Type>Granularity</Type>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>ID</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>_x0032_0-01_x0020_Единицы_x0020_измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</TableID>
+                            <ColumnID>ID</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>GoodsID</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>_x0032_0-01_x0020_Единицы_x0020_измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</TableID>
+                            <ColumnID>GoodsID</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>ClassifierUnitsID</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>_x0032_0-01_x0020_Единицы_x0020_измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</TableID>
+                            <ColumnID>ClassifierUnitsID</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Factor</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Double</DataType>
+                          <DataSize>-1</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>_x0032_0-01_x0020_Единицы_x0020_измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</TableID>
+                            <ColumnID>Factor</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Volume</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Double</DataType>
+                          <DataSize>-1</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>_x0032_0-01_x0020_Единицы_x0020_измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</TableID>
+                            <ColumnID>Volume</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>NetWeight</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Double</DataType>
+                          <DataSize>-1</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>_x0032_0-01_x0020_Единицы_x0020_измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</TableID>
+                            <ColumnID>NetWeight</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>GrossWeight</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Double</DataType>
+                          <DataSize>-1</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>_x0032_0-01_x0020_Единицы_x0020_измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</TableID>
+                            <ColumnID>GrossWeight</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Lenght</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Double</DataType>
+                          <DataSize>-1</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>_x0032_0-01_x0020_Единицы_x0020_измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</TableID>
+                            <ColumnID>Lenght</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Widt</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Double</DataType>
+                          <DataSize>-1</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>_x0032_0-01_x0020_Единицы_x0020_измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</TableID>
+                            <ColumnID>Widt</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Height</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Double</DataType>
+                          <DataSize>-1</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>_x0032_0-01_x0020_Единицы_x0020_измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</TableID>
+                            <ColumnID>Height</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>CodeEAN</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>_x0032_0-01_x0020_Единицы_x0020_измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</TableID>
+                            <ColumnID>CodeEAN</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>IsBasicUnit</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Integer</DataType>
+                          <DataSize>-1</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>_x0032_0-01_x0020_Единицы_x0020_измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</TableID>
+                            <ColumnID>IsBasicUnit</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                  </Attributes>
+                  <ddl200_200:ShareDimensionStorage>Shared</ddl200_200:ShareDimensionStorage>
+                </Dimension>
+                <Dimension xsi:type="ReferenceMeasureGroupDimension">
+                  <CubeDimensionID>Goods_1f62a172-7212-49c3-a93d-c32e3d7c1be0</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>RowNumber</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Integer</DataType>
+                          <DataSize>4</DataSize>
+                          <NullProcessing>Error</NullProcessing>
+                          <Source xsi:type="ddl200_200:RowNumberBinding" />
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>ID</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Error</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Goods_1f62a172-7212-49c3-a93d-c32e3d7c1be0</TableID>
+                            <ColumnID>ID</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                      <Type>Granularity</Type>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>ParentID</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Goods_1f62a172-7212-49c3-a93d-c32e3d7c1be0</TableID>
+                            <ColumnID>ParentID</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Code</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Goods_1f62a172-7212-49c3-a93d-c32e3d7c1be0</TableID>
+                            <ColumnID>Code</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Description</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Goods_1f62a172-7212-49c3-a93d-c32e3d7c1be0</TableID>
+                            <ColumnID>Description</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Article</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Goods_1f62a172-7212-49c3-a93d-c32e3d7c1be0</TableID>
+                            <ColumnID>Article</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>BusinessID</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Goods_1f62a172-7212-49c3-a93d-c32e3d7c1be0</TableID>
+                            <ColumnID>BusinessID</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                  </Attributes>
+                  <IntermediateCubeDimensionID>20-01 Единицы измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</IntermediateCubeDimensionID>
+                  <IntermediateGranularityAttributeID>GoodsID</IntermediateGranularityAttributeID>
+                  <Materialization>Regular</Materialization>
+                  <ddl300:RelationshipID>95751972-eae9-4028-a706-0dafa9416345</ddl300:RelationshipID>
+                </Dimension>
+                <Dimension xsi:type="ReferenceMeasureGroupDimension">
+                  <CubeDimensionID>20-01-01 Классификатор единиц измерения_69846ab8-6978-4bba-8711-f92428bcdf32</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>RowNumber</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Integer</DataType>
+                          <DataSize>4</DataSize>
+                          <NullProcessing>Error</NullProcessing>
+                          <Source xsi:type="ddl200_200:RowNumberBinding" />
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>ID</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Error</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>_x0032_0-01-01_x0020_Классификатор_x0020_единиц_x0020_измерения_69846ab8-6978-4bba-8711-f92428bcdf32</TableID>
+                            <ColumnID>ID</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                      <Type>Granularity</Type>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Code</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>_x0032_0-01-01_x0020_Классификатор_x0020_единиц_x0020_измерения_69846ab8-6978-4bba-8711-f92428bcdf32</TableID>
+                            <ColumnID>Code</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Description</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>_x0032_0-01-01_x0020_Классификатор_x0020_единиц_x0020_измерения_69846ab8-6978-4bba-8711-f92428bcdf32</TableID>
+                            <ColumnID>Description</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>FullName</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>_x0032_0-01-01_x0020_Классификатор_x0020_единиц_x0020_измерения_69846ab8-6978-4bba-8711-f92428bcdf32</TableID>
+                            <ColumnID>FullName</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                  </Attributes>
+                  <IntermediateCubeDimensionID>20-01 Единицы измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</IntermediateCubeDimensionID>
+                  <IntermediateGranularityAttributeID>ClassifierUnitsID</IntermediateGranularityAttributeID>
+                  <Materialization>Regular</Materialization>
+                  <ddl300:RelationshipID>e917fed6-803c-4afe-86d6-d0ee86fd1781</ddl300:RelationshipID>
+                </Dimension>
+              </Dimensions>
+              <Partitions>
+                <Partition>
+                  <ID>20-01 Единицы измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904</ID>
+                  <Name>20-01 Единицы измерения</Name>
+                  <Annotations>
+                    <Annotation>
+                      <Name>TableWidgetSerialization</Name>
+                    </Annotation>
+                    <Annotation>
+                      <Name>TableWidgetSourceTable</Name>
+                    </Annotation>
+                    <Annotation>
+                      <Name>QueryEditorSerialization</Name>
+                    </Annotation>
+                    <Annotation>
+                      <Name>IsQueryEditorUsed</Name>
+                      <Value>True</Value>
+                    </Annotation>
+                  </Annotations>
+                  <Source xsi:type="QueryBinding">
+                    <DataSourceID>55e78742-7a14-415d-ade9-8f42bea1a5bb</DataSourceID>
+                    <QueryDefinition>SELECT
+ CONVERT(varchar(32), Units._IDRRef, 2) AS ID      -- ID единицы измерения
+ ,CONVERT(varchar(32), Units._OwnerIDRRef, 2) AS GoodsID    -- ID номенклатуры-владельца
+ ,CONVERT(varchar(32), Units._Fld151RRef, 2) AS ClassifierUnitsID -- ID классификатора единиц ищзмерения
+ ,Units._Fld152 AS Factor           -- Коэффициент
+ ,Units._Fld153 AS Volume           -- Объем
+ ,Units._Fld154 AS NetWeight           -- Вес нетто
+ ,Units._Fld155 AS GrossWeight          -- Вес брутто
+ ,Units._Fld156 AS Lenght           -- Длина
+ ,Units._Fld157 AS Widt            -- Ширина
+ ,Units._Fld158 AS Height           -- Высота
+ ,Units._Fld159 AS CodeEAN           -- Код EAN
+ ,CASE
+  WHEN Goods._IDRRef IS NULL THEN  0
+  ELSE 1
+ END AS IsBasicUnit             -- Признак базовой единицы измерения
+FROM dbo._Reference46 AS Units
+LEFT JOIN dbo._Reference55 AS Goods ON Goods._Fld222RRef = Units._IDRRef AND Goods._IDRRef = Units._OwnerIDRRef
+WHERE Units._Marked = 0</QueryDefinition>
+                  </Source>
+                  <StorageMode valuens="ddl200_200">InMemory</StorageMode>
+                  <ProcessingMode>Regular</ProcessingMode>
+                  <ErrorConfiguration>
+                    <KeyNotFound>IgnoreError</KeyNotFound>
+                    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+                    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+                  </ErrorConfiguration>
+                  <ProactiveCaching>
+                    <SilenceInterval>-PT1S</SilenceInterval>
+                    <Latency>-PT1S</Latency>
+                    <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+                    <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+                    <Source xsi:type="ProactiveCachingInheritedBinding" />
+                  </ProactiveCaching>
+                </Partition>
+              </Partitions>
+              <ProactiveCaching>
+                <SilenceInterval>-PT1S</SilenceInterval>
+                <Latency>-PT1S</Latency>
+                <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+                <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+                <Source xsi:type="ProactiveCachingInheritedBinding" />
+              </ProactiveCaching>
+            </MeasureGroup>
+            <MeasureGroup>
+              <ID>20-01-01 Классификатор единиц измерения_69846ab8-6978-4bba-8711-f92428bcdf32</ID>
+              <Name>20-01-01 Классификатор единиц измерения</Name>
+              <Measures>
+                <Measure>
+                  <ID>20-01-01 Классификатор единиц измерения_69846ab8-6978-4bba-8711-f92428bcdf32</ID>
+                  <Name>_Количество 20-01-01 Классификатор единиц измерения</Name>
+                  <AggregateFunction>Count</AggregateFunction>
+                  <DataType>BigInt</DataType>
+                  <Source>
+                    <DataType>BigInt</DataType>
+                    <DataSize>8</DataSize>
+                    <Source xsi:type="RowBinding">
+                      <TableID>_x0032_0-01-01_x0020_Классификатор_x0020_единиц_x0020_измерения_69846ab8-6978-4bba-8711-f92428bcdf32</TableID>
+                    </Source>
+                  </Source>
+                  <Visible>false</Visible>
+                </Measure>
+              </Measures>
+              <StorageMode valuens="ddl200_200">InMemory</StorageMode>
+              <ErrorConfiguration>
+                <KeyNotFound>IgnoreError</KeyNotFound>
+                <KeyDuplicate>ReportAndStop</KeyDuplicate>
+                <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+              </ErrorConfiguration>
+              <ProcessingMode>Regular</ProcessingMode>
+              <Dimensions>
+                <Dimension xsi:type="DegenerateMeasureGroupDimension">
+                  <CubeDimensionID>20-01-01 Классификатор единиц измерения_69846ab8-6978-4bba-8711-f92428bcdf32</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>RowNumber</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Integer</DataType>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>_x0032_0-01-01_x0020_Классификатор_x0020_единиц_x0020_измерения</TableID>
+                            <ColumnID>RowNumber</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                      <Type>Granularity</Type>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>ID</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Error</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>_x0032_0-01-01_x0020_Классификатор_x0020_единиц_x0020_измерения_69846ab8-6978-4bba-8711-f92428bcdf32</TableID>
+                            <ColumnID>ID</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Code</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>_x0032_0-01-01_x0020_Классификатор_x0020_единиц_x0020_измерения_69846ab8-6978-4bba-8711-f92428bcdf32</TableID>
+                            <ColumnID>Code</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Description</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>_x0032_0-01-01_x0020_Классификатор_x0020_единиц_x0020_измерения_69846ab8-6978-4bba-8711-f92428bcdf32</TableID>
+                            <ColumnID>Description</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>FullName</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>32768</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>_x0032_0-01-01_x0020_Классификатор_x0020_единиц_x0020_измерения_69846ab8-6978-4bba-8711-f92428bcdf32</TableID>
+                            <ColumnID>FullName</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                  </Attributes>
+                  <ddl200_200:ShareDimensionStorage>Shared</ddl200_200:ShareDimensionStorage>
+                </Dimension>
+              </Dimensions>
+              <Partitions>
+                <Partition>
+                  <ID>20-01-01 Классификатор единиц измерения_69846ab8-6978-4bba-8711-f92428bcdf32</ID>
+                  <Name>20-01-01 Классификатор единиц измерения</Name>
+                  <Annotations>
+                    <Annotation>
+                      <Name>IsQueryEditorUsed</Name>
+                      <Value>True</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>QueryEditorSerialization</Name>
+                    </Annotation>
+                    <Annotation>
+                      <Name>TableWidgetSerialization</Name>
+                    </Annotation>
+                  </Annotations>
+                  <Source xsi:type="QueryBinding">
+                    <DataSourceID>55e78742-7a14-415d-ade9-8f42bea1a5bb</DataSourceID>
+                    <QueryDefinition>SELECT
+	CONVERT(varchar(32), _IDRRef, 2) AS ID	-- ID клпссификатора
+	,_Code AS Code							-- Код
+	,_Description AS Description			-- Наименовнаие
+	,_Fld164 AS FullName					-- Полное наименовнаие
+FROM dbo._Reference48
+WHERE _Marked = 0</QueryDefinition>
+                  </Source>
+                  <StorageMode valuens="ddl200_200">InMemory</StorageMode>
+                  <ProcessingMode>Regular</ProcessingMode>
+                  <ErrorConfiguration>
+                    <KeyNotFound>IgnoreError</KeyNotFound>
+                    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+                    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+                  </ErrorConfiguration>
+                  <ProactiveCaching>
+                    <SilenceInterval>-PT1S</SilenceInterval>
+                    <Latency>-PT1S</Latency>
+                    <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+                    <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+                    <Source xsi:type="ProactiveCachingInheritedBinding" />
+                  </ProactiveCaching>
+                </Partition>
+              </Partitions>
+              <ProactiveCaching>
+                <SilenceInterval>-PT1S</SilenceInterval>
+                <Latency>-PT1S</Latency>
+                <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+                <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+                <Source xsi:type="ProactiveCachingInheritedBinding" />
+              </ProactiveCaching>
+            </MeasureGroup>
           </MeasureGroups>
           <Source>
             <DataSourceViewID>Sandbox</DataSourceViewID>
@@ -13356,7 +14462,7 @@ CREATE MEASURE '01 Продажи'[Количество маршрутов]=DIST
 ----------------------------------------------------------
 
 
-CREATE MEASURE '20-01 Цены'[Средняя цена]=AVERAGE([Price]);
+CREATE MEASURE '20-XX Цены'[Средняя цена]=AVERAGE([Price]);
 </Text>
                   <Annotations>
                     <Annotation>
@@ -13365,7 +14471,7 @@ CREATE MEASURE '20-01 Цены'[Средняя цена]=AVERAGE([Price]);
                     </Annotation>
                     <Annotation>
                       <Name>Table</Name>
-                      <Value>20-01 Цены</Value>
+                      <Value>20-XX Цены</Value>
                     </Annotation>
                   </Annotations>
                 </Command>
@@ -13375,7 +14481,7 @@ CREATE MEASURE '20-01 Цены'[Средняя цена]=AVERAGE([Price]);
 ----------------------------------------------------------
 
 
-CREATE MEASURE '20-01 Цены'[Максимальная цена]=MAX([Price]);
+CREATE MEASURE '20-XX Цены'[Максимальная цена]=MAX([Price]);
 </Text>
                   <Annotations>
                     <Annotation>
@@ -13384,7 +14490,7 @@ CREATE MEASURE '20-01 Цены'[Максимальная цена]=MAX([Price]);
                     </Annotation>
                     <Annotation>
                       <Name>Table</Name>
-                      <Value>20-01 Цены</Value>
+                      <Value>20-XX Цены</Value>
                     </Annotation>
                   </Annotations>
                 </Command>
@@ -13394,7 +14500,7 @@ CREATE MEASURE '20-01 Цены'[Максимальная цена]=MAX([Price]);
 ----------------------------------------------------------
 
 
-CREATE MEASURE '20-01 Цены'[Минимальная цена]=MIN([Price]);
+CREATE MEASURE '20-XX Цены'[Минимальная цена]=MIN([Price]);
 </Text>
                   <Annotations>
                     <Annotation>
@@ -13403,7 +14509,7 @@ CREATE MEASURE '20-01 Цены'[Минимальная цена]=MIN([Price]);
                     </Annotation>
                     <Annotation>
                       <Name>Table</Name>
-                      <Value>20-01 Цены</Value>
+                      <Value>20-XX Цены</Value>
                     </Annotation>
                   </Annotations>
                 </Command>
@@ -13470,7 +14576,7 @@ CREATE MEASURE '01 Продажи'[Сумма себестоимостиt]=SUM([
 ----------------------------------------------------------
 
 
-CREATE MEASURE '20-01 Цены'[Цена]=FIRSTNONBLANK('20-01 Цены'[Price],1);
+CREATE MEASURE '20-XX Цены'[Цена]=FIRSTNONBLANK('20-01 Цены'[Price],1);
 </Text>
                   <Annotations>
                     <Annotation>
@@ -13479,7 +14585,7 @@ CREATE MEASURE '20-01 Цены'[Цена]=FIRSTNONBLANK('20-01 Цены'[Price],
                     </Annotation>
                     <Annotation>
                       <Name>Table</Name>
-                      <Value>20-01 Цены</Value>
+                      <Value>20-XX Цены</Value>
                     </Annotation>
                   </Annotations>
                 </Command>
@@ -14268,47 +15374,6 @@ CREATE MEASURE '01 Продажи'[Количество товаров]=DISTINCT
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
-                    <xs:element name="GoodsMeasures_a3ff564d-8c9b-4a02-a90b-5eee62652fef" msdata:Locale="" msprop:IsLogical="True" msprop:FriendlyName="MeasureUnits" msprop:DbTableName="GoodsMeasures" msprop:TableType="View" msprop:Description="GoodsMeasures" msprop:QueryDefinition="SELECT&#xD;&#xA; CONVERT(varchar(32), _IDRRef, 2) AS ID&#xD;&#xA; ,CONVERT(varchar(32), _OwnerIDRRef, 2) AS GoodsID&#xD;&#xA; ,_Code AS Code&#xD;&#xA; ,_Description AS [Description]&#xD;&#xA; ,CONVERT(varchar(32), _Fld151RRef, 2) AS ClassifierID&#xD;&#xA;FROM dbo._Reference46">
-                      <xs:complexType>
-                        <xs:sequence>
-                          <xs:element name="ID" msprop:DbColumnName="ID" msprop:FriendlyName="ID" minOccurs="0">
-                            <xs:simpleType>
-                              <xs:restriction base="xs:string">
-                                <xs:maxLength value="32768" />
-                              </xs:restriction>
-                            </xs:simpleType>
-                          </xs:element>
-                          <xs:element name="GoodsID" msprop:DbColumnName="GoodsID" msprop:FriendlyName="GoodsID" minOccurs="0">
-                            <xs:simpleType>
-                              <xs:restriction base="xs:string">
-                                <xs:maxLength value="32768" />
-                              </xs:restriction>
-                            </xs:simpleType>
-                          </xs:element>
-                          <xs:element name="Code" msprop:DbColumnName="Code" msprop:FriendlyName="Code" minOccurs="0">
-                            <xs:simpleType>
-                              <xs:restriction base="xs:string">
-                                <xs:maxLength value="32768" />
-                              </xs:restriction>
-                            </xs:simpleType>
-                          </xs:element>
-                          <xs:element name="Description" msprop:DbColumnName="Description" msprop:FriendlyName="Description" minOccurs="0">
-                            <xs:simpleType>
-                              <xs:restriction base="xs:string">
-                                <xs:maxLength value="32768" />
-                              </xs:restriction>
-                            </xs:simpleType>
-                          </xs:element>
-                          <xs:element name="ClassifierID" msprop:DbColumnName="ClassifierID" msprop:FriendlyName="ClassifierID" minOccurs="0">
-                            <xs:simpleType>
-                              <xs:restriction base="xs:string">
-                                <xs:maxLength value="32768" />
-                              </xs:restriction>
-                            </xs:simpleType>
-                          </xs:element>
-                        </xs:sequence>
-                      </xs:complexType>
-                    </xs:element>
                     <xs:element name="Goods_1f62a172-7212-49c3-a93d-c32e3d7c1be0" msdata:Locale="" msprop:IsLogical="True" msprop:FriendlyName="20 Номенклатура" msprop:DbTableName="Goods" msprop:TableType="View" msprop:Description="Goods" msprop:QueryDefinition="SELECT&#xD;&#xA; CONVERT(varchar(32), _IDRRef, 2) AS ID&#xD;&#xA; ,CASE&#xD;&#xA;  WHEN _ParentIDRRef = 0x00000000000000000000000000000000 THEN NULL&#xD;&#xA;  ELSE CONVERT(varchar(32),_ParentIDRRef, 2)&#xD;&#xA; END AS ParentID&#xD;&#xA; ,_Code AS Code&#xD;&#xA; ,_Description AS [Description]&#xD;&#xA; ,_Fld221 AS Article&#xD;&#xA; ,CONVERT(varchar(32), _Fld165RRef, 2) AS BusinessID&#xD;&#xA;FROM dbo._Reference55">
                       <xs:complexType>
                         <xs:sequence>
@@ -14646,7 +15711,7 @@ CREATE MEASURE '01 Продажи'[Количество товаров]=DISTINCT
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
-                    <xs:element name="Cost_ba5b515e-2ff0-47ec-bcd9-9b2936191797" msdata:Locale="" msprop:IsLogical="True" msprop:FriendlyName="20-01 Цены" msprop:DbTableName="Cost" msprop:TableType="View" msprop:Description="Cost" msprop:QueryDefinition="DECLARE @Offset int&#xD;&#xA;DECLARE @CostPriceType varchar(32)&#xD;&#xA;&#xD;&#xA;SET @Offset = (SELECT TOP 1 Offset FROM dbo._YearOffset)&#xD;&#xA;SET @CostPriceType = (SELECT TOP 1 CONVERT(varchar(32), _IDRRef, 2) FROM dbo.t_PredefinedValue WHERE ID = 38)&#xD;&#xA;&#xD;&#xA;SELECT&#xD;&#xA; DATEADD(year, -1*@Offset, CAST(Cost._Period AS date)) AS Date&#xD;&#xA; ,CONVERT(varchar(32), Cost._Fld1586RRef, 2) AS GoodID&#xD;&#xA; ,@CostPriceType AS PriceType&#xD;&#xA; ,Cost._Fld1587 AS Price&#xD;&#xA;FROM dbo._InfoRg1585 AS Cost&#xD;&#xA;WHERE Cost._Active = 0x01&#xD;&#xA;UNION ALL&#xD;&#xA;SELECT&#xD;&#xA; DATEADD(year, -1*@Offset, CAST(Price._Period AS date)) AS Date&#xD;&#xA; ,CONVERT(varchar(32), Price._Fld821RRef, 2) AS GoodID&#xD;&#xA; ,CONVERT(varchar(32), Price._Fld820RRef, 2) AS PriceType&#xD;&#xA; ,Price._Fld822 AS Price&#xD;&#xA;FROM dbo._InfoRg819 AS Price">
+                    <xs:element name="Cost_ba5b515e-2ff0-47ec-bcd9-9b2936191797" msdata:Locale="" msprop:IsLogical="True" msprop:FriendlyName="20-XX Цены" msprop:DbTableName="Cost" msprop:TableType="View" msprop:Description="Cost" msprop:QueryDefinition="DECLARE @Offset int&#xD;&#xA;DECLARE @CostPriceType varchar(32)&#xD;&#xA;&#xD;&#xA;SET @Offset = (SELECT TOP 1 Offset FROM dbo._YearOffset)&#xD;&#xA;SET @CostPriceType = (SELECT TOP 1 CONVERT(varchar(32), _IDRRef, 2) FROM dbo.t_PredefinedValue WHERE ID = 38)&#xD;&#xA;&#xD;&#xA;SELECT&#xD;&#xA; DATEADD(year, -1*@Offset, CAST(Cost._Period AS date)) AS Date&#xD;&#xA; ,CONVERT(varchar(32), Cost._Fld1586RRef, 2) AS GoodID&#xD;&#xA; ,@CostPriceType AS PriceType&#xD;&#xA; ,Cost._Fld1587 AS Price&#xD;&#xA;FROM dbo._InfoRg1585 AS Cost&#xD;&#xA;WHERE Cost._Active = 0x01&#xD;&#xA;UNION ALL&#xD;&#xA;SELECT&#xD;&#xA; DATEADD(year, -1*@Offset, CAST(Price._Period AS date)) AS Date&#xD;&#xA; ,CONVERT(varchar(32), Price._Fld821RRef, 2) AS GoodID&#xD;&#xA; ,CONVERT(varchar(32), Price._Fld820RRef, 2) AS PriceType&#xD;&#xA; ,Price._Fld822 AS Price&#xD;&#xA;FROM dbo._InfoRg819 AS Price">
                       <xs:complexType>
                         <xs:sequence>
                           <xs:element name="Date" msprop:DbColumnName="Date" msprop:FriendlyName="Date" type="xs:dateTime" minOccurs="0" />
@@ -14744,6 +15809,82 @@ CREATE MEASURE '01 Продажи'[Количество товаров]=DISTINCT
                           </xs:element>
                           <xs:element name="DocDate" msprop:DbColumnName="DocDate" msprop:FriendlyName="DocDate" type="xs:dateTime" minOccurs="0" />
                           <xs:element name="DocNumber" msprop:DbColumnName="DocNumber" msprop:FriendlyName="DocNumber" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:maxLength value="32768" />
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="_x0032_0-01_x0020_Единицы_x0020_измерения_0327b3c6-181a-4c40-b82f-2f62fd0b0904" msdata:Locale="" msprop:IsLogical="True" msprop:FriendlyName="20-01 Единицы измерения" msprop:DbTableName="20-01 Единицы измерения" msprop:TableType="View" msprop:Description="20-01 Единицы измерения" msprop:QueryDefinition="SELECT&#xD;&#xA; CONVERT(varchar(32), Units._IDRRef, 2) AS ID      -- ID единицы измерения&#xD;&#xA; ,CONVERT(varchar(32), Units._OwnerIDRRef, 2) AS GoodsID    -- ID номенклатуры-владельца&#xD;&#xA; ,CONVERT(varchar(32), Units._Fld151RRef, 2) AS ClassifierUnitsID -- ID классификатора единиц ищзмерения&#xD;&#xA; ,Units._Fld152 AS Factor           -- Коэффициент&#xD;&#xA; ,Units._Fld153 AS Volume           -- Объем&#xD;&#xA; ,Units._Fld154 AS NetWeight           -- Вес нетто&#xD;&#xA; ,Units._Fld155 AS GrossWeight          -- Вес брутто&#xD;&#xA; ,Units._Fld156 AS Lenght           -- Длина&#xD;&#xA; ,Units._Fld157 AS Widt            -- Ширина&#xD;&#xA; ,Units._Fld158 AS Height           -- Высота&#xD;&#xA; ,Units._Fld159 AS CodeEAN           -- Код EAN&#xD;&#xA; ,CASE&#xD;&#xA;  WHEN Goods._IDRRef IS NULL THEN  0&#xD;&#xA;  ELSE 1&#xD;&#xA; END AS IsBasicUnit             -- Признак базовой единицы измерения&#xD;&#xA;FROM dbo._Reference46 AS Units&#xD;&#xA;LEFT JOIN dbo._Reference55 AS Goods ON Goods._Fld222RRef = Units._IDRRef AND Goods._IDRRef = Units._OwnerIDRRef&#xD;&#xA;WHERE Units._Marked = 0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ID" msprop:DbColumnName="ID" msprop:FriendlyName="ID" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:maxLength value="32768" />
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="GoodsID" msprop:DbColumnName="GoodsID" msprop:FriendlyName="GoodsID" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:maxLength value="32768" />
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="ClassifierUnitsID" msprop:DbColumnName="ClassifierUnitsID" msprop:FriendlyName="ClassifierUnitsID" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:maxLength value="32768" />
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="Factor" msprop:DbColumnName="Factor" msprop:FriendlyName="Factor" type="xs:decimal" minOccurs="0" />
+                          <xs:element name="Volume" msprop:DbColumnName="Volume" msprop:FriendlyName="Volume" type="xs:decimal" minOccurs="0" />
+                          <xs:element name="NetWeight" msprop:DbColumnName="NetWeight" msprop:FriendlyName="NetWeight" type="xs:decimal" minOccurs="0" />
+                          <xs:element name="GrossWeight" msprop:DbColumnName="GrossWeight" msprop:FriendlyName="GrossWeight" type="xs:decimal" minOccurs="0" />
+                          <xs:element name="Lenght" msprop:DbColumnName="Lenght" msprop:FriendlyName="Lenght" type="xs:decimal" minOccurs="0" />
+                          <xs:element name="Widt" msprop:DbColumnName="Widt" msprop:FriendlyName="Widt" type="xs:decimal" minOccurs="0" />
+                          <xs:element name="Height" msprop:DbColumnName="Height" msprop:FriendlyName="Height" type="xs:decimal" minOccurs="0" />
+                          <xs:element name="CodeEAN" msprop:DbColumnName="CodeEAN" msprop:FriendlyName="CodeEAN" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:maxLength value="32768" />
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="IsBasicUnit" msprop:DbColumnName="IsBasicUnit" msprop:FriendlyName="IsBasicUnit" type="xs:int" minOccurs="0" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="_x0032_0-01-01_x0020_Классификатор_x0020_единиц_x0020_измерения_69846ab8-6978-4bba-8711-f92428bcdf32" msdata:Locale="" msprop:IsLogical="True" msprop:FriendlyName="20-01-01 Классификатор единиц измерения" msprop:DbTableName="20-01-01 Классификатор единиц измерения" msprop:TableType="View" msprop:Description="20-01-01 Классификатор единиц измерения" msprop:QueryDefinition="SELECT&#xD;&#xA; CONVERT(varchar(32), _IDRRef, 2) AS ID -- ID клпссификатора&#xD;&#xA; ,_Code AS Code       -- Код&#xD;&#xA; ,_Description AS Description   -- Наименовнаие&#xD;&#xA; ,_Fld164 AS FullName     -- Полное наименовнаие&#xD;&#xA;FROM dbo._Reference48&#xD;&#xA;WHERE _Marked = 0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ID" msprop:DbColumnName="ID" msprop:FriendlyName="ID" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:maxLength value="32768" />
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="Code" msprop:DbColumnName="Code" msprop:FriendlyName="Code" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:maxLength value="32768" />
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="Description" msprop:DbColumnName="Description" msprop:FriendlyName="Description" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:maxLength value="32768" />
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="FullName" msprop:DbColumnName="FullName" msprop:FriendlyName="FullName" minOccurs="0">
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
                                 <xs:maxLength value="32768" />
