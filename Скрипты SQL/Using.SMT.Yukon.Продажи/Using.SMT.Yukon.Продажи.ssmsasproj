@@ -9,7 +9,7 @@
           <Server>V-APP8283</Server>
           <UserName />
           <Authentication>Проверка подлинности Windows</Authentication>
-          <InitialDB>Табличная модель продаж Трансазии_avramkovv_94021c4d-4c0e-4c6f-b78c-807818096cad</InitialDB>
+          <InitialDB>TransasiaSales</InitialDB>
           <LoginTimeout>15</LoginTimeout>
           <ExecutionTimeout>0</ExecutionTimeout>
           <ConnectionProtocol>NotSpecified</ConnectionProtocol>
